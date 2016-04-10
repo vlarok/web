@@ -38,7 +38,7 @@ namespace Web.Controllers
             //  vm.ContactTypeSelectList = new SelectList(_uow.ContactTypes.All.Select(t => new {t.ContactTypeId, ContactTypeName = t.ContactTypeName.Translate()}).ToList(), nameof(ContactType.ContactTypeId), nameof(ContactType.ContactTypeName));
       //      ViewBag.RestaurantId = new SelectList(_uow.Restaurants.All, "Id", "Name", dbBooking.RestaurantId);
 
-            vm.ServiceSelectList = new SelectList(_uow.Services.All.Select(t => new { t.ServiceId, t.ServiceName }).ToList(), nameof(Service.ServiceId), nameof(Service.ServiceName), "");
+            vm.ServiceSelectList = new SelectList(_uow.Services.All.Select(t => new { t.ServiceId, t.ServiceName }).ToList(), nameof(Service.ServiceId), nameof(Service.ServiceName), vm.ServiceSelectList);
 
             return View(vm);
         }
