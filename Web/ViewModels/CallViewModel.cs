@@ -14,7 +14,7 @@ namespace Web.ViewModels
         public int? ServiceIdNullable { get; set; }
         public IEnumerable<Call> Calls { get;  set; }
         public DateTime SearchStartDate { get; set; }
-        public DateTime SearchEndDate { get; set; }
+        public DateTime SearchEndDate { get; set;  }
         public SelectList ServiceSelectList { get; set; }
     }
 }
