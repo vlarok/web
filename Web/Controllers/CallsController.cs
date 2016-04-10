@@ -26,18 +26,15 @@ namespace Web.Controllers
         // GET: Calls
         public ActionResult Index(CallViewModel vm)
         {
-
-            if (vm==null)
-            {
-                 vm = new CallViewModel();
+            if (vm.SearchEndDate.Equals(vm.SearchEndDate)) {
+                  vm.SearchStartDate=DateTime.Today;
+                  vm.SearchEndDate= DateTime.Today.AddDays(1).AddTicks(-1);
             }
-           // var calls = db.Calls.Include(c => c.Service);
-           var calls = _uow.Calls.All;
+            // var calls = db.Calls.Include(c => c.Service);
+            var calls = _uow.Calls.All;
            
             vm.Calls = calls;
-            //  vm.ContactTypeSelectList = new SelectList(_uow.ContactTypes.All.Select(t => new {t.ContactTypeId, ContactTypeName = t.ContactTypeName.Translate()}).ToList(), nameof(ContactType.ContactTypeId), nameof(ContactType.ContactTypeName));
-      //      ViewBag.RestaurantId = new SelectList(_uow.Restaurants.All, "Id", "Name", dbBooking.RestaurantId);
-
+   
             vm.ServiceSelectList = new SelectList(_uow.Services.All.Select(t => new { t.ServiceId, t.ServiceName }).ToList(), nameof(Service.ServiceId), nameof(Service.ServiceName), vm.ServiceSelectList);
 
             return View(vm);

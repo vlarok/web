@@ -41,7 +41,7 @@ namespace Domain
 
         [StringLength(128, MinimumLength = 0)]
         public string Custom4 { get; set; }
-        public int ServiceId { get; set; }
+        public int? ServiceId { get; set; }
         public virtual Service Service { get; set; }
     }
 }
