@@ -13,7 +13,7 @@ using Web.ViewModels;
 
 namespace Web.Controllers
 {
-    public class CallsController :  BaseController
+    public class CallsController : BaseController
     {
 
         private readonly IUOW _uow;
@@ -32,7 +32,7 @@ namespace Web.Controllers
                 SearchEndDate = DateTime.Now,
                 Calls = _uow.Calls.All,
                 ServiceSelectList = new SelectList(_uow.Services.All.Select(t => new { t.ServiceId, t.ServiceName }).ToList(), nameof(Service.ServiceId), nameof(Service.ServiceName))
-        };
+            };
             return View(vm);
         }
 
@@ -43,6 +43,13 @@ namespace Web.Controllers
             if (ModelState.IsValid)
             {
                 //DoSomeStuff
+                if (vm.ServiceIdNullable == null)
+                {
+                }
+                else
+                {
+                }
+                return RedirectToAction("Index", "Home", new { ServiceIdNullable = vm.ServiceIdNullable== null ? "null" : vm.ServiceIdNullable.ToString() });
             }
 
             //initialize lists again
@@ -146,7 +153,7 @@ namespace Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-           _uow.Calls.Delete(id);
+            _uow.Calls.Delete(id);
             _uow.Commit();
             return RedirectToAction("Index");
         }
@@ -155,7 +162,7 @@ namespace Web.Controllers
         {
             if (disposing)
             {
-               // _uow.Dispose();
+                // _uow.Dispose();
             }
             base.Dispose(disposing);
         }

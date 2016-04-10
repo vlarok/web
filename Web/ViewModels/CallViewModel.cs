@@ -11,6 +11,7 @@ namespace Web.ViewModels
     {
         public Service Service { get; set; }
         public Call Call { get; set; }
+        public int? ServiceIdNullable { get; set; }
         public IEnumerable<Call> Calls { get;  set; }
         public DateTime SearchStartDate { get; set; }
         public DateTime SearchEndDate { get; set; }
