@@ -4,7 +4,7 @@
     ViewBag.Title = "index";
 }
 
-@using (Html.BeginForm("Index", "Calls", FormMethod.Get))
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
@@ -32,7 +32,7 @@
                                         <span class="glyphicon glyphicon-calendar">
                                         </span>
                                     </span>
-                                    @Html.TextBox("startDate", Model.SearchStartDate, new { @class = "form-control date_start" })
+                                    @Html.TextBoxFor(model => model.SearchStartDate, new { @class = "form-control date_start" })
                                 </div>
                             </div>
                         </div>
@@ -45,8 +45,7 @@
                                         <span class="glyphicon glyphicon-calendar">
                                         </span>
                                     </span>
-
-                                    @Html.TextBox("endDate", Model.SearchEndDate, new { @class = "form-control date_end" })
+                                    @Html.TextBoxFor(model => model.SearchEndDate, new { @class = "form-control date_start" })
                                 </div>
                             </div>
                         </div>
@@ -55,7 +54,7 @@
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="select">Service</label>
                             <div class="col-md-9">
-                                 @Html.DropDownListFor(model => model.ServiceSelectList, null, "All Services", new {@class = "form-control"})
+                                @Html.DropDownListFor(model => model.Service.ServiceId, Model.ServiceSelectList, "All Services", new { @class = "form-control" })
 
 
                             </div>
@@ -79,13 +78,13 @@
                 <h2>
                     <i class="fa fa-cutlery"></i><span class="break"></span>@Resources.Domain.Calls
                 </h2><div class="panel-actions">
-    <a href="@Url.Action("Create", "Calls", new {})"><i class="fa fa-edit"></i></a>
-</div>
+                    <a href="@Url.Action("Create", "Calls", new {})"><i class="fa fa-edit"></i></a>
+                </div>
             </div>
 
-            
+
             <div class="panel-body bookings">
-               
+
                 <table class="table table-bordered bootstrap-datatable datatable">
                     <tr>
                         <th>
@@ -180,7 +179,7 @@
                                     <a class="btn btn-sm btn-info" href="@Url.Action("Details", new {id = item.CallId})">
                                         <i class="fa fa-search-plus"></i>
                                     </a>
-                                
+
                                 </div>
                             </td>
                         </tr>
