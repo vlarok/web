@@ -1,0 +1,196 @@
+﻿@model Web.ViewModels.CallViewModel
+
+@{
+    ViewBag.Title = "index";
+}
+
+@using (Html.BeginForm("Index", "Calls", FormMethod.Get))
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2>
+                            <strong>Filter</strong> booking
+                        </h2>
+                        <div class="panel-actions">
+                            <a href="/#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                            <a href="/#" class="btn-close"><i class="fa fa-times"></i></a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="text-input">From</label>
+                            <div class="col-md-9">
+                                <div class='input-group input-append date' id='datetimepicker'>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar">
+                                        </span>
+                                    </span>
+                                    @Html.TextBox("startDate", Model.SearchStartDate, new { @class = "form-control date_start" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="text-input">To</label>
+                            <div class="col-md-9">
+                                <div class='input-group input-append date' id='datetimepicker2'>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar">
+                                        </span>
+                                    </span>
+
+                                    @Html.TextBox("endDate", Model.SearchEndDate, new { @class = "form-control date_end" })
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="select">Service</label>
+                            <div class="col-md-9">
+                                 @Html.DropDownListFor(model => model.ServiceSelectList, null, "All Services", new {@class = "form-control"})
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div><!--/.col-->
+    </div><!--/.row-->
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading" data-original-title>
+                <h2>
+                    <i class="fa fa-cutlery"></i><span class="break"></span>@Resources.Domain.Calls
+                </h2><div class="panel-actions">
+    <a href="@Url.Action("Create", "Calls", new {})"><i class="fa fa-edit"></i></a>
+</div>
+            </div>
+
+            
+            <div class="panel-body bookings">
+               
+                <table class="table table-bordered bootstrap-datatable datatable">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Call.Service.ServiceName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Call.Anumber)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Call.Bnumber)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Call.Dir)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Call.Duration)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Call.Created)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Call.AudioFileName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Call.UserId)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Call.AudioDir)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Call.Custom1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Call.Custom2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Call.Custom3)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Call.Custom4)
+                        </th>
+                        <th></th>
+
+                    </tr>
+
+                    @foreach (var item in Model.Calls)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Service.ServiceName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Anumber)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Bnumber)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Dir)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Duration)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Created)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.AudioFileName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UserId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.AudioDir)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Custom1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Custom2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Custom3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Custom4)
+                            </td>
+
+                            <td>
+                                <div class="delete-section">
+
+                                    <a class="btn btn-sm btn-info" href="@Url.Action("Details", new {id = item.CallId})">
+                                        <i class="fa fa-search-plus"></i>
+                                    </a>
+                                
+                                </div>
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

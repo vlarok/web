@@ -1,0 +1,122 @@
+﻿@model Domain.Call
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Call</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Service.ServiceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Service.ServiceName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Anumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Anumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bnumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bnumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dir)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dir)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Created)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Created)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AudioFileName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AudioFileName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AudioDir)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AudioDir)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Custom1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Custom1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Custom2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Custom2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Custom3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Custom3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Custom4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Custom4)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CallId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

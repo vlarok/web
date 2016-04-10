@@ -1,0 +1,88 @@
+﻿@using System.Threading
+@using Microsoft.AspNet.Identity
+@using Web.Helpers
+@{
+    var culture = CultureHelper.GetCurrentUICulture().ToLower();
+
+    var nameValueCollection = HttpUtility.ParseQueryString(Request?.Url?.Query ?? "");
+    nameValueCollection.Remove("culture");
+    string returnUrl = Request?.Url?.AbsolutePath + "?" + nameValueCollection;
+
+    //var returnUrl = Request.Url?.PathAndQuery ?? "";
+}
+<ul class="nav navbar-nav navbar-right">
+    @if (Request.IsAuthenticated)
+    {
+
+        <li class="dropdown">
+            <a href="/#" class="dropdown-toggle avatar" data-toggle="dropdown"><i class="fa fa-cog"></i></a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-menu-header text-center">
+                    <strong>Language</strong>
+                </li>
+                <li class="@Html.Raw(culture == "et" ? "list-group-item-success" : "")">
+                    <a href="@Url.Action("SetLanguage", "Language", new {area = "", culture = "et", returnUrl})"><i class="fa fa-file"></i>Eesti keel</a>
+                </li>
+
+                <li class="@Html.Raw(culture == "en" ? "list-group-item-success" : "")">
+                    <a href="@Url.Action("SetLanguage", "Language", new {area = "", culture = "en", returnUrl})"><i class="fa fa-file"></i>English</a>
+                </li>
+                <li class="dropdown-menu-header text-center">
+                    <strong>Settings</strong>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index", "Manage", new {area = "", culture = "en", returnUrl})"><i class="fa fa-user"></i>@Resources.Common.ManageAccount</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="/#" class="dropdown-toggle avatar" data-toggle="dropdown"><i class="fa fa-lock"></i></a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-menu-header text-center">
+                    <strong>@User.Identity.GetUserName()</strong>
+                </li>
+
+                  @using (Html.BeginForm("LogOff", "Account", new { area = "" }, FormMethod.Post, new { id = "logoutForm" }))
+                  {
+                    @Html.AntiForgeryToken()
+                    <li>
+                        <a href="javascript:document.getElementById('logoutForm').submit()"><i class="fa fa-lock"></i>@Resources.Common.LogOff</a>
+                    </li>
+
+                  }
+            </ul>
+        </li>
+
+    }
+    else
+    {
+       
+        <li class="dropdown">
+            <a href="/#" class="dropdown-toggle avatar" data-toggle="dropdown"><i class="fa fa-cog"></i></a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-menu-header text-center">
+                    <strong>Settings</strong>
+                </li>
+                <li class="@Html.Raw(culture == "et" ? "list-group-item-success" : "")">
+                    <a href="@Url.Action("SetLanguage", "Language", new {area = "", culture = "et", returnUrl})"><i class="fa fa-file"></i>Eesti keel</a>
+                </li>
+
+                <li class="@Html.Raw(culture == "en" ? "list-group-item-success" : "")">
+                    <a href="@Url.Action("SetLanguage", "Language", new {area = "", culture = "en", returnUrl})"><i class="fa fa-file"></i>English</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="/#" class="dropdown-toggle avatar" data-toggle="dropdown"><i class="fa fa-lock"></i></a>
+            <ul class="dropdown-menu">
+      
+                <li>
+                    <a href="@Url.Action("Login", "Account", new {})"><i class="fa fa-lock"></i>Login</a>
+                </li>
+
+            </ul>
+        </li>
+    }
+</ul>
