@@ -24,18 +24,31 @@ namespace Web.Controllers
         }
 
         // GET: Calls
+        public ActionResult Index()
+        {
+            var vm = new CallViewModel()
+            {
+                SearchStartDate = DateTime.Today,
+                SearchEndDate = DateTime.Now,
+                Calls = _uow.Calls.All,
+                ServiceSelectList = new SelectList(_uow.Services.All.Select(t => new { t.ServiceId, t.ServiceName }).ToList(), nameof(Service.ServiceId), nameof(Service.ServiceName))
+        };
+            return View(vm);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Index(CallViewModel vm)
         {
-            if (vm.SearchEndDate.Equals(vm.SearchEndDate)) {
-                  vm.SearchStartDate=DateTime.Today;
-                  vm.SearchEndDate= DateTime.Today.AddDays(1).AddTicks(-1);
+            if (ModelState.IsValid)
+            {
+                //DoSomeStuff
             }
-            // var calls = db.Calls.Include(c => c.Service);
-            var calls = _uow.Calls.All;
-           
-            vm.Calls = calls;
-   
-            vm.ServiceSelectList = new SelectList(_uow.Services.All.Select(t => new { t.ServiceId, t.ServiceName }).ToList(), nameof(Service.ServiceId), nameof(Service.ServiceName), vm.ServiceSelectList);
+
+            //initialize lists again
+            vm.Calls = _uow.Calls.All;
+            //initialize list and set back selected value
+            vm.ServiceSelectList = new SelectList(_uow.Services.All.Select(t => new { t.ServiceId, t.ServiceName }).ToList(), nameof(Service.ServiceId), nameof(Service.ServiceName), vm.Service.ServiceId);
 
             return View(vm);
         }
