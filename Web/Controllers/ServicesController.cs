@@ -12,9 +12,9 @@ using DAL.Interfaces;
 
 namespace Web.Controllers
 {
-    public class ServicesController : Controller
+    public class ServicesController : BaseController
     {
-        private DataBaseContext db = new DataBaseContext();
+
 
         private readonly IUOW _uow;
 
@@ -58,8 +58,8 @@ namespace Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Services.Add(service);
-                db.SaveChanges();
+                _uow.Services.Add(service);
+                _uow.Commit();
                 return RedirectToAction("Index");
             }
 
@@ -73,7 +73,7 @@ namespace Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Service service = db.Services.Find(id);
+            Service service = _uow.Services.GetById(id);
             if (service == null)
             {
                 return HttpNotFound();
@@ -90,8 +90,8 @@ namespace Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(service).State = EntityState.Modified;
-                db.SaveChanges();
+                _uow.Services.Update(service);
+                _uow.Commit();
                 return RedirectToAction("Index");
             }
             return View(service);
@@ -104,7 +104,7 @@ namespace Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Service service = db.Services.Find(id);
+            Service service = _uow.Services.GetById(id);
             if (service == null)
             {
                 return HttpNotFound();
@@ -117,9 +117,10 @@ namespace Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Service service = db.Services.Find(id);
-            db.Services.Remove(service);
-            db.SaveChanges();
+            Service srv = _uow.Services.GetById(id);
+            srv.Deteted = true;
+            _uow.Services.Update(srv);
+            _uow.Commit();
             return RedirectToAction("Index");
         }
 
@@ -127,7 +128,7 @@ namespace Web.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+
             }
             base.Dispose(disposing);
         }

@@ -123,11 +123,11 @@
   <data name="ArticleHeadline" xml:space="preserve">
     <value>Headline</value>
   </data>
-  <data name="FirstLastname" xml:space="preserve">
+  <data name="FirstLastName" xml:space="preserve">
     <value>First, Lastname</value>
   </data>
-  <data name="LastFirstname" xml:space="preserve">
-    <value>Last, Firstname</value>
+  <data name="LastFirstName" xml:space="preserve">
+    <value>Agent</value>
   </data>
   <data name="EntityPrimaryKey" xml:space="preserve">
     <value>Id</value>
@@ -158,5 +158,26 @@
   </data>
   <data name="Calls" xml:space="preserve">
     <value>Calls</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="Anumber" xml:space="preserve">
+    <value>Caller number</value>
+  </data>
+  <data name="Bnumber" xml:space="preserve">
+    <value>Answered number</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Call start</value>
+  </data>
+  <data name="Dir" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Duration</value>
   </data>
 </root>

@@ -62,12 +62,12 @@
 
                 <div class="sidebar-collapse collapse">
 
-                    <div class="nav-sidebar title"><span>Main Menu</span></div>
+                    <div class="nav-sidebar title"><span>@Resources.Common.MainMenu</span></div>
 
                     <ul class="nav nav-sidebar">
 
-                        <li><a href="@Url.Action("Index","Calls",new {})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> @Resources.Domain.Calls</span></a></li>
-                        <li><a href="@Url.Action("Index","Services",new {})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> @Resources.Domain.Calls</span></a></li>
+                        <li><a href="@Url.Action("Index","Calls",new {})"><i class="fa fa-headphones"></i><span class="hidden-sm text"> @Resources.Domain.Calls</span></a></li>
+                        <li><a href="@Url.Action("Index","Services",new {})"><i class="fa fa-wrench"></i><span class="hidden-sm text"> @Resources.Domain.Services</span></a></li>
 
                          @if (Request.IsAuthenticated)
                         {

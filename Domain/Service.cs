@@ -17,5 +17,6 @@ namespace Domain
         [Display(Name = nameof(Resources.Domain.ServiceName), ResourceType = typeof(Resources.Domain))]
         public string ServiceName { get; set; }
         public virtual List<Call> Calls { get; set; }
+        public bool Deteted { get; set; }
     }
 }

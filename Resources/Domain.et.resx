@@ -117,14 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Anumber" xml:space="preserve">
+    <value>Helistaja number</value>
+  </data>
   <data name="ArticleBody" xml:space="preserve">
     <value>Keha</value>
   </data>
   <data name="ArticleHeadline" xml:space="preserve">
     <value>Pealkiri</value>
   </data>
+  <data name="Bnumber" xml:space="preserve">
+    <value>Vastuvõtja number</value>
+  </data>
   <data name="Calls" xml:space="preserve">
     <value>Kõned</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Kõne algus</value>
+  </data>
+  <data name="Dir" xml:space="preserve">
+    <value>Suund</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Kestus</value>
   </data>
   <data name="FirstLastName" xml:space="preserve">
     <value>Ees-, perekonnanimi</value>
@@ -136,7 +151,7 @@
     <value>Eesnimi on liiga pikk.</value>
   </data>
   <data name="LastFirstName" xml:space="preserve">
-    <value>Pere-, eesnimi</value>
+    <value>Agent</value>
   </data>
   <data name="Lastname" xml:space="preserve">
     <value>Perekonnanimi</value>
@@ -147,7 +162,13 @@
   <data name="Persons" xml:space="preserve">
     <value>Inimesed</value>
   </data>
+  <data name="Service" xml:space="preserve">
+    <value>Teenus</value>
+  </data>
   <data name="ServiceName" xml:space="preserve">
     <value>Teenuse nimi</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Teenused</value>
   </data>
 </root>

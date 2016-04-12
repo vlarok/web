@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Caller number.
+        /// </summary>
+        public static string Anumber {
+            get {
+                return ResourceManager.GetString("Anumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Body.
         /// </summary>
         public static string ArticleBody {
@@ -75,6 +84,15 @@ namespace Resources {
         public static string ArticleHeadline {
             get {
                 return ResourceManager.GetString("ArticleHeadline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Answered number.
+        /// </summary>
+        public static string Bnumber {
+            get {
+                return ResourceManager.GetString("Bnumber", resourceCulture);
             }
         }
         
@@ -106,6 +124,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Call start.
+        /// </summary>
+        public static string Created {
+            get {
+                return ResourceManager.GetString("Created", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Direction.
+        /// </summary>
+        public static string Dir {
+            get {
+                return ResourceManager.GetString("Dir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Duration.
+        /// </summary>
+        public static string Duration {
+            get {
+                return ResourceManager.GetString("Duration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Id.
         /// </summary>
         public static string EntityPrimaryKey {
@@ -117,9 +162,9 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to First, Lastname.
         /// </summary>
-        public static string FirstLastname {
+        public static string FirstLastName {
             get {
-                return ResourceManager.GetString("FirstLastname", resourceCulture);
+                return ResourceManager.GetString("FirstLastName", resourceCulture);
             }
         }
         
@@ -142,11 +187,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Last, Firstname.
+        ///   Looks up a localized string similar to Agent.
         /// </summary>
-        public static string LastFirstname {
+        public static string LastFirstName {
             get {
-                return ResourceManager.GetString("LastFirstname", resourceCulture);
+                return ResourceManager.GetString("LastFirstName", resourceCulture);
             }
         }
         
@@ -178,11 +223,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Service.
+        /// </summary>
+        public static string Service {
+            get {
+                return ResourceManager.GetString("Service", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Service name.
         /// </summary>
         public static string ServiceName {
             get {
                 return ResourceManager.GetString("ServiceName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Services.
+        /// </summary>
+        public static string Services {
+            get {
+                return ResourceManager.GetString("Services", resourceCulture);
             }
         }
     }

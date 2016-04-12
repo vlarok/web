@@ -1,33 +1,137 @@
 ﻿@model IEnumerable<Domain.Service>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = @Resources.Domain.Services;
 }
 
-<h2>Index</h2>
+@Html.AntiForgeryToken()
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ServiceName)
-        </th>
-        <th></th>
-    </tr>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading" data-original-title>
+                <h2>
+                    <i class="fa fa-location-arrow"></i><span class="break"></span>@Resources.Domain.Services
+                </h2>
+                <div class="panel-actions">
+                    <a href="@Url.Action("Create","Services",new {area=""})"><i class="fa fa-edit"></i></a>
+                </div>
+            </div>
+            <div class="panel-body">
+                <a href="@Url.Action("Create","Services",new {area=""})" class="btn btn-sm btn-success" title="Add restourant"><i class="fa fa-edit"></i> @Resources.Common.OK</a>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ServiceName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ServiceId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ServiceId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ServiceId })
-        </td>
-    </tr>
+                <table class="table table-bordered bootstrap-datatable datatable">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ServiceId)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ServiceName)
+                        </th>
+
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr @(item.Deteted.Equals(true) ? "class=deleted": String.Empty )
+                            >
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ServiceId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ServiceName)
+                            </td>
+                            <td>
+                                <div class="delete-section">
+@if (item.Deteted.Equals(false))
+{
+                                    <a class="btn btn-sm btn-info" href="@Url.Action("Edit", new {id = item.ServiceId})">
+                                        <i class="fa fa-edit "></i>
+                                    </a>
+
+
+                                    
+
+                                        <a class="btn btn-sm btn-danger delete-link" href="@Url.Action("Delete", new {id = item.ServiceId})"><i class="fa fa-trash-o "></i></a>
+                                        <div class="btn btn-sm btn-danger delete-confirm" style="display: none" data-delete-id="@item.ServiceId">
+                                            <i class="fa fa-edit"></i> Confirm
+                                        </div>
+
+                                    }
+
+
+                                </div>
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript">
+    $(function () {
+        $("a.delete-link").click(function () {
+            var deleteLink = $(this);
+            deleteLink.hide();
+            var confirmButton = deleteLink.siblings(".delete-confirm");
+            confirmButton.show();
+
+            var cancelDelete =  function () {
+                removeEvents();
+                showDeleteLink();
+            };
+
+            var deleteItem = function () {
+                removeEvents();
+                confirmButton.hide();
+                $.post(
+                    '@Url.Action("Delete")',
+                    AddAntiForgeryToken({ id: confirmButton.attr('data-delete-id') }))
+                   .done(function () {
+                       var parentRow = deleteLink.parents("tr:first");
+                        parentRow.addClass("deleted");
+                    }).fail(function (data) {
+                       alert("error");
+                   });
+                return false;
+            };
+
+            var removeEvents = function () {
+                confirmButton.off("click", deleteItem);
+                $(document).on("click", cancelDelete);
+                $(document).off("keypress", onKeyPress);
+            };
+
+            var showDeleteLink = function () {
+                confirmButton.hide();
+                deleteLink.show();
+            };
+
+            var onKeyPress = function (e) {
+                //Cancel if escape key pressed
+                if (e.which == 27) {
+                    cancelDelete();
+                }
+            };
+
+            confirmButton.on("click", deleteItem);
+            $(document).on("click", cancelDelete);
+            $(document).on("keypress", onKeyPress);
+
+            return false;
+        });
+
+        AddAntiForgeryToken = function (data) {
+            data.__RequestVerificationToken = $('input[name=__RequestVerificationToken]').val();
+            return data;
+        };
+    });
+    </script>
 }
-
-</table>

@@ -147,4 +147,22 @@
   <data name="Submit" xml:space="preserve">
     <value>Kinnita</value>
   </data>
+  <data name="Search" xml:space="preserve">
+    <value>Otsi</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Alates</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>Kuni</value>
+  </data>
+  <data name="MainMenu" xml:space="preserve">
+    <value>Põhi menüü</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Seaded</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Keeled</value>
+  </data>
 </root>

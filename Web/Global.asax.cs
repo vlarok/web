@@ -20,6 +20,7 @@ namespace Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            ModelBinders.Binders.Add(typeof(DateTime), new DateTimeBinder());
         }
 
         protected void Application_BeginRequest()
@@ -34,4 +35,17 @@ namespace Web
             //}
         }
     }
+
+
+    public class DateTimeBinder : IModelBinder
+    {
+        public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+        {
+            var value = bindingContext.ValueProvider.GetValue(bindingContext.ModelName);
+            bindingContext.ModelState.SetModelValue(bindingContext.ModelName, value);
+
+            return value.ConvertTo(typeof(DateTime), CultureInfo.CurrentCulture);
+        }
+    }
+
 }

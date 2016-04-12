@@ -1,10 +1,12 @@
-﻿@model Web.ViewModels.CallViewModel
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model Web.ViewModels.CallViewModel
 
 @{
-    ViewBag.Title = "index";
+    ViewBag.Title = @Resources.Domain.Calls;
 }
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Index", "Calls", FormMethod.Get))
 {
     @Html.AntiForgeryToken()
 
@@ -15,7 +17,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h2>
-                            <strong>Filter</strong> booking
+                            <strong>@Resources.Common.Search</strong> @Resources.Domain.Calls
                         </h2>
                         <div class="panel-actions">
                             <a href="/#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
@@ -25,48 +27,52 @@
                     <div class="panel-body">
 
                         <div class="form-group">
-                            <label class="col-md-3 control-label" for="text-input">From</label>
+                            <label class="col-md-3 control-label" for="text-input">@Resources.Common.From</label>
                             <div class="col-md-9">
-                                <div class='input-group input-append date' id='datetimepicker'>
+                                <div class='input-group input-append'>
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar">
                                         </span>
                                     </span>
-                                     @Html.EditorFor(model => model.SearchStartDate, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.SearchStartDate, "", new { @class = "text-danger" })
+                                    @Html.EditorFor(model => model.SearchStartDate, new {htmlAttributes = new {@class = "form-control"}})
+
+                                </div>
+                                @Html.ValidationMessageFor(model => model.SearchStartDate, "", new { @class = "text-danger" })
 
 
-                                 </div>
+
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="col-md-3 control-label" for="text-input">To</label>
+                            <label class="col-md-3 control-label" for="text-input">@Resources.Common.To</label>
                             <div class="col-md-9">
-                                <div class='input-group input-append date' id='datetimepicker2'>
+                                <div class='input-group input-append'>
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar">
                                         </span>
                                     </span>
-                                    @Html.EditorFor(model => model.SearchEndDate, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.SearchEndDate, "", new { @class = "text-danger" })
-                        </div>
+                                    @Html.EditorFor(model => model.SearchEndDate, new {htmlAttributes = new {@class = "form-control"}})
+                                </div>
+                                @Html.ValidationMessageFor(model => model.SearchEndDate, "", new { @class = "text-danger" })
+
+
                             </div>
                         </div>
 
 
                         <div class="form-group">
-                            <label class="col-md-3 control-label" for="select">Service</label>
+                            <label class="col-md-3 control-label" for="select">@Resources.Domain.Service</label>
                             <div class="col-md-9">
                             
-                                @Html.DropDownListFor(model => model.ServiceIdNullable, Model.ServiceSelectList, "All Services", new {@class = "form-control"})
+                                @Html.DropDownListFor(model => model.ServiceIdNullable, Model.ServiceSelectList, @Resources.Domain.Services, new {@class = "form-control"})
                                 @Html.ValidationMessageFor(model => model.ServiceIdNullable, "", new {@class = "text-danger"})
 
                             </div>
                         </div>
                     </div>
                     <div class="panel-footer">
-                        <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                        <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> @Resources.Common.Submit</button>
                     </div>
                 </div>
 
@@ -81,7 +87,7 @@
         <div class="panel panel-default">
             <div class="panel-heading" data-original-title>
                 <h2>
-                    <i class="fa fa-cutlery"></i><span class="break"></span>@Resources.Domain.Calls
+                    <i class="fa fa-headphones"></i><span class="break"></span>@Resources.Domain.Calls
                 </h2><div class="panel-actions">
                     <a href="@Url.Action("Create", "Calls", new {})"><i class="fa fa-edit"></i></a>
                 </div>
@@ -92,8 +98,13 @@
 
                 <table class="table table-bordered bootstrap-datatable datatable">
                     <tr>
+
                         <th>
-                            @Html.DisplayNameFor(model => model.Call.Service.ServiceName)
+                            @Html.ActionLink(@Resources.Domain.Created, "Index", new { Page=Model.Page.ToString(),Sort = Model.CreatedSort, Search = Model.CurrentSearch, SearchStartDate = Model.SearchStartDate.ToString(), SearchEndDate = Model.SearchEndDate.ToString(), ServiceIdNullable = Model.ServiceIdNullable.ToString() })
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Call.Duration)
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.Call.Anumber)
@@ -104,45 +115,26 @@
                         <th>
                             @Html.DisplayNameFor(model => model.Call.Dir)
                         </th>
+
                         <th>
-                            @Html.DisplayNameFor(model => model.Call.Duration)
+                            @Html.DisplayNameFor(model => model.Call.User.LastFirstName)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.Call.Created)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Call.AudioFileName)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Call.UserId)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Call.Service)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Call.AudioDir)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Call.Custom1)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Call.Custom2)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Call.Custom3)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Call.Custom4)
+                            @Html.DisplayNameFor(model => model.Call.Service.ServiceName)
                         </th>
                         <th></th>
 
                     </tr>
 
-                    @foreach (var item in Model.Calls)
+                    @foreach (var item in Model.PagedCalls)
                     {
                         <tr>
+
                             <td>
-                                @Html.DisplayFor(modelItem => item.Service.ServiceName)
+                                @Html.DisplayFor(modelItem => item.Created)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Duration)
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Anumber)
@@ -153,37 +145,13 @@
                             <td>
                                 @Html.DisplayFor(modelItem => item.Dir)
                             </td>
+
                             <td>
-                                @Html.DisplayFor(modelItem => item.Duration)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Created)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.AudioFileName)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.UserId)
+                                @Html.DisplayFor(modelItem => item.User.LastFirstName)
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Service.ServiceName)
                             </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.AudioDir)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Custom1)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Custom2)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Custom3)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Custom4)
-                            </td>
-
                             <td>
                                 <div class="delete-section">
 
@@ -197,6 +165,7 @@
                     }
 
                 </table>
+                @Html.PagedListPager(Model.PagedCalls,Page=>Url.Action("Index", new {Page, Sort = Model.CurrentSort, Search = Model.CurrentSearch, SearchStartDate = Model.SearchStartDate.ToString(), SearchEndDate= Model.SearchEndDate.ToString(), ServiceIdNullable=Model.ServiceIdNullable.ToString() }))
             </div>
         </div>
     </div>

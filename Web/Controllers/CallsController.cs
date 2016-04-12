@@ -9,6 +9,8 @@ using System.Web.Mvc;
 using DAL;
 using DAL.Interfaces;
 using Domain;
+using PagedList;
+using PagedList.Mvc;
 using Web.ViewModels;
 
 namespace Web.Controllers
@@ -24,18 +26,62 @@ namespace Web.Controllers
         }
 
         // GET: Calls
-        public ActionResult Index()
+        //[ValidateInput(false)]
+        public ActionResult Index(CallViewModel vm)
         {
-            var vm = new CallViewModel()
+
+
+            vm.CreatedSort = String.IsNullOrEmpty(vm.Sort) ? "created" : string.Empty;
+            if (vm.SearchStartDate.Equals(vm.SearchEndDate))
             {
-                SearchStartDate = DateTime.Today,
-                SearchEndDate = DateTime.Now,
-                Calls = _uow.Calls.All,
-                ServiceSelectList = new SelectList(_uow.Services.All.Select(t => new { t.ServiceId, t.ServiceName }).ToList(), nameof(Service.ServiceId), nameof(Service.ServiceName))
-            };
+
+                vm.SearchStartDate = DateTime.Today;
+                vm.SearchEndDate = DateTime.Today.AddDays(1).AddTicks(-1);
+            }
+
+            if (vm.ServiceIdNullable == null)
+            {
+                vm.Calls =
+                    _uow.Calls.All.Where(
+                        c => c.Created >= vm.SearchStartDate && c.Created <= vm.SearchEndDate);
+
+            }
+            else
+            {
+                vm.Calls =
+                    _uow.Calls.All.Where(
+                        c =>
+                            c.Created >= vm.SearchStartDate && c.Created <= vm.SearchEndDate &&
+                            c.ServiceId == vm.ServiceIdNullable);
+            }
+            // return
+
+            vm.ServiceSelectList =
+                new SelectList(_uow.Services.All.Select(t => new {t.ServiceId, t.ServiceName}).ToList(),
+                    nameof(Service.ServiceId), nameof(Service.ServiceName));
+
+
+
+            switch (vm.Sort)
+            {
+
+                case "created":
+                    vm.Calls = vm.Calls.OrderBy(c => c.Created);
+
+                    break;
+
+                default:
+                    vm.Calls = vm.Calls.OrderByDescending(c => c.Created);
+
+                    break;
+            }
+
+            vm.PagedCalls=vm.Calls.ToPagedList(vm.Page ?? 1, 3);
             return View(vm);
         }
 
+
+        /*
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Index(CallViewModel vm)
@@ -45,21 +91,30 @@ namespace Web.Controllers
                 //DoSomeStuff
                 if (vm.ServiceIdNullable == null)
                 {
+                    vm.Calls =
+                        _uow.Calls.All.Where(
+                            c => c.Created >= vm.SearchStartDate && c.Created <= vm.SearchEndDate)
+                            .OrderBy(x => x.Created).ToPagedList(vm.Page??1,3);
+                    
                 }
                 else
                 {
+                    vm.Calls =
+                       _uow.Calls.All.Where(
+                           c => c.Created >= vm.SearchStartDate && c.Created <= vm.SearchEndDate && c.ServiceId== vm.ServiceIdNullable)
+                           .OrderBy(x => x.Created).ToPagedList(vm.Page ?? 1, 3);
                 }
-                return RedirectToAction("Index", "Home", new { ServiceIdNullable = vm.ServiceIdNullable== null ? "null" : vm.ServiceIdNullable.ToString() });
+               // return RedirectToAction("Index", "Home", new { ServiceIdNullable = vm.ServiceIdNullable== null ? "null" : vm.ServiceIdNullable.ToString() });
             }
 
             //initialize lists again
-            vm.Calls = _uow.Calls.All;
+           // vm.Calls = _uow.Calls.All;
             //initialize list and set back selected value
-            vm.ServiceSelectList = new SelectList(_uow.Services.All.Select(t => new { t.ServiceId, t.ServiceName }).ToList(), nameof(Service.ServiceId), nameof(Service.ServiceName), vm.Service.ServiceId);
+            vm.ServiceSelectList = new SelectList(_uow.Services.All.Select(t => new { t.ServiceId, t.ServiceName }).ToList(), nameof(Service.ServiceId), nameof(Service.ServiceName));
 
             return View(vm);
         }
-
+        */
         // GET: Calls/Details/5
         public ActionResult Details(int? id)
         {

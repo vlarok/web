@@ -3,7 +3,7 @@ tr.deleted  {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAFklEQVQIW2NkwAIYSRL8j64apB1DEAA4bQIEZy/ttQAAAABJRU5ErkJggg==');
     background-repeat: repeat-x;
     background-position: 0 15px;
-   
+
 }
 
 tr.updated {

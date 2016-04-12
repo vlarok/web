@@ -56,8 +56,8 @@ namespace Domain.Identity
        [DataType(DataType.DateTime)]
         public DateTime Created { get; set; }
 
-        public virtual List<Call> Calls { get; set; } = new List<Call>();
-
+     //   public virtual List<Call> Calls { get; set; } = new List<Call>();
+       public virtual List<Call> Calls { get; set; }
     }
 
 
