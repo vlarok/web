@@ -80,6 +80,10 @@ namespace Web.Controllers
             return View(vm);
         }
 
+        public ActionResult Selective()
+        {
+            return View();
+        }
 
         /*
         [HttpPost]

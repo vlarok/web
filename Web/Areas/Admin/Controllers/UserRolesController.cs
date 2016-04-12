@@ -3,7 +3,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
-using Config;
+
 using DAL;
 using DAL.Interfaces;
 using Domain.Identity;
@@ -18,7 +18,7 @@ namespace Web.Areas.Admin.Controllers
     {
         //private readonly DataBaseContext _db = new DataBaseContext();
 
-        private readonly NLog.ILogger _logger;
+        private readonly NLog.ILogger _logger; // = NLog.LogManager.GetCurrentClassLogger();
         private readonly string _instanceId = Guid.NewGuid().ToString();
 
         private readonly IUOW _uow;
@@ -27,24 +27,27 @@ namespace Web.Areas.Admin.Controllers
         private readonly ApplicationUserManager _userManager;
         private readonly IAuthenticationManager _authenticationManager;
 
-        public UserRolesController(IUOW uow, ApplicationRoleManager roleManager, ApplicationSignInManager signInManager,
-            ApplicationUserManager userManager, IAuthenticationManager authenticationManager, ILogger logger)
+        public UserRolesController(ILogger logger, IUOW uow)
         {
             _logger = logger;
             _logger.Debug("InstanceId: " + _instanceId);
 
             _uow = uow;
+            /*
+            , ApplicationRoleManager roleManager, ApplicationSignInManager signInManager,
+            ApplicationUserManager userManager, IAuthenticationManager authenticationManager
             _roleManager = roleManager;
             _signInManager = signInManager;
             _userManager = userManager;
             _authenticationManager = authenticationManager;
+            */
         }
 
         // GET: UserRoles
         public ActionResult Index()
         {
             var userRoles = _uow.UserRolesInt.All.OrderBy(a => a.Role.Name).ToList();
-                //.Include(u => u.Role).Include(u => u.User).OrderBy(a => a.Role.Name);
+            //.Include(u => u.Role).Include(u => u.User).OrderBy(a => a.Role.Name);
             return View(userRoles);
         }
 

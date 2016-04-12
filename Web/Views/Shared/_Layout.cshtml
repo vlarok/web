@@ -65,41 +65,58 @@
                     <div class="nav-sidebar title"><span>@Resources.Common.MainMenu</span></div>
 
                     <ul class="nav nav-sidebar">
+                        <li>
+                            <a class="dropmenu" href="index.html#"><i class="fa fa-headphones"></i><span class="hidden-sm text"> @Resources.Front.RecordedCalls</span> <span class="chevron opened"></span></a>
+                            <ul>
 
-                        <li><a href="@Url.Action("Index","Calls",new {})"><i class="fa fa-headphones"></i><span class="hidden-sm text"> @Resources.Domain.Calls</span></a></li>
-                        <li><a href="@Url.Action("Index","Services",new {})"><i class="fa fa-wrench"></i><span class="hidden-sm text"> @Resources.Domain.Services</span></a></li>
+                                <li><a href="@Url.Action("Index", "Calls", new {})"><i class="fa fa-search"></i><span class="hidden-sm text"> @Resources.Front.RecordedInteractions</span></a></li>
+                                <li><a href="@Url.Action("Selective", "Calls", new {})"><i class="fa  fa-search-plus"></i><span class="hidden-sm text"> @Resources.Front.Selectiverecording</span></a></li>
 
-                         @if (Request.IsAuthenticated)
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropmenu" href="index.html#"><i class="fa  fa-users"></i><span class="hidden-sm text"> @Resources.Front.UsersAgents</span> <span class="chevron opened"></span></a>
+                            <ul>
+                   
+                                <li><a href="@Url.Action("Index", "Users", new {area = "Admin"})"><i class="fa  fa-user"></i><span class="hidden-sm text"> @Resources.Front.UsersAgents</span></a></li>
+                                <li><a href="@Url.Action("Index", "Roles", new {area = "Admin"})"><i class="fa  fa-gears"></i><span class="hidden-sm text"> Roles</span></a></li>
+                                <li><a href="@Url.Action("Index", "UserRoles", new {area = "Admin"})"><i class="fa fa-trophy"></i><span class="hidden-sm text"> Users in Roles</span></a></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a class="dropmenu" href="index.html#"><i class="fa fa-suitcase"></i><span class="hidden-sm text"> @Resources.Front.Management</span> <span class="chevron opened"></span></a>
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Services", new {})"><i class="fa  fa-globe"></i><span class="hidden-sm text"> @Resources.Front.Service1</span></a></li>
+
+                           </ul>
+                        </li>
+
+                    
+                        @if (Request.IsAuthenticated)
                         {
-                            <li><a href="@Url.Action("Index", "Persons", new {})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> @Resources.Domain.Persons</span></a></li>
-                            <li><a href="@Url.Action("Index","Contacts",new {})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> Contacts</span></a></li>
-                        }
+                              }
                         @*<li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>*@
                         @*<li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>*@
-
                         @if (Request.IsAuthenticated && User.IsInRole("Admin"))
                         {
-                            <li class="dropdown">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li>@Html.ActionLink("Contact Types", "Index", new { area = "Admin", controller = "ContactTypes" })</li>
-                                    <li>@Html.ActionLink("Articles", "Index", new { area = "Admin", controller = "Articles" })</li>
-                                    <li class="divider"></li>
-                                    <li>@Html.ActionLink("MultiLangStrings", "Index", new { area = "Admin", controller = "MultiLangStrings" })</li>
-                                    <li>@Html.ActionLink("Translations", "Index", new { area = "Admin", controller = "Translations" })</li>
-                                    <li>@Html.ActionLink("System logs", "Index", new { area = "Admin", controller = "SystemLog" })</li>
+
+                            <li>
+                                <a class="dropmenu" href="index.html#"><i class="fa fa-edit"></i><span class="hidden-sm text"> All</span> <span class="chevron opened"></span></a>
+                                <ul>
+                                    <li><a href="@Url.Action("Index", "ContactTypes", new {area = "Admin"})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> Contact type</span></a></li>
+                                    <li><a href="@Url.Action("Index", "Articles", new {area = "Admin"})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> Articles</span></a></li>
+                                    <li><a href="@Url.Action("Index", "MultiLangStrings", new {area = "Admin"})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> MultiLangStrings</span></a></li>
+                                    <li><a href="@Url.Action("Index", "Translations", new {area = "Admin"})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> Translations</span></a></li>
+                                    <li><a href="@Url.Action("Index", "SystemLog", new {area = "Admin"})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> SystemLog</span></a></li>
+
+                                    <li><a href="@Url.Action("Index", "UserLogins", new {area = "Admin"})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> Logins</span></a></li>
+                                    <li><a href="@Url.Action("Index", "UserClaims", new {area = "Admin"})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> Claims</span></a></li>
+
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Identity <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li>@Html.ActionLink("Users", "Index", new { area = "Admin", controller = "Users" })</li>
-                                    <li>@Html.ActionLink("Roles", "Index", new { area = "Admin", controller = "Roles" })</li>
-                                    <li>@Html.ActionLink("Users in Roles", "Index", new { area = "Admin", controller = "UserRoles" })</li>
-                                    <li>@Html.ActionLink("Logins", "Index", new { area = "Admin", controller = "UserLogins" })</li>
-                                    <li>@Html.ActionLink("Claims", "Index", new { area = "Admin", controller = "UserClaims" })</li>
-                                </ul>
-                            </li>
+
                         }
                     </ul>
 

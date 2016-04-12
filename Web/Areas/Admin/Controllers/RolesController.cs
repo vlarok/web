@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
-using Config;
 using DAL.Interfaces;
 using Domain.Identity;
 using Microsoft.AspNet.Identity;

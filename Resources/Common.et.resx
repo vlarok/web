@@ -165,4 +165,7 @@
   <data name="Language" xml:space="preserve">
     <value>Keeled</value>
   </data>
+  <data name="Create" xml:space="preserve">
+    <value>Loo uus</value>
+  </data>
 </root>

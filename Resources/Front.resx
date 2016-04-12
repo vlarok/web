@@ -1,0 +1,2802 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accesscallreplaylog" xml:space="preserve">
+    <value>Access call replay log</value>
+  </data>
+  <data name="Accessrolelistings" xml:space="preserve">
+    <value>Access role listings</value>
+  </data>
+  <data name="AccesstocallsofassignedAgentGroup" xml:space="preserve">
+    <value>Access to calls of assigned Agent Group</value>
+  </data>
+  <data name="Accesstofolders" xml:space="preserve">
+    <value>Access to folders</value>
+  </data>
+  <data name="AccesstoPQMSapplet" xml:space="preserve">
+    <value>Access to PQMS applet</value>
+  </data>
+  <data name="AccesstoPQMSapplet1" xml:space="preserve">
+    <value>Access to PQMS applet</value>
+  </data>
+  <data name="AccesstoPQMSOnlinecalls" xml:space="preserve">
+    <value>Access to PQMS Online calls</value>
+  </data>
+  <data name="Accesstoteamlistings" xml:space="preserve">
+    <value>Access to team listings</value>
+  </data>
+  <data name="Accessuserlistings" xml:space="preserve">
+    <value>Access user listings</value>
+  </data>
+  <data name="Achivingcomplete" xml:space="preserve">
+    <value>Achiving complete</value>
+  </data>
+  <data name="Achivingstarted" xml:space="preserve">
+    <value>Achiving started</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="Actionreport" xml:space="preserve">
+    <value>Action report</value>
+  </data>
+  <data name="ActionReport1" xml:space="preserve">
+    <value>Action Report</value>
+  </data>
+  <data name="Actionreport2" xml:space="preserve">
+    <value>Action report</value>
+  </data>
+  <data name="ActionReport3" xml:space="preserve">
+    <value>Action Report</value>
+  </data>
+  <data name="ActivationDate" xml:space="preserve">
+    <value>Activation Date</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Active1" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Active2" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Active3" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="ActiveAgentGroupsofselecteduser" xml:space="preserve">
+    <value>Active Agent Groups of selected user</value>
+  </data>
+  <data name="Activerolesofselecteduser" xml:space="preserve">
+    <value>Active roles of selected user</value>
+  </data>
+  <data name="ActiveTemplate" xml:space="preserve">
+    <value>Active Template</value>
+  </data>
+  <data name="Activetemplate1" xml:space="preserve">
+    <value>Active template</value>
+  </data>
+  <data name="ActiveusersassignedtoRole" xml:space="preserve">
+    <value>Active users assigned to Role</value>
+  </data>
+  <data name="AddaEvaluationForm" xml:space="preserve">
+    <value>Add a Evaluation Form</value>
+  </data>
+  <data name="Addanentity" xml:space="preserve">
+    <value>Add an entity</value>
+  </data>
+  <data name="Addanewcriteria" xml:space="preserve">
+    <value>Add a new criteria</value>
+  </data>
+  <data name="Addcall" xml:space="preserve">
+    <value>Add call</value>
+  </data>
+  <data name="Addcalltag" xml:space="preserve">
+    <value>Add call tag</value>
+  </data>
+  <data name="Addedattributes" xml:space="preserve">
+    <value>Added attributes</value>
+  </data>
+  <data name="Addedcalltofolder" xml:space="preserve">
+    <value>Added call to folder</value>
+  </data>
+  <data name="Addedcriterias" xml:space="preserve">
+    <value>Added criterias</value>
+  </data>
+  <data name="Addedrule" xml:space="preserve">
+    <value>Added rule</value>
+  </data>
+  <data name="Addevaluationform" xml:space="preserve">
+    <value>Add evaluation form</value>
+  </data>
+  <data name="Addextensionparameters" xml:space="preserve">
+    <value>Add extension parameters</value>
+  </data>
+  <data name="Addgroup" xml:space="preserve">
+    <value>Add group</value>
+  </data>
+  <data name="Addingnewuser" xml:space="preserve">
+    <value>Adding new user</value>
+  </data>
+  <data name="AddingofnewRole" xml:space="preserve">
+    <value>Adding of new Role</value>
+  </data>
+  <data name="Addnew" xml:space="preserve">
+    <value>Add new</value>
+  </data>
+  <data name="Addnew1" xml:space="preserve">
+    <value>Add new</value>
+  </data>
+  <data name="Addnew2" xml:space="preserve">
+    <value>Add new</value>
+  </data>
+  <data name="Addnewattributes" xml:space="preserve">
+    <value>Add new attributes</value>
+  </data>
+  <data name="Addnewcalloutcome" xml:space="preserve">
+    <value>Add new call outcome</value>
+  </data>
+  <data name="Addnewfolder" xml:space="preserve">
+    <value>Add new folder</value>
+  </data>
+  <data name="Addnewfolder1" xml:space="preserve">
+    <value>Add new folder</value>
+  </data>
+  <data name="Addnewprofile" xml:space="preserve">
+    <value>Add new profile</value>
+  </data>
+  <data name="Addordelaterolesassignedtousers" xml:space="preserve">
+    <value>Add or delate roles assigned to users</value>
+  </data>
+  <data name="Addrole" xml:space="preserve">
+    <value>Add role</value>
+  </data>
+  <data name="Addroles" xml:space="preserve">
+    <value>Add roles</value>
+  </data>
+  <data name="Addselectiverecordingprofile" xml:space="preserve">
+    <value>Add selective recording profile</value>
+  </data>
+  <data name="Addselectiverecordingprofile1" xml:space="preserve">
+    <value>Add selective recording profile</value>
+  </data>
+  <data name="Addservice" xml:space="preserve">
+    <value>Add service</value>
+  </data>
+  <data name="Addteams" xml:space="preserve">
+    <value>Add teams</value>
+  </data>
+  <data name="Adduser" xml:space="preserve">
+    <value>Add user</value>
+  </data>
+  <data name="Addusers" xml:space="preserve">
+    <value>Add users</value>
+  </data>
+  <data name="AdministrateFolders" xml:space="preserve">
+    <value>Administrate Folders</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="Administrator" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="Agent" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent1" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent2" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent3" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent4" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent5" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent6" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent7" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent8" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent9" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agentaddedtext" xml:space="preserve">
+    <value>Agent added text</value>
+  </data>
+  <data name="Agentalreadyinlist" xml:space="preserve">
+    <value>Agent already in list</value>
+  </data>
+  <data name="AgentCCLoginname" xml:space="preserve">
+    <value>Agent CC Login name</value>
+  </data>
+  <data name="AgentGroup" xml:space="preserve">
+    <value>Agent Group</value>
+  </data>
+  <data name="AgentGroup1" xml:space="preserve">
+    <value>Agent Group</value>
+  </data>
+  <data name="AgentGroup2" xml:space="preserve">
+    <value>Agent Group</value>
+  </data>
+  <data name="Agentgroupslinkedtotherole" xml:space="preserve">
+    <value>Agent groups linked to the role</value>
+  </data>
+  <data name="AgentGroupsUserGroups" xml:space="preserve">
+    <value>Agent Groups / User Groups</value>
+  </data>
+  <data name="AgentUserGroups" xml:space="preserve">
+    <value>Agent/User Groups</value>
+  </data>
+  <data name="AgentUserGroups1" xml:space="preserve">
+    <value>Agent/User Groups</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Allagentstogether" xml:space="preserve">
+    <value>All agents together</value>
+  </data>
+  <data name="AllGroups" xml:space="preserve">
+    <value>All Groups</value>
+  </data>
+  <data name="Allusers" xml:space="preserve">
+    <value>All users</value>
+  </data>
+  <data name="Anumber" xml:space="preserve">
+    <value>A number</value>
+  </data>
+  <data name="Appletlogoutok" xml:space="preserve">
+    <value>Applet logout ok</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="Archive" xml:space="preserve">
+    <value>Archive</value>
+  </data>
+  <data name="Archivecalls" xml:space="preserve">
+    <value>Archive calls</value>
+  </data>
+  <data name="Archivecalls1" xml:space="preserve">
+    <value>Archive calls</value>
+  </data>
+  <data name="Archivedirectoryfieldcantbeempty" xml:space="preserve">
+    <value>Archive directory field can't be empty</value>
+  </data>
+  <data name="Archiveerror" xml:space="preserve">
+    <value>Archive error</value>
+  </data>
+  <data name="Archiveevalutated" xml:space="preserve">
+    <value>Archive evalutated</value>
+  </data>
+  <data name="Archiveeventslist" xml:space="preserve">
+    <value>Archive events list</value>
+  </data>
+  <data name="Archivefinished" xml:space="preserve">
+    <value>Archive finished</value>
+  </data>
+  <data name="Archiveid" xml:space="preserve">
+    <value>Archive id</value>
+  </data>
+  <data name="Archivemedia" xml:space="preserve">
+    <value>Archive media</value>
+  </data>
+  <data name="Archiving" xml:space="preserve">
+    <value>Archiving</value>
+  </data>
+  <data name="Archivingright" xml:space="preserve">
+    <value>Archiving right</value>
+  </data>
+  <data name="Archivingstatus" xml:space="preserve">
+    <value>Archiving status</value>
+  </data>
+  <data name="Areyousure" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+  <data name="AreYousuretocontinuetolistenthatcall" xml:space="preserve">
+    <value>Are You sure to continue to listen that call?</value>
+  </data>
+  <data name="AreYousuretodeletethisextionsionparameters" xml:space="preserve">
+    <value>Are You sure to delete this extionsion parameters?</value>
+  </data>
+  <data name="AreYousuretoterminatethiscallresult" xml:space="preserve">
+    <value>Are You sure to terminate this call result</value>
+  </data>
+  <data name="AreYousureYouwanttochangeuserclass" xml:space="preserve">
+    <value>Are You sure You want to change user class?</value>
+  </data>
+  <data name="AreYousureYouwanttodeletethisfolder" xml:space="preserve">
+    <value>Are You sure You want to delete this folder?</value>
+  </data>
+  <data name="AreYousureYouwanttodeletethisfolderobject" xml:space="preserve">
+    <value>Are You sure You want to delete this folder object?</value>
+  </data>
+  <data name="ArhiveID" xml:space="preserve">
+    <value>Arhive ID</value>
+  </data>
+  <data name="AssigningAgentGrouptotheRole" xml:space="preserve">
+    <value>Assigning Agent Group to the Role</value>
+  </data>
+  <data name="AssigningpersontotheAgentGroup" xml:space="preserve">
+    <value>Assigning person to the Agent Group.</value>
+  </data>
+  <data name="Assignprivilegestoroles" xml:space="preserve">
+    <value>Assign privileges to roles</value>
+  </data>
+  <data name="Assignrolestousers" xml:space="preserve">
+    <value>Assign roles to users</value>
+  </data>
+  <data name="Atleastoneattributevaluemustnotbeempty" xml:space="preserve">
+    <value>At least one attribute value must not be empty</value>
+  </data>
+  <data name="Attributesremoved" xml:space="preserve">
+    <value>Attributes removed</value>
+  </data>
+  <data name="Audiofilescalls" xml:space="preserve">
+    <value>Audio files/calls</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="AutoselectforEvaluation" xml:space="preserve">
+    <value>Auto-select for Evaluation</value>
+  </data>
+  <data name="AvailableLicences" xml:space="preserve">
+    <value>Available Licences </value>
+  </data>
+  <data name="Availableroles" xml:space="preserve">
+    <value>Available roles</value>
+  </data>
+  <data name="Averageofscoreandrating" xml:space="preserve">
+    <value>Average of score and rating</value>
+  </data>
+  <data name="Averagepoints" xml:space="preserve">
+    <value>Average points</value>
+  </data>
+  <data name="Averagescore" xml:space="preserve">
+    <value>Average score</value>
+  </data>
+  <data name="Averagescore1" xml:space="preserve">
+    <value>Average score %</value>
+  </data>
+  <data name="Averagescore2" xml:space="preserve">
+    <value>Average score %</value>
+  </data>
+  <data name="Avgcalldurmin" xml:space="preserve">
+    <value>Avg. call dur (min)</value>
+  </data>
+  <data name="Backtofolders" xml:space="preserve">
+    <value>Back to folders</value>
+  </data>
+  <data name="BestregardsPQMSmailsenderservice" xml:space="preserve">
+    <value>Best regards,PQMS mail sender service</value>
+  </data>
+  <data name="Bnumber" xml:space="preserve">
+    <value>B number</value>
+  </data>
+  <data name="Bookmarkedcalls" xml:space="preserve">
+    <value>Bookmarked calls</value>
+  </data>
+  <data name="Byduration" xml:space="preserve">
+    <value>By duration</value>
+  </data>
+  <data name="Byuser" xml:space="preserve">
+    <value>By user</value>
+  </data>
+  <data name="Call" xml:space="preserve">
+    <value>Call</value>
+  </data>
+  <data name="callagentidchangedok" xml:space="preserve">
+    <value>call agent id changed ok</value>
+  </data>
+  <data name="CallAssesmantofassignedAgentGroups" xml:space="preserve">
+    <value>Call Assesmant of assigned Agent Groups </value>
+  </data>
+  <data name="CallAssesment" xml:space="preserve">
+    <value>Call Assesment</value>
+  </data>
+  <data name="Callattribute" xml:space="preserve">
+    <value>Call attribute</value>
+  </data>
+  <data name="Callcount" xml:space="preserve">
+    <value>Call count</value>
+  </data>
+  <data name="Calldataupdated" xml:space="preserve">
+    <value>Call data updated!!!</value>
+  </data>
+  <data name="Calldatawasnotupdated" xml:space="preserve">
+    <value>Call data was not updated!</value>
+  </data>
+  <data name="Calldate" xml:space="preserve">
+    <value>Call date</value>
+  </data>
+  <data name="Calldateid" xml:space="preserve">
+    <value>Call date, id</value>
+  </data>
+  <data name="Calldateid1" xml:space="preserve">
+    <value>Call date (id)</value>
+  </data>
+  <data name="Calldetails" xml:space="preserve">
+    <value>Call details</value>
+  </data>
+  <data name="Calldownload" xml:space="preserve">
+    <value>Call download</value>
+  </data>
+  <data name="Callduretion" xml:space="preserve">
+    <value>Call duretion</value>
+  </data>
+  <data name="CalledParty" xml:space="preserve">
+    <value>Called Party</value>
+  </data>
+  <data name="CalledParty1" xml:space="preserve">
+    <value>Called Party</value>
+  </data>
+  <data name="Callended" xml:space="preserve">
+    <value>Call ended</value>
+  </data>
+  <data name="CallerID" xml:space="preserve">
+    <value>Caller ID</value>
+  </data>
+  <data name="Callevaluated" xml:space="preserve">
+    <value>Call evaluated</value>
+  </data>
+  <data name="CallevaluationnoticefromPQMS" xml:space="preserve">
+    <value>Call evaluation notice from PQMS</value>
+  </data>
+  <data name="Callfileismissing" xml:space="preserve">
+    <value>Call file is missing</value>
+  </data>
+  <data name="Callfileismissing1" xml:space="preserve">
+    <value>Call file is missing!</value>
+  </data>
+  <data name="CallingParty" xml:space="preserve">
+    <value>Calling Party</value>
+  </data>
+  <data name="CallingParty1" xml:space="preserve">
+    <value>Calling Party</value>
+  </data>
+  <data name="Calllisten" xml:space="preserve">
+    <value>Call listen</value>
+  </data>
+  <data name="Calllisteningreports" xml:space="preserve">
+    <value>Call listening reports</value>
+  </data>
+  <data name="callmaxscore" xml:space="preserve">
+    <value>call, max score</value>
+  </data>
+  <data name="callmaxscore1" xml:space="preserve">
+    <value>call, max score</value>
+  </data>
+  <data name="Callmustmatchwithallrules" xml:space="preserve">
+    <value>Call must match with all rules</value>
+  </data>
+  <data name="Callmustmatchwithanyrule" xml:space="preserve">
+    <value>Call must match with any rule</value>
+  </data>
+  <data name="Calloutcomeupdated" xml:space="preserve">
+    <value>Call outcome updated</value>
+  </data>
+  <data name="Callqualityassessment" xml:space="preserve">
+    <value>Call quality assessment</value>
+  </data>
+  <data name="CallReplayLog" xml:space="preserve">
+    <value>Call Replay Log</value>
+  </data>
+  <data name="CallReplayLog1" xml:space="preserve">
+    <value>Call Replay Log</value>
+  </data>
+  <data name="CallResult" xml:space="preserve">
+    <value>Call Result</value>
+  </data>
+  <data name="Callresult1" xml:space="preserve">
+    <value>Call result</value>
+  </data>
+  <data name="Callresult2" xml:space="preserve">
+    <value>Call result</value>
+  </data>
+  <data name="Callresultadded" xml:space="preserve">
+    <value>Call result added</value>
+  </data>
+  <data name="Callresultchanged" xml:space="preserve">
+    <value>Call result changed</value>
+  </data>
+  <data name="CallResults" xml:space="preserve">
+    <value>Call Results</value>
+  </data>
+  <data name="Callresultterminated" xml:space="preserve">
+    <value>Call result terminated</value>
+  </data>
+  <data name="Callscopy" xml:space="preserve">
+    <value>Calls copy</value>
+  </data>
+  <data name="Callsevaluationreport" xml:space="preserve">
+    <value>Calls evaluation report</value>
+  </data>
+  <data name="Callsforperiod" xml:space="preserve">
+    <value>Calls for period</value>
+  </data>
+  <data name="Callssummaryreport" xml:space="preserve">
+    <value>Calls summary report</value>
+  </data>
+  <data name="Callstarttime" xml:space="preserve">
+    <value>Call start time</value>
+  </data>
+  <data name="Callstarttime1" xml:space="preserve">
+    <value>Call start time</value>
+  </data>
+  <data name="CallStartTimeto" xml:space="preserve">
+    <value>Call Start Time to:</value>
+  </data>
+  <data name="Calltag" xml:space="preserve">
+    <value>Call tag</value>
+  </data>
+  <data name="Calltags" xml:space="preserve">
+    <value>Call tags</value>
+  </data>
+  <data name="Calltime" xml:space="preserve">
+    <value>Call time</value>
+  </data>
+  <data name="CallType" xml:space="preserve">
+    <value>Call Type</value>
+  </data>
+  <data name="Calltype1" xml:space="preserve">
+    <value>Call type</value>
+  </data>
+  <data name="Callupdated" xml:space="preserve">
+    <value>Call updated</value>
+  </data>
+  <data name="Callwasnotfound" xml:space="preserve">
+    <value>Call was not found</value>
+  </data>
+  <data name="CanbereplayedfromArchive" xml:space="preserve">
+    <value>Can be replayed from Archive</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Cancel1" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CannotcompareNewobjectversionnotfound" xml:space="preserve">
+    <value>Cannot compare! New object version not found.</value>
+  </data>
+  <data name="Cantmakethatfolder" xml:space="preserve">
+    <value>Can't make that folder</value>
+  </data>
+  <data name="CCLoginname" xml:space="preserve">
+    <value>CC Login name</value>
+  </data>
+  <data name="CD" xml:space="preserve">
+    <value>CD</value>
+  </data>
+  <data name="Changecallagent" xml:space="preserve">
+    <value>Change call agent</value>
+  </data>
+  <data name="Changecallattributes" xml:space="preserve">
+    <value>Change call attributes</value>
+  </data>
+  <data name="Changecalloutcome" xml:space="preserve">
+    <value>Change call outcome</value>
+  </data>
+  <data name="Changecalltag" xml:space="preserve">
+    <value>Change call tag</value>
+  </data>
+  <data name="Changedattributes" xml:space="preserve">
+    <value>Changed attributes</value>
+  </data>
+  <data name="Changedby" xml:space="preserve">
+    <value>Changed by</value>
+  </data>
+  <data name="Changedcriterias" xml:space="preserve">
+    <value>Changed criterias</value>
+  </data>
+  <data name="Changeelsespassword" xml:space="preserve">
+    <value>Change else`s password</value>
+  </data>
+  <data name="Changeevaluationform" xml:space="preserve">
+    <value>Change evaluation form</value>
+  </data>
+  <data name="Changegroup" xml:space="preserve">
+    <value>Change group</value>
+  </data>
+  <data name="Changeingstatuspleasewait" xml:space="preserve">
+    <value>Changeing status, please wait...</value>
+  </data>
+  <data name="Changeownpassword" xml:space="preserve">
+    <value>Change own password</value>
+  </data>
+  <data name="Changepassword" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="Changepassword1" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="Changerole" xml:space="preserve">
+    <value>Change role</value>
+  </data>
+  <data name="Changeselectiverecordingprofile" xml:space="preserve">
+    <value>Change selective recording profile</value>
+  </data>
+  <data name="Changeservice" xml:space="preserve">
+    <value>Change service</value>
+  </data>
+  <data name="Changeservice1" xml:space="preserve">
+    <value>Change service</value>
+  </data>
+  <data name="Changessavedsucessfully" xml:space="preserve">
+    <value>Changes saved sucessfully</value>
+  </data>
+  <data name="Changestatus" xml:space="preserve">
+    <value>Change status</value>
+  </data>
+  <data name="Changestatusfailed" xml:space="preserve">
+    <value>Change status failed</value>
+  </data>
+  <data name="Changeuser" xml:space="preserve">
+    <value>Change user</value>
+  </data>
+  <data name="Changingofparameters" xml:space="preserve">
+    <value>Changing of parameters</value>
+  </data>
+  <data name="Channel" xml:space="preserve">
+    <value>Channel</value>
+  </data>
+  <data name="Channel1" xml:space="preserve">
+    <value>Channel</value>
+  </data>
+  <data name="Channelnumber" xml:space="preserve">
+    <value>Channel number</value>
+  </data>
+  <data name="Chooseagent" xml:space="preserve">
+    <value>Choose agent</value>
+  </data>
+  <data name="Choosecalloutcome" xml:space="preserve">
+    <value>Choose call outcome</value>
+  </data>
+  <data name="Choosentypeofrulecannotbediscarding" xml:space="preserve">
+    <value>Choosen type of rule cannot be discarding!</value>
+  </data>
+  <data name="Chooseonlylastevaluatedresult" xml:space="preserve">
+    <value>Choose only last evaluated result</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="ClearFields" xml:space="preserve">
+    <value>Clear Fields</value>
+  </data>
+  <data name="Clientnum" xml:space="preserve">
+    <value>Client num.</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="comment1" xml:space="preserve">
+    <value>comment</value>
+  </data>
+  <data name="Comment2" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="Comment3" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="Comment4" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="Comment5" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="Comment6" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="Comment7" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="Commentary" xml:space="preserve">
+    <value>Commentary</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="Comments1" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="Commonscore" xml:space="preserve">
+    <value>Common score %</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="Connected" xml:space="preserve">
+    <value>Connected</value>
+  </data>
+  <data name="ConnectedOK" xml:space="preserve">
+    <value>Connected OK</value>
+  </data>
+  <data name="Connectedwaitingforcalls" xml:space="preserve">
+    <value>Connected waiting for calls..</value>
+  </data>
+  <data name="Connectingserverfailingpleasetrytorelogin" xml:space="preserve">
+    <value>Connecting server failing, please try to relogin..</value>
+  </data>
+  <data name="Connectionfailedwillretryinsecseconds" xml:space="preserve">
+    <value>Connection failed, will retry in [sec] seconds..</value>
+  </data>
+  <data name="Connectiontoserverfailed" xml:space="preserve">
+    <value>Connection to server failed</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="Copycallfiles" xml:space="preserve">
+    <value>Copy call files</value>
+  </data>
+  <data name="Copycomplete" xml:space="preserve">
+    <value>Copy complete</value>
+  </data>
+  <data name="Copyerror" xml:space="preserve">
+    <value>Copy error</value>
+  </data>
+  <data name="Copyprogress" xml:space="preserve">
+    <value>Copy progress</value>
+  </data>
+  <data name="Copystarted" xml:space="preserve">
+    <value>Copy started</value>
+  </data>
+  <data name="Copystatus" xml:space="preserve">
+    <value>Copy status</value>
+  </data>
+  <data name="Couldnotaddcallfile" xml:space="preserve">
+    <value>Could not add call file!</value>
+  </data>
+  <data name="Couldnotfindoldevaluationformforcomparison" xml:space="preserve">
+    <value>Could not find old evaluation form for comparison!</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="Countingbasedrecording" xml:space="preserve">
+    <value>Counting based recording</value>
+  </data>
+  <data name="Countofevaluations" xml:space="preserve">
+    <value>Count of evaluations</value>
+  </data>
+  <data name="Createactionreport" xml:space="preserve">
+    <value>Create action report</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="Createdby" xml:space="preserve">
+    <value>Created by</value>
+  </data>
+  <data name="Createdmediafolders" xml:space="preserve">
+    <value>Created media folders</value>
+  </data>
+  <data name="CreateFolders" xml:space="preserve">
+    <value>Create Folders</value>
+  </data>
+  <data name="Createnewevaluation" xml:space="preserve">
+    <value>Create new evaluation</value>
+  </data>
+  <data name="Createreport" xml:space="preserve">
+    <value>Create report</value>
+  </data>
+  <data name="Criterianame" xml:space="preserve">
+    <value>Criteria name</value>
+  </data>
+  <data name="criteriarowdeleted" xml:space="preserve">
+    <value>criteria row deleted</value>
+  </data>
+  <data name="CriteriaType" xml:space="preserve">
+    <value>Criteria Type</value>
+  </data>
+  <data name="DataCentre" xml:space="preserve">
+    <value>Data-Centre</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Date1" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Date2" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Date3" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Date4" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Datefrom" xml:space="preserve">
+    <value>Date from</value>
+  </data>
+  <data name="DateofArhivation" xml:space="preserve">
+    <value>Date of Arhivation</value>
+  </data>
+  <data name="Dateoferasing" xml:space="preserve">
+    <value>Date of erasing</value>
+  </data>
+  <data name="Dateshallbeinformatddmmyyyy" xml:space="preserve">
+    <value>Date shall be in format dd.mm.yyyy</value>
+  </data>
+  <data name="Dateto" xml:space="preserve">
+    <value>Date to</value>
+  </data>
+  <data name="Dateto1" xml:space="preserve">
+    <value>Date to</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="Day1" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="ddmmyyyy" xml:space="preserve">
+    <value>(dd.mm.yyyy)</value>
+  </data>
+  <data name="Dearrecipient" xml:space="preserve">
+    <value>Dear recipient,</value>
+  </data>
+  <data name="Defaultform" xml:space="preserve">
+    <value>Default form</value>
+  </data>
+  <data name="Defaultpath" xml:space="preserve">
+    <value>Default path</value>
+  </data>
+  <data name="Defaultrole" xml:space="preserve">
+    <value>Default role</value>
+  </data>
+  <data name="DefaultTemplate" xml:space="preserve">
+    <value>Default Template</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Delete1" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Delete2" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Delete3" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Delete4" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Delete5" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>Deleted</value>
+  </data>
+  <data name="Deletescallswitchmatchwithrules" xml:space="preserve">
+    <value>Deletes calls witch match with rules!</value>
+  </data>
+  <data name="Deletingfolderfailed" xml:space="preserve">
+    <value>Deleting folder failed!</value>
+  </data>
+  <data name="DescribingEvaluationForms" xml:space="preserve">
+    <value>Describing Evaluation Forms</value>
+  </data>
+  <data name="Destinationfolder" xml:space="preserve">
+    <value>Destination folder</value>
+  </data>
+  <data name="DetailedSearch" xml:space="preserve">
+    <value>Detailed Search</value>
+  </data>
+  <data name="DetailedviewofRoles" xml:space="preserve">
+    <value>Detailed view of Roles</value>
+  </data>
+  <data name="Detsember" xml:space="preserve">
+    <value>Detsember</value>
+  </data>
+  <data name="Dialednum" xml:space="preserve">
+    <value>Dialed num.</value>
+  </data>
+  <data name="Dialednumber" xml:space="preserve">
+    <value>Dialed number</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="Discard" xml:space="preserve">
+    <value>Discard</value>
+  </data>
+  <data name="Disonnected" xml:space="preserve">
+    <value>Disonnected</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="Downloadcall" xml:space="preserve">
+    <value>Download call</value>
+  </data>
+  <data name="DoyouwantchangeuserAgentGroupparameters" xml:space="preserve">
+    <value>Do you want change user Agent Group parameters</value>
+  </data>
+  <data name="DoYouwanttoterminateprevioususeraccount" xml:space="preserve">
+    <value>Do You want to terminate previous user account?</value>
+  </data>
+  <data name="Dublicatevaluesconflictwithvalueswithexistingservices" xml:space="preserve">
+    <value>Dublicate values conflict with values with existing services</value>
+  </data>
+  <data name="Duplicateentryforthisagentinthisprofile" xml:space="preserve">
+    <value>Duplicate entry for this agent in this profile</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Duration1" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Duration2" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Duration3" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="durationto" xml:space="preserve">
+    <value>duration to</value>
+  </data>
+  <data name="DVD" xml:space="preserve">
+    <value>DVD</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Editentity" xml:space="preserve">
+    <value>Edit entity</value>
+  </data>
+  <data name="Editextensionparameters" xml:space="preserve">
+    <value>Edit extension parameters</value>
+  </data>
+  <data name="Effect" xml:space="preserve">
+    <value>Effect</value>
+  </data>
+  <data name="Emailaddressisnotcorrect" xml:space="preserve">
+    <value>E-mail address is not correct!</value>
+  </data>
+  <data name="EMC" xml:space="preserve">
+    <value>EMC</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="Enddate" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="Enddate1" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="EndPeriod" xml:space="preserve">
+    <value>End Period</value>
+  </data>
+  <data name="Endtime" xml:space="preserve">
+    <value>End time</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Error1" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Errorcallfilewasnotfound" xml:space="preserve">
+    <value>Error call file was not found.</value>
+  </data>
+  <data name="Errorcallwasnotselectedorfound" xml:space="preserve">
+    <value>Error call was not selected or found.</value>
+  </data>
+  <data name="Errorcompletedevalutionforthiscallalreadyexists" xml:space="preserve">
+    <value>Error - completed evalution for this call already exists</value>
+  </data>
+  <data name="Errorindateortimeformat" xml:space="preserve">
+    <value>Error in date {0} or time {1} format.</value>
+  </data>
+  <data name="ErrorinLoggonprocedurePleasetryagain" xml:space="preserve">
+    <value>Error in Logg-onprocedure. Please try again.</value>
+  </data>
+  <data name="ErrorinLoggonprocedureWrongorincorrectPassword" xml:space="preserve">
+    <value>Error in Logg-onprocedure. Wrong or incorrect Password.</value>
+  </data>
+  <data name="ErrorinLoggonprocedureWrongorincorrectUsername" xml:space="preserve">
+    <value>Error in Logg-onprocedure. Wrong or incorrect Username.</value>
+  </data>
+  <data name="Errorinvalidvalue" xml:space="preserve">
+    <value>Error- invalid value</value>
+  </data>
+  <data name="ErrorNoformdescriptionfound" xml:space="preserve">
+    <value>Error - No form description found</value>
+  </data>
+  <data name="ErrorNosuchcallwasfound" xml:space="preserve">
+    <value>Error - No such call was found</value>
+  </data>
+  <data name="Erroronearchivingprocessalreadyrunningmultipleachriveprocesscannotrunconcurrently" xml:space="preserve">
+    <value>Error, one archiving process already running, multiple achrive process can not run concurrently.</value>
+  </data>
+  <data name="Erroronselectiverecordingrules" xml:space="preserve">
+    <value>Error on selective recording rules.</value>
+  </data>
+  <data name="Errortoolongvariable" xml:space="preserve">
+    <value>Error - too long variable</value>
+  </data>
+  <data name="Errorvariabletoobig" xml:space="preserve">
+    <value>Error- variable too big</value>
+  </data>
+  <data name="Erroryouhavealreadyloggedinwithapplet" xml:space="preserve">
+    <value>Error you have already logged in with applet</value>
+  </data>
+  <data name="Estonia" xml:space="preserve">
+    <value>Estonia</value>
+  </data>
+  <data name="EvaluateaCall" xml:space="preserve">
+    <value>Evaluate a Call</value>
+  </data>
+  <data name="Evaluateautoselectedcallsonly" xml:space="preserve">
+    <value>Evaluate autoselected calls only</value>
+  </data>
+  <data name="Evaluatecalls" xml:space="preserve">
+    <value>Evaluate calls</value>
+  </data>
+  <data name="evaluated" xml:space="preserve">
+    <value>evaluated</value>
+  </data>
+  <data name="Evaluated1" xml:space="preserve">
+    <value>Evaluated</value>
+  </data>
+  <data name="Evaluatedby" xml:space="preserve">
+    <value>Evaluated by</value>
+  </data>
+  <data name="Evaluatedby1" xml:space="preserve">
+    <value>Evaluated by</value>
+  </data>
+  <data name="Evaluateteamscalls" xml:space="preserve">
+    <value>Evaluate teams calls</value>
+  </data>
+  <data name="Evaluation" xml:space="preserve">
+    <value>Evaluation</value>
+  </data>
+  <data name="Evaluationcompleted" xml:space="preserve">
+    <value>Evaluation completed</value>
+  </data>
+  <data name="Evaluationdate" xml:space="preserve">
+    <value>Evaluation date</value>
+  </data>
+  <data name="Evaluationdateid" xml:space="preserve">
+    <value>Evaluation date(id)</value>
+  </data>
+  <data name="EvaluationdetailsExcel" xml:space="preserve">
+    <value>Evaluation details(Excel)</value>
+  </data>
+  <data name="Evaluationform" xml:space="preserve">
+    <value>Evaluation form</value>
+  </data>
+  <data name="EvaluationForms" xml:space="preserve">
+    <value>Evaluation Forms</value>
+  </data>
+  <data name="Evaluationformversion" xml:space="preserve">
+    <value>Evaluation form version</value>
+  </data>
+  <data name="Evaluationinscorebycriterias" xml:space="preserve">
+    <value>Evaluation in score  % by criterias</value>
+  </data>
+  <data name="Evaluationlinksuccessfullysent" xml:space="preserve">
+    <value>Evaluation link successfully sent!</value>
+  </data>
+  <data name="Evaluationno" xml:space="preserve">
+    <value>Evaluation no.</value>
+  </data>
+  <data name="Evaluationreport" xml:space="preserve">
+    <value>Evaluation report</value>
+  </data>
+  <data name="Evaluationreporting" xml:space="preserve">
+    <value>Evaluation reporting</value>
+  </data>
+  <data name="EvaluationReports" xml:space="preserve">
+    <value>Evaluation Reports</value>
+  </data>
+  <data name="EvaluationReports1" xml:space="preserve">
+    <value>Evaluation Reports</value>
+  </data>
+  <data name="Evaluationsaved" xml:space="preserve">
+    <value>Evaluation saved</value>
+  </data>
+  <data name="Evaluationsbycriteriasreport" xml:space="preserve">
+    <value>Evaluations by criterias report</value>
+  </data>
+  <data name="EvaluationTemplate" xml:space="preserve">
+    <value>Evaluation Template</value>
+  </data>
+  <data name="EvaluationTemplate1" xml:space="preserve">
+    <value>Evaluation Template</value>
+  </data>
+  <data name="EvaluationTemplates" xml:space="preserve">
+    <value>Evaluation Templates</value>
+  </data>
+  <data name="EvaluationweightedExcel" xml:space="preserve">
+    <value>Evaluation weighted (Excel)</value>
+  </data>
+  <data name="Existingevaluationfforthiscall" xml:space="preserve">
+    <value>Existing evaluationf for this call</value>
+  </data>
+  <data name="Expires" xml:space="preserve">
+    <value>Expires</value>
+  </data>
+  <data name="Exportcalls" xml:space="preserve">
+    <value>Export calls</value>
+  </data>
+  <data name="ExportdataintoMSExcel" xml:space="preserve">
+    <value>Export data into MS Excel</value>
+  </data>
+  <data name="Extension" xml:space="preserve">
+    <value>Extension</value>
+  </data>
+  <data name="Extension1" xml:space="preserve">
+    <value>Extension</value>
+  </data>
+  <data name="Extension2" xml:space="preserve">
+    <value>Extension</value>
+  </data>
+  <data name="Extensionalreadyinlist" xml:space="preserve">
+    <value>Extension already in list</value>
+  </data>
+  <data name="Extensionlicencesinuse" xml:space="preserve">
+    <value>Extension licences in use</value>
+  </data>
+  <data name="Extensionparametersadded" xml:space="preserve">
+    <value>Extension parameters added</value>
+  </data>
+  <data name="Extensionparametersdeleted" xml:space="preserve">
+    <value>Extension parameters deleted</value>
+  </data>
+  <data name="Extensionparametersupdated" xml:space="preserve">
+    <value>Extension parameters updated</value>
+  </data>
+  <data name="Extensionreport" xml:space="preserve">
+    <value>Extension report</value>
+  </data>
+  <data name="extensions" xml:space="preserve">
+    <value> extensions.</value>
+  </data>
+  <data name="Failedtosendstop" xml:space="preserve">
+    <value>Failed to send stop!</value>
+  </data>
+  <data name="Failedtostartrecording" xml:space="preserve">
+    <value>Failed to start recording!</value>
+  </data>
+  <data name="Failformat" xml:space="preserve">
+    <value>Fail format</value>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>Failure</value>
+  </data>
+  <data name="failure1" xml:space="preserve">
+    <value>failure</value>
+  </data>
+  <data name="Failure2" xml:space="preserve">
+    <value>Failure</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>February</value>
+  </data>
+  <data name="fieldcannotbenull" xml:space="preserve">
+    <value>field can not be null</value>
+  </data>
+  <data name="fieldmayincludeonlydigits" xml:space="preserve">
+    <value> field may include only digits</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="Filescopied" xml:space="preserve">
+    <value>Files copied</value>
+  </data>
+  <data name="Filesfailednotfound" xml:space="preserve">
+    <value>Files failed (not found)</value>
+  </data>
+  <data name="Filesnotfound" xml:space="preserve">
+    <value>Files not found</value>
+  </data>
+  <data name="Filesnotfound1" xml:space="preserve">
+    <value>Files not found</value>
+  </data>
+  <data name="Folderaccess" xml:space="preserve">
+    <value>Folder access</value>
+  </data>
+  <data name="Foldercontents" xml:space="preserve">
+    <value>Folder contents</value>
+  </data>
+  <data name="Folderdeleted" xml:space="preserve">
+    <value>Folder deleted</value>
+  </data>
+  <data name="Folderfileuploaded" xml:space="preserve">
+    <value>Folder file uploaded.</value>
+  </data>
+  <data name="Folderid" xml:space="preserve">
+    <value>Folder id</value>
+  </data>
+  <data name="Folderlist" xml:space="preserve">
+    <value>Folder list</value>
+  </data>
+  <data name="Foldermediafile" xml:space="preserve">
+    <value>Folder media file</value>
+  </data>
+  <data name="Foldername" xml:space="preserve">
+    <value>Folder name</value>
+  </data>
+  <data name="Folderobjectdeleted" xml:space="preserve">
+    <value>Folder object deleted</value>
+  </data>
+  <data name="Folders" xml:space="preserve">
+    <value>Folders</value>
+  </data>
+  <data name="Foldersaved" xml:space="preserve">
+    <value>Folder saved.</value>
+  </data>
+  <data name="Folderslist" xml:space="preserve">
+    <value>Folders list</value>
+  </data>
+  <data name="Forename" xml:space="preserve">
+    <value>Forename</value>
+  </data>
+  <data name="Formaverages" xml:space="preserve">
+    <value>Form averages</value>
+  </data>
+  <data name="Formdataisinvalid" xml:space="preserve">
+    <value>Form data is invalid</value>
+  </data>
+  <data name="Formdeleted" xml:space="preserve">
+    <value>Form deleted</value>
+  </data>
+  <data name="Formhaserrors" xml:space="preserve">
+    <value>Form has {0} errors</value>
+  </data>
+  <data name="Formsaved" xml:space="preserve">
+    <value>Form saved</value>
+  </data>
+  <data name="Found" xml:space="preserve">
+    <value>Found</value>
+  </data>
+  <data name="Foundfolderstotalshowingto" xml:space="preserve">
+    <value>Found {0} folders total, showing {1} to {2}</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="from" xml:space="preserve">
+    <value>from</value>
+  </data>
+  <data name="FromIP" xml:space="preserve">
+    <value>From IP</value>
+  </data>
+  <data name="Generalevaluationsreport" xml:space="preserve">
+    <value>General evaluations report</value>
+  </data>
+  <data name="Generatereport" xml:space="preserve">
+    <value>Generate report</value>
+  </data>
+  <data name="Generatesummaryreports" xml:space="preserve">
+    <value>Generate summary reports</value>
+  </data>
+  <data name="Genteratereports" xml:space="preserve">
+    <value>Genterate reports</value>
+  </data>
+  <data name="Groupbyservices" xml:space="preserve">
+    <value>Group by services</value>
+  </data>
+  <data name="Groupheader" xml:space="preserve">
+    <value>Group header</value>
+  </data>
+  <data name="gtgt" xml:space="preserve">
+    <value>&amp;gt;&amp;gt;</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="HostnameIP" xml:space="preserve">
+    <value>Hostname/IP</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="ID1" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Id2" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="in" xml:space="preserve">
+    <value>in</value>
+  </data>
+  <data name="InBound" xml:space="preserve">
+    <value>InBound</value>
+  </data>
+  <data name="Inboundno" xml:space="preserve">
+    <value>In bound no</value>
+  </data>
+  <data name="Inboundno1" xml:space="preserve">
+    <value>Inbound no</value>
+  </data>
+  <data name="Inclold" xml:space="preserve">
+    <value>Incl. old</value>
+  </data>
+  <data name="Includefollowingattributesinfilename" xml:space="preserve">
+    <value>Include following attributes in file name</value>
+  </data>
+  <data name="Includevisualcharts" xml:space="preserve">
+    <value>Include visual charts</value>
+  </data>
+  <data name="Incorrectinputdata" xml:space="preserve">
+    <value>Incorrect input data</value>
+  </data>
+  <data name="Inout" xml:space="preserve">
+    <value>In/out</value>
+  </data>
+  <data name="InOutCall" xml:space="preserve">
+    <value>In/Out Call</value>
+  </data>
+  <data name="InOutCall1" xml:space="preserve">
+    <value>In/Out Call</value>
+  </data>
+  <data name="Insert" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="InsertnewRole" xml:space="preserve">
+    <value>Insert new Role</value>
+  </data>
+  <data name="InsertnewUser" xml:space="preserve">
+    <value>Insert new User</value>
+  </data>
+  <data name="Invalidcallid" xml:space="preserve">
+    <value>Invalid call id</value>
+  </data>
+  <data name="Invaliddate" xml:space="preserve">
+    <value>Invalid date</value>
+  </data>
+  <data name="Invalidnewagentid" xml:space="preserve">
+    <value>Invalid new agent id</value>
+  </data>
+  <data name="Invalidpassword" xml:space="preserve">
+    <value>Invalid password</value>
+  </data>
+  <data name="Invalidusernameorpassword" xml:space="preserve">
+    <value>Invalid username or password</value>
+  </data>
+  <data name="Itemsperpage" xml:space="preserve">
+    <value>Items per page</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>January</value>
+  </data>
+  <data name="Jobisactivated" xml:space="preserve">
+    <value>Job is activated</value>
+  </data>
+  <data name="Jobparameters" xml:space="preserve">
+    <value>Job parameters</value>
+  </data>
+  <data name="Jobscheduleoptions" xml:space="preserve">
+    <value>Job schedule options</value>
+  </data>
+  <data name="joinedbyoperator" xml:space="preserve">
+    <value>joined by operator</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>July</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>June</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Lasterror" xml:space="preserve">
+    <value>Last error</value>
+  </data>
+  <data name="Lastrecording" xml:space="preserve">
+    <value>Last recording</value>
+  </data>
+  <data name="Lenghtminutesseconds" xml:space="preserve">
+    <value>Lenght (minutes, seconds)</value>
+  </data>
+  <data name="LicenceManagement" xml:space="preserve">
+    <value>Licence Management</value>
+  </data>
+  <data name="LicenceManagement1" xml:space="preserve">
+    <value>Licence Management</value>
+  </data>
+  <data name="LicenceManagement2" xml:space="preserve">
+    <value>Licence Management</value>
+  </data>
+  <data name="Licencesinuse" xml:space="preserve">
+    <value>Licences in use</value>
+  </data>
+  <data name="LicencesUsed" xml:space="preserve">
+    <value>Licences Used </value>
+  </data>
+  <data name="Linestates" xml:space="preserve">
+    <value>Line states</value>
+  </data>
+  <data name="Linestatesofchannels" xml:space="preserve">
+    <value>Line states of channels</value>
+  </data>
+  <data name="Listen" xml:space="preserve">
+    <value>Listen</value>
+  </data>
+  <data name="Listen1" xml:space="preserve">
+    <value>Listen</value>
+  </data>
+  <data name="ListenAllCalls" xml:space="preserve">
+    <value>Listen All Calls</value>
+  </data>
+  <data name="Listenallcalls1" xml:space="preserve">
+    <value>Listen all calls </value>
+  </data>
+  <data name="Listencallsbyrecordingrule" xml:space="preserve">
+    <value>Listen calls by recording rule</value>
+  </data>
+  <data name="Listencallsbyservice" xml:space="preserve">
+    <value>Listen calls by service</value>
+  </data>
+  <data name="Listendate" xml:space="preserve">
+    <value>Listen date</value>
+  </data>
+  <data name="Listenedat" xml:space="preserve">
+    <value>Listened at</value>
+  </data>
+  <data name="Listenedby" xml:space="preserve">
+    <value>Listened by</value>
+  </data>
+  <data name="ListenedBy1" xml:space="preserve">
+    <value>Listened By:</value>
+  </data>
+  <data name="Listenowncalls" xml:space="preserve">
+    <value>Listen own calls</value>
+  </data>
+  <data name="Listenowncalls1" xml:space="preserve">
+    <value>Listen own calls</value>
+  </data>
+  <data name="Listenteamcalls" xml:space="preserve">
+    <value>Listen team calls</value>
+  </data>
+  <data name="ListofRoles" xml:space="preserve">
+    <value>List of Roles:</value>
+  </data>
+  <data name="ListofRoles1" xml:space="preserve">
+    <value>List of Roles</value>
+  </data>
+  <data name="ListofRoles2" xml:space="preserve">
+    <value>List of Roles</value>
+  </data>
+  <data name="ListoftheAgentGroups" xml:space="preserve">
+    <value>List of the Agent Groups</value>
+  </data>
+  <data name="ListofUsers" xml:space="preserve">
+    <value>List of Users</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="Logout1" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="ltlt" xml:space="preserve">
+    <value>&amp;lt;&amp;lt;</value>
+  </data>
+  <data name="Maintainevaluationforms" xml:space="preserve">
+    <value>Maintain evaluation forms</value>
+  </data>
+  <data name="Makereport" xml:space="preserve">
+    <value>Make report</value>
+  </data>
+  <data name="Mame" xml:space="preserve">
+    <value>Mame</value>
+  </data>
+  <data name="Management" xml:space="preserve">
+    <value>Management</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>March</value>
+  </data>
+  <data name="Markedforreplay" xml:space="preserve">
+    <value>Marked for replay</value>
+  </data>
+  <data name="MaximumamountofLicensesinuse" xml:space="preserve">
+    <value>Maximum amount of Licenses in use</value>
+  </data>
+  <data name="Maximumcount" xml:space="preserve">
+    <value>Maximum count</value>
+  </data>
+  <data name="MaxScore" xml:space="preserve">
+    <value>Max Score</value>
+  </data>
+  <data name="Maxscore1" xml:space="preserve">
+    <value>Max score</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>May</value>
+  </data>
+  <data name="Media" xml:space="preserve">
+    <value>Media</value>
+  </data>
+  <data name="MembersofAgentGroup" xml:space="preserve">
+    <value>Members of Agent Group</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Message1" xml:space="preserve">
+    <value>Message:</value>
+  </data>
+  <data name="Messageschanged" xml:space="preserve">
+    <value>Messages changed</value>
+  </data>
+  <data name="Minutestotal" xml:space="preserve">
+    <value>Minutes total</value>
+  </data>
+  <data name="mmss" xml:space="preserve">
+    <value>(mm:ss)</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>Modified</value>
+  </data>
+  <data name="Modifyuserrightsoftherole" xml:space="preserve">
+    <value>Modify user rights of the role</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Month1" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Month2" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Name1" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Name2" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Name3" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Name4" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NameofAgentGroupisalreadyinuse" xml:space="preserve">
+    <value>Name of Agent Group is already in use</value>
+  </data>
+  <data name="Needsevaluation" xml:space="preserve">
+    <value>Needs evaluation</value>
+  </data>
+  <data name="Needsreplay" xml:space="preserve">
+    <value>Needs replay</value>
+  </data>
+  <data name="Needssupervision" xml:space="preserve">
+    <value>Needs supervision</value>
+  </data>
+  <data name="NewAgentGroup" xml:space="preserve">
+    <value>New Agent Group</value>
+  </data>
+  <data name="NewAgentGroupisaddedtolist" xml:space="preserve">
+    <value>New Agent Group is added to list.</value>
+  </data>
+  <data name="Newcallstarted" xml:space="preserve">
+    <value>New call started</value>
+  </data>
+  <data name="NewEvaluationTemplate" xml:space="preserve">
+    <value>New Evaluation Template</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="Newpasswordandnewpasswordrepeatmustmatch" xml:space="preserve">
+    <value>New password and new password repeat must match</value>
+  </data>
+  <data name="Newpasswordmustbeatleastcharacters" xml:space="preserve">
+    <value>New password must be at least 6 characters</value>
+  </data>
+  <data name="NewRoleiscreated" xml:space="preserve">
+    <value>New Role is created</value>
+  </data>
+  <data name="Newsubfolderoptional" xml:space="preserve">
+    <value>New sub folder (optional)</value>
+  </data>
+  <data name="Newuseriscreated" xml:space="preserve">
+    <value>New user is created</value>
+  </data>
+  <data name="next" xml:space="preserve">
+    <value>next</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="Nocallsfoundmachingsetcriteria" xml:space="preserve">
+    <value>No calls found maching set criteria</value>
+  </data>
+  <data name="Nodataforreportcriteriaswasnotfountreportwillnotbegenrated" xml:space="preserve">
+    <value>No data for report criterias was not fount, report will not be genrated</value>
+  </data>
+  <data name="Noofcalls" xml:space="preserve">
+    <value>No. of calls</value>
+  </data>
+  <data name="Noprofileruletype" xml:space="preserve">
+    <value>No profile rule type</value>
+  </data>
+  <data name="Normalselectiverecording" xml:space="preserve">
+    <value>Normal selective recording</value>
+  </data>
+  <data name="Notavalidextension" xml:space="preserve">
+    <value>Not a valid extension</value>
+  </data>
+  <data name="Notrelevant" xml:space="preserve">
+    <value>Not relevant</value>
+  </data>
+  <data name="Notrelevantmarkedbydefault" xml:space="preserve">
+    <value>Not relevant marked by default</value>
+  </data>
+  <data name="Nousersfound" xml:space="preserve">
+    <value>No users found</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="NR" xml:space="preserve">
+    <value>NR.</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>October</value>
+  </data>
+  <data name="Old" xml:space="preserve">
+    <value>Old</value>
+  </data>
+  <data name="OnDemand" xml:space="preserve">
+    <value>On Demand</value>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>On-line</value>
+  </data>
+  <data name="OnlineCalls" xml:space="preserve">
+    <value>Online Calls</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="OpenexistingEvaluationTemplate" xml:space="preserve">
+    <value>Open existing Evaluation Template</value>
+  </data>
+  <data name="Openingconnectiontoserver" xml:space="preserve">
+    <value>Opening connection to server</value>
+  </data>
+  <data name="Ordernumber" xml:space="preserve">
+    <value>Order number</value>
+  </data>
+  <data name="out" xml:space="preserve">
+    <value>out</value>
+  </data>
+  <data name="OutBound" xml:space="preserve">
+    <value>OutBound</value>
+  </data>
+  <data name="OutBoundno" xml:space="preserve">
+    <value>OutBound no</value>
+  </data>
+  <data name="Outboundno1" xml:space="preserve">
+    <value>Outbound no</value>
+  </data>
+  <data name="Outcome" xml:space="preserve">
+    <value>Outcome</value>
+  </data>
+  <data name="page" xml:space="preserve">
+    <value>page</value>
+  </data>
+  <data name="Parameters" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="PartcomQualityMonitoringSuite" xml:space="preserve">
+    <value>Partcom Quality Monitoring Suite</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Passwordandusernamechangedok" xml:space="preserve">
+    <value>Password and username changed ok</value>
+  </data>
+  <data name="Passwordchangedok" xml:space="preserve">
+    <value>Password changed ok</value>
+  </data>
+  <data name="Passwordcheck" xml:space="preserve">
+    <value>Password check</value>
+  </data>
+  <data name="Passworddonotmach" xml:space="preserve">
+    <value>Password do not mach</value>
+  </data>
+  <data name="PasswordshouldbeatleastcharacterslongMustincludenumbersuppercaseandlowercasecharacters" xml:space="preserve">
+    <value>Password should be at least 6 characters long. Must include numbers, uppercase and lowercase characters</value>
+  </data>
+  <data name="PBXnumber" xml:space="preserve">
+    <value>PBX number</value>
+  </data>
+  <data name="peragent" xml:space="preserve">
+    <value>per agent</value>
+  </data>
+  <data name="percent" xml:space="preserve">
+    <value>percent</value>
+  </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>Percentage</value>
+  </data>
+  <data name="Percentagebasedrecording" xml:space="preserve">
+    <value>Percentage based recording</value>
+  </data>
+  <data name="Percentagetorecord" xml:space="preserve">
+    <value>Percentage to record</value>
+  </data>
+  <data name="Perday" xml:space="preserve">
+    <value>Per day</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="Period1" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="Period2" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="Periodtype" xml:space="preserve">
+    <value>Period type</value>
+  </data>
+  <data name="PeriodType1" xml:space="preserve">
+    <value>Period Type</value>
+  </data>
+  <data name="Permissiontoseeevaluatedcalls" xml:space="preserve">
+    <value>Permission to see evaluated calls</value>
+  </data>
+  <data name="Permonth" xml:space="preserve">
+    <value>Per month</value>
+  </data>
+  <data name="Perweek" xml:space="preserve">
+    <value>Per week</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="Phone1" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="PhoneCClogname" xml:space="preserve">
+    <value>Phone CC log name</value>
+  </data>
+  <data name="Pilotno" xml:space="preserve">
+    <value>Pilot no</value>
+  </data>
+  <data name="Pilotno1" xml:space="preserve">
+    <value>Pilot no</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="Play1" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="PQMSApplet" xml:space="preserve">
+    <value>PQMS Applet</value>
+  </data>
+  <data name="PQMSClientAppletlogin" xml:space="preserve">
+    <value>PQMS Client Applet login</value>
+  </data>
+  <data name="PQMSusernotifiesYouaboutanevaluationresult" xml:space="preserve">
+    <value>PQMS user {0} notifies You about an evaluation result.</value>
+  </data>
+  <data name="PremissiontomanageEvaluationForms" xml:space="preserve">
+    <value>Premission to manage Evaluation Forms</value>
+  </data>
+  <data name="previous" xml:space="preserve">
+    <value>previous</value>
+  </data>
+  <data name="Printevaluation" xml:space="preserve">
+    <value>Print evaluation</value>
+  </data>
+  <data name="PrintPDF" xml:space="preserve">
+    <value>Print PDF</value>
+  </data>
+  <data name="Priority" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="Priority1" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="Privatecall" xml:space="preserve">
+    <value>Private call</value>
+  </data>
+  <data name="Privatecall1" xml:space="preserve">
+    <value>Private call</value>
+  </data>
+  <data name="Privilegeadded" xml:space="preserve">
+    <value>Privilege added</value>
+  </data>
+  <data name="Privilegeremoved" xml:space="preserve">
+    <value>Privilege removed</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="Profileactiveagents" xml:space="preserve">
+    <value>Profile active agents</value>
+  </data>
+  <data name="Profileactiverules" xml:space="preserve">
+    <value>Profile active rules</value>
+  </data>
+  <data name="Profiledeletedok" xml:space="preserve">
+    <value>Profile deleted ok</value>
+  </data>
+  <data name="Profiledetailview" xml:space="preserve">
+    <value>Profile detailview</value>
+  </data>
+  <data name="Profileforautomaticevaluationselection" xml:space="preserve">
+    <value>Profile for automatic evaluation selection</value>
+  </data>
+  <data name="Profilehaserrors" xml:space="preserve">
+    <value>Profile has {0} errors</value>
+  </data>
+  <data name="Profilenamealreadyinuse" xml:space="preserve">
+    <value>Profile name already in use</value>
+  </data>
+  <data name="Profilesavedok" xml:space="preserve">
+    <value>Profile saved ok</value>
+  </data>
+  <data name="Profilesforautomaticevaluationselection" xml:space="preserve">
+    <value>Profiles for automatic evaluation selection</value>
+  </data>
+  <data name="Profileupdatewassuccess" xml:space="preserve">
+    <value>Profile update was success</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="rated" xml:space="preserve">
+    <value>rated</value>
+  </data>
+  <data name="Rateddateid" xml:space="preserve">
+    <value>Rated date, id</value>
+  </data>
+  <data name="Ratingform" xml:space="preserve">
+    <value>Rating form</value>
+  </data>
+  <data name="Reactivate" xml:space="preserve">
+    <value>Re-activate</value>
+  </data>
+  <data name="Receivednewcall" xml:space="preserve">
+    <value>Received new call!!!</value>
+  </data>
+  <data name="Record" xml:space="preserve">
+    <value>Record</value>
+  </data>
+  <data name="RecordedCalls" xml:space="preserve">
+    <value>Recorded Calls</value>
+  </data>
+  <data name="RecordedInteractions" xml:space="preserve">
+    <value>Recorded Interactions</value>
+  </data>
+  <data name="Recording" xml:space="preserve">
+    <value>Recording</value>
+  </data>
+  <data name="Recordingended" xml:space="preserve">
+    <value>Recording ended.</value>
+  </data>
+  <data name="Recordingstarted" xml:space="preserve">
+    <value>Recording started.</value>
+  </data>
+  <data name="Recordingthecall" xml:space="preserve">
+    <value>Recording the call ...</value>
+  </data>
+  <data name="records" xml:space="preserve">
+    <value>records</value>
+  </data>
+  <data name="Recordsonlythosecallswitchmatchwithrules" xml:space="preserve">
+    <value>Records only those calls witch match with rules!</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Remove1" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Removedattributes" xml:space="preserve">
+    <value>Removed attributes</value>
+  </data>
+  <data name="Removedcriterias" xml:space="preserve">
+    <value>Removed criterias</value>
+  </data>
+  <data name="Removedrule" xml:space="preserve">
+    <value>Removed rule</value>
+  </data>
+  <data name="Renamefiles" xml:space="preserve">
+    <value>Rename files</value>
+  </data>
+  <data name="Reportgeneratedat" xml:space="preserve">
+    <value>Report generated at</value>
+  </data>
+  <data name="Reportgeneratedat1" xml:space="preserve">
+    <value>Report generated at</value>
+  </data>
+  <data name="Reportiperiod" xml:space="preserve">
+    <value>Reporti period</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="ReportsizelimitexceededPleaseusecriteriasorshortentheperiod" xml:space="preserve">
+    <value>Report size limit exceeded! Please use criterias or shorten the period.</value>
+  </data>
+  <data name="Reportstarting" xml:space="preserve">
+    <value>Report starting</value>
+  </data>
+  <data name="Requestedactionentrynotfound" xml:space="preserve">
+    <value>Requested action entry not found</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Result1" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Result2" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Result3" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Righttodownloadcalls" xml:space="preserve">
+    <value>Right to download calls</value>
+  </data>
+  <data name="Ringingtonesbeforeanswer" xml:space="preserve">
+    <value>Ringing tones before answer</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="Roleclass" xml:space="preserve">
+    <value>Role class</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="Rolesadded" xml:space="preserve">
+    <value>Roles added</value>
+  </data>
+  <data name="Roleservicesupdatedok" xml:space="preserve">
+    <value>Role services updated ok</value>
+  </data>
+  <data name="Rolesremoved" xml:space="preserve">
+    <value>Roles removed</value>
+  </data>
+  <data name="Rolessetforuser" xml:space="preserve">
+    <value>Roles set for user</value>
+  </data>
+  <data name="Ruledeleted" xml:space="preserve">
+    <value>Rule deleted</value>
+  </data>
+  <data name="RuleEffect" xml:space="preserve">
+    <value>Rule Effect</value>
+  </data>
+  <data name="Ruleinsertsuccessful" xml:space="preserve">
+    <value>Rule insert successful</value>
+  </data>
+  <data name="Rules" xml:space="preserve">
+    <value>Rules</value>
+  </data>
+  <data name="Ruletype" xml:space="preserve">
+    <value>Rule type</value>
+  </data>
+  <data name="Ruletype1" xml:space="preserve">
+    <value>Rule type</value>
+  </data>
+  <data name="Runmonthlyon" xml:space="preserve">
+    <value>Run monthly on</value>
+  </data>
+  <data name="Runonceat" xml:space="preserve">
+    <value>Run once at</value>
+  </data>
+  <data name="Runweeklyon" xml:space="preserve">
+    <value>Run weekly on</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Save1" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Save2" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Save3" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Save4" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Saveeval" xml:space="preserve">
+    <value>Save eval</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="Score1" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="Score2" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="Scorebygroups" xml:space="preserve">
+    <value>Score by groups</value>
+  </data>
+  <data name="scoreof" xml:space="preserve">
+    <value>score of</value>
+  </data>
+  <data name="Scorepoints" xml:space="preserve">
+    <value>Score (points)</value>
+  </data>
+  <data name="Scorestep" xml:space="preserve">
+    <value>Score step</value>
+  </data>
+  <data name="Scorestep1" xml:space="preserve">
+    <value>Score step</value>
+  </data>
+  <data name="Screenrecordingextensions" xml:space="preserve">
+    <value>Screen recording extensions</value>
+  </data>
+  <data name="Screenrecordingmanagement" xml:space="preserve">
+    <value>Screen recording management</value>
+  </data>
+  <data name="Screenrecordingparameters" xml:space="preserve">
+    <value>Screen recording parameters</value>
+  </data>
+  <data name="Screenrecordings" xml:space="preserve">
+    <value>Screen recordings</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Search1" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Searchfrom" xml:space="preserve">
+    <value>Search from</value>
+  </data>
+  <data name="SearchofUsers" xml:space="preserve">
+    <value>Search of Users</value>
+  </data>
+  <data name="Seeevaluationresults" xml:space="preserve">
+    <value>See evaluation results</value>
+  </data>
+  <data name="Selectagents" xml:space="preserve">
+    <value>Select agent(s)</value>
+  </data>
+  <data name="Selectall" xml:space="preserve">
+    <value>--- Select all ---</value>
+  </data>
+  <data name="Selectdocumentoraudiofile" xml:space="preserve">
+    <value>Select document or audio file</value>
+  </data>
+  <data name="SelectedforEvaluation" xml:space="preserve">
+    <value>Selected for Evaluation</value>
+  </data>
+  <data name="SelectedGroups" xml:space="preserve">
+    <value>Selected Groups</value>
+  </data>
+  <data name="SelectedRoles" xml:space="preserve">
+    <value>Selected Roles:</value>
+  </data>
+  <data name="SelectedUsernameisalreadyinusepleaseinsertnewUsername" xml:space="preserve">
+    <value>Selected Username is already in use, please insert new Username</value>
+  </data>
+  <data name="Selectedusers" xml:space="preserve">
+    <value>Selected users</value>
+  </data>
+  <data name="Selectionupdated" xml:space="preserve">
+    <value>Selection updated</value>
+  </data>
+  <data name="Selectiverecording" xml:space="preserve">
+    <value>Selective recording</value>
+  </data>
+  <data name="SelectiveRecording1" xml:space="preserve">
+    <value>Selective Recording</value>
+  </data>
+  <data name="Selectiverecordingrule" xml:space="preserve">
+    <value>Selective recording rule</value>
+  </data>
+  <data name="Selectiverecordingrules" xml:space="preserve">
+    <value>Selective recording rules</value>
+  </data>
+  <data name="Selectiverecordingruletype" xml:space="preserve">
+    <value>Selective recording rule type</value>
+  </data>
+  <data name="Selectivereocrding" xml:space="preserve">
+    <value>Selective reocrding</value>
+  </data>
+  <data name="Selectreporttype" xml:space="preserve">
+    <value>Select report type</value>
+  </data>
+  <data name="Selectteams" xml:space="preserve">
+    <value>Select team(s)</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="Sendevaluationto" xml:space="preserve">
+    <value>Send evaluation to</value>
+  </data>
+  <data name="Sendingcommand" xml:space="preserve">
+    <value>Sending command ...</value>
+  </data>
+  <data name="Sentstoptorecorder" xml:space="preserve">
+    <value>Sent stop to recorder.</value>
+  </data>
+  <data name="September" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="Serverreturnederror" xml:space="preserve">
+    <value>Server returned error.</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Service1" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Service2" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Service3" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Service4" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Service5" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Service6" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Service7" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Serviceaddedok" xml:space="preserve">
+    <value>Service added ok</value>
+  </data>
+  <data name="ServiceID" xml:space="preserve">
+    <value>Service ID</value>
+  </data>
+  <data name="ServiceID1" xml:space="preserve">
+    <value>Service ID</value>
+  </data>
+  <data name="Serviceid2" xml:space="preserve">
+    <value>Service id</value>
+  </data>
+  <data name="Servicename" xml:space="preserve">
+    <value>Service name</value>
+  </data>
+  <data name="ServicePilot" xml:space="preserve">
+    <value>Service/Pilot</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="Services1" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="Services2" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="Services3" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="Servicesaccessibletorole" xml:space="preserve">
+    <value>Services accessible to role</value>
+  </data>
+  <data name="Servicesadded" xml:space="preserve">
+    <value>Services added</value>
+  </data>
+  <data name="Servicesmanagement" xml:space="preserve">
+    <value>Services management</value>
+  </data>
+  <data name="Servicesremoved" xml:space="preserve">
+    <value>Services removed</value>
+  </data>
+  <data name="Servicestobearchived" xml:space="preserve">
+    <value>Services to be archived</value>
+  </data>
+  <data name="Servicestobedeleted" xml:space="preserve">
+    <value>Services to be deleted</value>
+  </data>
+  <data name="Serviceterminatedok" xml:space="preserve">
+    <value>Service terminated ok</value>
+  </data>
+  <data name="Serviceupdatedok" xml:space="preserve">
+    <value>Service updated ok</value>
+  </data>
+  <data name="Sessionstart" xml:space="preserve">
+    <value>Session start</value>
+  </data>
+  <data name="Setupselectiverecordingrules" xml:space="preserve">
+    <value>Setup selective recording rules</value>
+  </data>
+  <data name="Shedulerjobname" xml:space="preserve">
+    <value>Sheduler job name</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="Showterminated" xml:space="preserve">
+    <value>Show terminated</value>
+  </data>
+  <data name="SizeMB" xml:space="preserve">
+    <value>Size (MB)</value>
+  </data>
+  <data name="StartArchiving" xml:space="preserve">
+    <value>Start Archiving</value>
+  </data>
+  <data name="startarchiving1" xml:space="preserve">
+    <value>start archiving</value>
+  </data>
+  <data name="Startcopy" xml:space="preserve">
+    <value>Start copy</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="Startdatemustbeearlierthanenddate" xml:space="preserve">
+    <value>Start date must be earlier than end date</value>
+  </data>
+  <data name="Startingfrom" xml:space="preserve">
+    <value>Starting from</value>
+  </data>
+  <data name="StartPeriod" xml:space="preserve">
+    <value>Start Period</value>
+  </data>
+  <data name="Startrecording" xml:space="preserve">
+    <value>Start recording.</value>
+  </data>
+  <data name="StartSearching" xml:space="preserve">
+    <value>Start Searching</value>
+  </data>
+  <data name="Starttime" xml:space="preserve">
+    <value>Start time</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="StatuschangedOK" xml:space="preserve">
+    <value>Status changed OK</value>
+  </data>
+  <data name="Statusnotchanged" xml:space="preserve">
+    <value>Status not changed</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="Stoprecording" xml:space="preserve">
+    <value>Stop recording.</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>!=</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>&gt;</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>&gt;=</value>
+  </data>
+  <data name="String3" xml:space="preserve">
+    <value>&lt;</value>
+  </data>
+  <data name="String4" xml:space="preserve">
+    <value>&lt;=</value>
+  </data>
+  <data name="String5" xml:space="preserve">
+    <value>=</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Success1" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Success2" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="Summaryandextensionsreport" xml:space="preserve">
+    <value>Summary and extensions report</value>
+  </data>
+  <data name="Summaryreports" xml:space="preserve">
+    <value>Summary reports</value>
+  </data>
+  <data name="Sumwithrateingform" xml:space="preserve">
+    <value>Sum with rateing form</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="Supervisor" xml:space="preserve">
+    <value>Supervisor</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Surname</value>
+  </data>
+  <data name="Surname1" xml:space="preserve">
+    <value>Surname</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="TeamaveragesExcel" xml:space="preserve">
+    <value>Team averages (Excel)</value>
+  </data>
+  <data name="Teamaveragesreport" xml:space="preserve">
+    <value>Team averages report</value>
+  </data>
+  <data name="Teamleader" xml:space="preserve">
+    <value>Team leader</value>
+  </data>
+  <data name="Teams" xml:space="preserve">
+    <value>Teams</value>
+  </data>
+  <data name="Teamsadded" xml:space="preserve">
+    <value>Teams added</value>
+  </data>
+  <data name="Teamsadded1" xml:space="preserve">
+    <value>Teams added</value>
+  </data>
+  <data name="Teamsremoved" xml:space="preserve">
+    <value>Teams removed</value>
+  </data>
+  <data name="Teamsremoved1" xml:space="preserve">
+    <value>Teams removed</value>
+  </data>
+  <data name="Terminate" xml:space="preserve">
+    <value>Terminate</value>
+  </data>
+  <data name="Terminated" xml:space="preserve">
+    <value>Terminated</value>
+  </data>
+  <data name="Terminated1" xml:space="preserve">
+    <value>Terminated</value>
+  </data>
+  <data name="Terminated2" xml:space="preserve">
+    <value>Terminated</value>
+  </data>
+  <data name="TerminationDate" xml:space="preserve">
+    <value>Termination Date</value>
+  </data>
+  <data name="Thatagentidisalreadyinusepealechoosenewid" xml:space="preserve">
+    <value>That agent id is already in use, peale choose new id.</value>
+  </data>
+  <data name="Thatarchiveidalreadyexists" xml:space="preserve">
+    <value>That archive id already exists</value>
+  </data>
+  <data name="Thefieldmustnotbeempty" xml:space="preserve">
+    <value>The field must not be empty</value>
+  </data>
+  <data name="ThenameoftheroleisalreadyinuseSelectnewnamefortherole" xml:space="preserve">
+    <value>The name of the role is already in use. Select new name for the role.</value>
+  </data>
+  <data name="Thiscallhasbeenmarkedasprivate" xml:space="preserve">
+    <value>This call has been marked as private!</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Time1" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Time2" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Timemustbeinformat" xml:space="preserve">
+    <value>Time must be in {0} format</value>
+  </data>
+  <data name="TimeofDay" xml:space="preserve">
+    <value>Time of Day</value>
+  </data>
+  <data name="Timestamp" xml:space="preserve">
+    <value>Timestamp</value>
+  </data>
+  <data name="Timestampdownload" xml:space="preserve">
+    <value>Timestamp download</value>
+  </data>
+  <data name="TimestampisnotOK" xml:space="preserve">
+    <value>Timestamp is not OK</value>
+  </data>
+  <data name="TimestampisOK" xml:space="preserve">
+    <value>Timestamp is OK</value>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="tocopyfiles" xml:space="preserve">
+    <value>to copy files</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Total1" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Totalscore" xml:space="preserve">
+    <value>Total score </value>
+  </data>
+  <data name="Totalweightedscore" xml:space="preserve">
+    <value>Total weighted score</value>
+  </data>
+  <data name="Totalwithevaluationform" xml:space="preserve">
+    <value>Total with evaluation form</value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>Transfer</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Type1" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Type2" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Type3" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="until" xml:space="preserve">
+    <value>until</value>
+  </data>
+  <data name="until1" xml:space="preserve">
+    <value>until</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="User1" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="User2" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="UserAgentGroup" xml:space="preserve">
+    <value>User/Agent Group</value>
+  </data>
+  <data name="Userclass" xml:space="preserve">
+    <value>User class</value>
+  </data>
+  <data name="Userdonothavepermissiontoaccessthiscall" xml:space="preserve">
+    <value>User do not have permission to access this call</value>
+  </data>
+  <data name="Userlanguage" xml:space="preserve">
+    <value>User language</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="Username1" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="Usernamecannotbeempty" xml:space="preserve">
+    <value>Username can  not be empty</value>
+  </data>
+  <data name="UsernameCCLoginnamealreadyinuse" xml:space="preserve">
+    <value>Username/CC Login name already in use!</value>
+  </data>
+  <data name="Userparameters" xml:space="preserve">
+    <value>User parameters</value>
+  </data>
+  <data name="Userrights" xml:space="preserve">
+    <value>User rights</value>
+  </data>
+  <data name="UserrightsassignedtoRole" xml:space="preserve">
+    <value>User rights assigned to Role</value>
+  </data>
+  <data name="UserrightsoftheRole" xml:space="preserve">
+    <value>User rights of the Role</value>
+  </data>
+  <data name="UsersAgents" xml:space="preserve">
+    <value>Users/Agents</value>
+  </data>
+  <data name="UsersAgents1" xml:space="preserve">
+    <value>Users/Agents</value>
+  </data>
+  <data name="Usersallowed" xml:space="preserve">
+    <value>Users allowed</value>
+  </data>
+  <data name="Usersnotallowed" xml:space="preserve">
+    <value>Users not allowed</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Verifytimestamp" xml:space="preserve">
+    <value>Verify timestamp</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="View1" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="Viewandplayscreenrecordings" xml:space="preserve">
+    <value>View and play screen recordings </value>
+  </data>
+  <data name="Viewevaluationreports" xml:space="preserve">
+    <value>View evaluation reports</value>
+  </data>
+  <data name="Viewevaluationresults" xml:space="preserve">
+    <value>View evaluation results</value>
+  </data>
+  <data name="Viewlinestates" xml:space="preserve">
+    <value>View line states</value>
+  </data>
+  <data name="Viewscreenrecordings" xml:space="preserve">
+    <value>View screen recordings</value>
+  </data>
+  <data name="VoiceloggerIP" xml:space="preserve">
+    <value>Voicelogger IP</value>
+  </data>
+  <data name="WaringareYousuretoterminateservice" xml:space="preserve">
+    <value>Waring: are You sure to terminate service?</value>
+  </data>
+  <data name="WarningareYousuretodeletethisprofile" xml:space="preserve">
+    <value>Warning: are You sure to delete this profile?</value>
+  </data>
+  <data name="WarningDoyouwanttodeletewholeform" xml:space="preserve">
+    <value>Warning. Do you want to delete whole form?</value>
+  </data>
+  <data name="WARNINGIfnorulesaredefinedALLCALLSWILLBEDELETED" xml:space="preserve">
+    <value>WARNING! If no rules are defined ALL CALLS WILL BE DELETED!</value>
+  </data>
+  <data name="Warninginformationisunavailbleforcallsmadebeforedateorcallsarearchivedtohistory" xml:space="preserve">
+    <value>Warning, information is unavailble for calls made before {$date} or calls are archived to history.</value>
+  </data>
+  <data name="WarningThereportgeneratorfoundovermaximumallowedofoverMaxreportrecordsthereportisgenratedtothemaximumallowedreportsize" xml:space="preserve">
+    <value>Warning: The report generator found over maximum allowed of {$overMax} report records, the report is genrated to the maximum allowed report size!</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>Week</value>
+  </data>
+  <data name="Week1" xml:space="preserve">
+    <value>Week</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="WeightedResult" xml:space="preserve">
+    <value>Weighted Result</value>
+  </data>
+  <data name="WeightedResult1" xml:space="preserve">
+    <value>Weighted Result</value>
+  </data>
+  <data name="Weightedtotal" xml:space="preserve">
+    <value>Weighted total %</value>
+  </data>
+  <data name="Wheretoarchive" xml:space="preserve">
+    <value>Where to archive</value>
+  </data>
+  <data name="Wheretocreatearchives" xml:space="preserve">
+    <value>Where to create archives</value>
+  </data>
+  <data name="withthisform" xml:space="preserve">
+    <value>with this form</value>
+  </data>
+  <data name="Workstation" xml:space="preserve">
+    <value>Workstation</value>
+  </data>
+  <data name="WrongformatofcalldateCalldateshallbeinformat" xml:space="preserve">
+    <value>Wrong format of call date. Call date shall be in format:</value>
+  </data>
+  <data name="WrongformatofcalllenghtCalllenghtshallbeinformat" xml:space="preserve">
+    <value>Wrong format of call lenght. Call lenght shall be in format:</value>
+  </data>
+  <data name="XSLtransformationerror" xml:space="preserve">
+    <value>XSL transformation error</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="Youareloggedoutclosethiswindow" xml:space="preserve">
+    <value>You are logged out, close this window.</value>
+  </data>
+  <data name="Youareunabletoseethisevaluationbecauseitisnotcompletedyet" xml:space="preserve">
+    <value>You are unable to see this evaluation because it is not completed yet</value>
+  </data>
+  <data name="Youcanviewtheresultfromlinkbelow" xml:space="preserve">
+    <value>You can view the result from link below:</value>
+  </data>
+  <data name="Youdonothavepremisiisonsforthataction" xml:space="preserve">
+    <value>You do not have premisiisons for that action</value>
+  </data>
+  <data name="Youdonthaveaccessforthispage" xml:space="preserve">
+    <value>You dont have access for this page</value>
+  </data>
+  <data name="Yourenotallowedtoaccessroledetails" xml:space="preserve">
+    <value>Youre not allowed to access role details!</value>
+  </data>
+  <data name="Yourenotallowedtoevalutecalls" xml:space="preserve">
+    <value>You`re not allowed to evalute calls</value>
+  </data>
+</root>

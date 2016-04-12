@@ -1,0 +1,2802 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accesscallreplaylog" xml:space="preserve">
+    <value>Kõne kuulamiste logi</value>
+  </data>
+  <data name="Accessrolelistings" xml:space="preserve">
+    <value>Rollide nimekiri</value>
+  </data>
+  <data name="AccesstocallsofassignedAgentGroup" xml:space="preserve">
+    <value>Oma tiimi kõnede kuulamine</value>
+  </data>
+  <data name="Accesstofolders" xml:space="preserve">
+    <value>Ligipääs kaustadele</value>
+  </data>
+  <data name="AccesstoPQMSapplet" xml:space="preserve">
+    <value>Ligipääs PQMS Applet-ile</value>
+  </data>
+  <data name="AccesstoPQMSapplet1" xml:space="preserve">
+    <value>Ligipääs PQMS Applet-ile</value>
+  </data>
+  <data name="AccesstoPQMSOnlinecalls" xml:space="preserve">
+    <value>Ligipääs PQMS Online kõnedele</value>
+  </data>
+  <data name="Accesstoteamlistings" xml:space="preserve">
+    <value>Tiimide nimekiri</value>
+  </data>
+  <data name="Accessuserlistings" xml:space="preserve">
+    <value>Kasutajate nimekiri</value>
+  </data>
+  <data name="Achivingcomplete" xml:space="preserve">
+    <value>Arhiveerimine valmis</value>
+  </data>
+  <data name="Achivingstarted" xml:space="preserve">
+    <value>Arhiveerimine käivitunud</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Toiming</value>
+  </data>
+  <data name="Actionreport" xml:space="preserve">
+    <value>Toimingute raport</value>
+  </data>
+  <data name="ActionReport1" xml:space="preserve">
+    <value>Toimingute Raport</value>
+  </data>
+  <data name="Actionreport2" xml:space="preserve">
+    <value>Toimingute raport</value>
+  </data>
+  <data name="ActionReport3" xml:space="preserve">
+    <value>Toimingute Raport</value>
+  </data>
+  <data name="ActivationDate" xml:space="preserve">
+    <value>Alguskuupäev</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Aktiivne</value>
+  </data>
+  <data name="Active1" xml:space="preserve">
+    <value>Aktiivne</value>
+  </data>
+  <data name="Active2" xml:space="preserve">
+    <value>Aktiivsed</value>
+  </data>
+  <data name="Active3" xml:space="preserve">
+    <value>Aktiivne</value>
+  </data>
+  <data name="ActiveAgentGroupsofselecteduser" xml:space="preserve">
+    <value>Kasutaja aktiivsed tiimid</value>
+  </data>
+  <data name="Activerolesofselecteduser" xml:space="preserve">
+    <value>Kasutaja aktiivsed rollid</value>
+  </data>
+  <data name="ActiveTemplate" xml:space="preserve">
+    <value>Aktiivne</value>
+  </data>
+  <data name="Activetemplate1" xml:space="preserve">
+    <value>Aktiivne vorm</value>
+  </data>
+  <data name="ActiveusersassignedtoRole" xml:space="preserve">
+    <value>Rollis olevad aktiivsed kasutajad</value>
+  </data>
+  <data name="AddaEvaluationForm" xml:space="preserve">
+    <value>Koosta uus kõne hindamise vorm</value>
+  </data>
+  <data name="Addanentity" xml:space="preserve">
+    <value>Lisa</value>
+  </data>
+  <data name="Addanewcriteria" xml:space="preserve">
+    <value>Uus rida</value>
+  </data>
+  <data name="Addcall" xml:space="preserve">
+    <value>Lisa kõne</value>
+  </data>
+  <data name="Addcalltag" xml:space="preserve">
+    <value>Kõne tagi lisamine</value>
+  </data>
+  <data name="Addedattributes" xml:space="preserve">
+    <value>Lisatud atribuudid</value>
+  </data>
+  <data name="Addedcalltofolder" xml:space="preserve">
+    <value>Kõne kataloogile lisatud</value>
+  </data>
+  <data name="Addedcriterias" xml:space="preserve">
+    <value>Lisatud kriteeriumid</value>
+  </data>
+  <data name="Addedrule" xml:space="preserve">
+    <value>Lisatud reegel</value>
+  </data>
+  <data name="Addevaluationform" xml:space="preserve">
+    <value>Hindamis vormi lisamine</value>
+  </data>
+  <data name="Addextensionparameters" xml:space="preserve">
+    <value>Lisa töökoha parameetrid</value>
+  </data>
+  <data name="Addgroup" xml:space="preserve">
+    <value>Tiimi lisamine</value>
+  </data>
+  <data name="Addingnewuser" xml:space="preserve">
+    <value>Kasutaja lisamine</value>
+  </data>
+  <data name="AddingofnewRole" xml:space="preserve">
+    <value>Rolli lisamine</value>
+  </data>
+  <data name="Addnew" xml:space="preserve">
+    <value>Lisa uus</value>
+  </data>
+  <data name="Addnew1" xml:space="preserve">
+    <value>Lisa uus</value>
+  </data>
+  <data name="Addnew2" xml:space="preserve">
+    <value>Lisa uus</value>
+  </data>
+  <data name="Addnewattributes" xml:space="preserve">
+    <value>Lisa uued atribuudid</value>
+  </data>
+  <data name="Addnewcalloutcome" xml:space="preserve">
+    <value>Lisa uus kõnetulemus</value>
+  </data>
+  <data name="Addnewfolder" xml:space="preserve">
+    <value>Lisa uus kataloog</value>
+  </data>
+  <data name="Addnewfolder1" xml:space="preserve">
+    <value>Lisa uus kataloog</value>
+  </data>
+  <data name="Addnewprofile" xml:space="preserve">
+    <value>Lisa uus</value>
+  </data>
+  <data name="Addordelaterolesassignedtousers" xml:space="preserve">
+    <value>Rollide lisamine/kustutamine kasutajatelt</value>
+  </data>
+  <data name="Addrole" xml:space="preserve">
+    <value>Rolli lisamine</value>
+  </data>
+  <data name="Addroles" xml:space="preserve">
+    <value>Rollide lisamine</value>
+  </data>
+  <data name="Addselectiverecordingprofile" xml:space="preserve">
+    <value>Lisa valikulise salvestamise profiil</value>
+  </data>
+  <data name="Addselectiverecordingprofile1" xml:space="preserve">
+    <value>Valikulise salvestamise profiili lisamine</value>
+  </data>
+  <data name="Addservice" xml:space="preserve">
+    <value>Teenuse lisamine</value>
+  </data>
+  <data name="Addteams" xml:space="preserve">
+    <value>Tiimide lisamine</value>
+  </data>
+  <data name="Adduser" xml:space="preserve">
+    <value>Kasutaja lisamine</value>
+  </data>
+  <data name="Addusers" xml:space="preserve">
+    <value>Kasutajate lisamine</value>
+  </data>
+  <data name="AdministrateFolders" xml:space="preserve">
+    <value>Kaustade administreerimine</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>Administreerimine</value>
+  </data>
+  <data name="Administrator" xml:space="preserve">
+    <value>ADMIN</value>
+  </data>
+  <data name="Agent" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent1" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent2" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent3" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent4" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent5" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent6" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent7" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent8" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agent9" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Agentaddedtext" xml:space="preserve">
+    <value>Agendi kommentaar.</value>
+  </data>
+  <data name="Agentalreadyinlist" xml:space="preserve">
+    <value>Agent on juba nimekirjas</value>
+  </data>
+  <data name="AgentCCLoginname" xml:space="preserve">
+    <value>Agendi CC Login nimi </value>
+  </data>
+  <data name="AgentGroup" xml:space="preserve">
+    <value>Agendi Grupp</value>
+  </data>
+  <data name="AgentGroup1" xml:space="preserve">
+    <value>Tiimi detailvaade</value>
+  </data>
+  <data name="AgentGroup2" xml:space="preserve">
+    <value>Agentide Grupp</value>
+  </data>
+  <data name="Agentgroupslinkedtotherole" xml:space="preserve">
+    <value>Rolliga seotud tiimid</value>
+  </data>
+  <data name="AgentGroupsUserGroups" xml:space="preserve">
+    <value>Tiimid</value>
+  </data>
+  <data name="AgentUserGroups" xml:space="preserve">
+    <value>Tiimid</value>
+  </data>
+  <data name="AgentUserGroups1" xml:space="preserve">
+    <value>Teamid</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Kõik</value>
+  </data>
+  <data name="Allagentstogether" xml:space="preserve">
+    <value>Kõik kasutajad kokku</value>
+  </data>
+  <data name="AllGroups" xml:space="preserve">
+    <value>Kõik grupid</value>
+  </data>
+  <data name="Allusers" xml:space="preserve">
+    <value>Kõik kasutajad</value>
+  </data>
+  <data name="Anumber" xml:space="preserve">
+    <value>A number</value>
+  </data>
+  <data name="Appletlogoutok" xml:space="preserve">
+    <value>Applet välja logitud</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>Aprill</value>
+  </data>
+  <data name="Archive" xml:space="preserve">
+    <value>Ajalugu</value>
+  </data>
+  <data name="Archivecalls" xml:space="preserve">
+    <value>Kõnede arhiveerimine</value>
+  </data>
+  <data name="Archivecalls1" xml:space="preserve">
+    <value>Kõnede arhiveerimine</value>
+  </data>
+  <data name="Archivedirectoryfieldcantbeempty" xml:space="preserve">
+    <value>Arhiivi kausta väli ei tohi tühi olla</value>
+  </data>
+  <data name="Archiveerror" xml:space="preserve">
+    <value>Arhiveerimise viga</value>
+  </data>
+  <data name="Archiveevalutated" xml:space="preserve">
+    <value>Arhiveeri hinnatud</value>
+  </data>
+  <data name="Archiveeventslist" xml:space="preserve">
+    <value>Arhiveerimis sündmuste nimekiri</value>
+  </data>
+  <data name="Archivefinished" xml:space="preserve">
+    <value>Arhiveerimine lõpetatud</value>
+  </data>
+  <data name="Archiveid" xml:space="preserve">
+    <value>Athiivi id</value>
+  </data>
+  <data name="Archivemedia" xml:space="preserve">
+    <value>Arhiivi meedia</value>
+  </data>
+  <data name="Archiving" xml:space="preserve">
+    <value>Arhiveerimine</value>
+  </data>
+  <data name="Archivingright" xml:space="preserve">
+    <value>Arhiveerimise õigus</value>
+  </data>
+  <data name="Archivingstatus" xml:space="preserve">
+    <value>Arhiveerimise staatus</value>
+  </data>
+  <data name="Areyousure" xml:space="preserve">
+    <value>Kas oled kindel?</value>
+  </data>
+  <data name="AreYousuretocontinuetolistenthatcall" xml:space="preserve">
+    <value>Kas oled kindel, et soovid seda kuulata?</value>
+  </data>
+  <data name="AreYousuretodeletethisextionsionparameters" xml:space="preserve">
+    <value>Kas olete kindel, et soovite eemaldada töökoha parameetreid?</value>
+  </data>
+  <data name="AreYousuretoterminatethiscallresult" xml:space="preserve">
+    <value>Kas oled kindel, et lõpetada kõne tulemus</value>
+  </data>
+  <data name="AreYousureYouwanttochangeuserclass" xml:space="preserve">
+    <value>Oled kindel, et tahad muuta kasutaja klassi?</value>
+  </data>
+  <data name="AreYousureYouwanttodeletethisfolder" xml:space="preserve">
+    <value>Kas Sa oled kindel, et Sa tahad seda kataloogi kustutada?</value>
+  </data>
+  <data name="AreYousureYouwanttodeletethisfolderobject" xml:space="preserve">
+    <value>Kas Sa oled kindel, et Sa tahad seda kataloogi objekti kustutada?</value>
+  </data>
+  <data name="ArhiveID" xml:space="preserve">
+    <value>Arhiveerimise id</value>
+  </data>
+  <data name="AssigningAgentGrouptotheRole" xml:space="preserve">
+    <value>Rolli sidumine tiimiga</value>
+  </data>
+  <data name="AssigningpersontotheAgentGroup" xml:space="preserve">
+    <value>Kasutajale tiimide lisamine/kustutamine</value>
+  </data>
+  <data name="Assignprivilegestoroles" xml:space="preserve">
+    <value>Privileegide määramine rollidele</value>
+  </data>
+  <data name="Assignrolestousers" xml:space="preserve">
+    <value>Rollide määramine kasutajatele</value>
+  </data>
+  <data name="Atleastoneattributevaluemustnotbeempty" xml:space="preserve">
+    <value>Vähemalt üks väärtus peab olema täidetudo</value>
+  </data>
+  <data name="Attributesremoved" xml:space="preserve">
+    <value>Atribuudid eemaldatud</value>
+  </data>
+  <data name="Audiofilescalls" xml:space="preserve">
+    <value>Audio failid/kõned</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="AutoselectforEvaluation" xml:space="preserve">
+    <value>Kõnede automaatne valik hindamiseks</value>
+  </data>
+  <data name="AvailableLicences" xml:space="preserve">
+    <value>Olemasolevad litsentsid </value>
+  </data>
+  <data name="Availableroles" xml:space="preserve">
+    <value>Kõik rollid</value>
+  </data>
+  <data name="Averageofscoreandrating" xml:space="preserve">
+    <value>Keskmine tulemus ja punktid</value>
+  </data>
+  <data name="Averagepoints" xml:space="preserve">
+    <value>Keskmine</value>
+  </data>
+  <data name="Averagescore" xml:space="preserve">
+    <value>Keskmine tulemus</value>
+  </data>
+  <data name="Averagescore1" xml:space="preserve">
+    <value>Keskmine tulemuse %</value>
+  </data>
+  <data name="Averagescore2" xml:space="preserve">
+    <value>Keskmine tulemuse %</value>
+  </data>
+  <data name="Avgcalldurmin" xml:space="preserve">
+    <value>Keskime kõne kestus(min)</value>
+  </data>
+  <data name="Backtofolders" xml:space="preserve">
+    <value>Tagasi kataloogide juurde</value>
+  </data>
+  <data name="BestregardsPQMSmailsenderservice" xml:space="preserve">
+    <value>Parimate soovidega, Partcom QMS</value>
+  </data>
+  <data name="Bnumber" xml:space="preserve">
+    <value>B number</value>
+  </data>
+  <data name="Bookmarkedcalls" xml:space="preserve">
+    <value>Vajab järelvaatamist</value>
+  </data>
+  <data name="Byduration" xml:space="preserve">
+    <value>Pikkuse järgi</value>
+  </data>
+  <data name="Byuser" xml:space="preserve">
+    <value>Muutja</value>
+  </data>
+  <data name="Call" xml:space="preserve">
+    <value>Kõne</value>
+  </data>
+  <data name="callagentidchangedok" xml:space="preserve">
+    <value>Kõne agent muudetud ok</value>
+  </data>
+  <data name="CallAssesmantofassignedAgentGroups" xml:space="preserve">
+    <value>Oma tiimi kõnede hindamine</value>
+  </data>
+  <data name="CallAssesment" xml:space="preserve">
+    <value>Kõnede hindamine</value>
+  </data>
+  <data name="Callattribute" xml:space="preserve">
+    <value>Kõne atribuut</value>
+  </data>
+  <data name="Callcount" xml:space="preserve">
+    <value>Kõnede arv</value>
+  </data>
+  <data name="Calldataupdated" xml:space="preserve">
+    <value>Kõne andmed uuenesid!!!</value>
+  </data>
+  <data name="Calldatawasnotupdated" xml:space="preserve">
+    <value>Kõne andmeid ei uuendatud!</value>
+  </data>
+  <data name="Calldate" xml:space="preserve">
+    <value>Kõne kuup.</value>
+  </data>
+  <data name="Calldateid" xml:space="preserve">
+    <value>Kõne kuupäev, id</value>
+  </data>
+  <data name="Calldateid1" xml:space="preserve">
+    <value>Kõne kuupäev (id)</value>
+  </data>
+  <data name="Calldetails" xml:space="preserve">
+    <value>Kõne detailvaade</value>
+  </data>
+  <data name="Calldownload" xml:space="preserve">
+    <value>Kõne salvestamine</value>
+  </data>
+  <data name="Callduretion" xml:space="preserve">
+    <value>Kõne kestus</value>
+  </data>
+  <data name="CalledParty" xml:space="preserve">
+    <value>Valitud number</value>
+  </data>
+  <data name="CalledParty1" xml:space="preserve">
+    <value>B Number</value>
+  </data>
+  <data name="Callended" xml:space="preserve">
+    <value>Kõne lõppes</value>
+  </data>
+  <data name="CallerID" xml:space="preserve">
+    <value>Helistaja ID</value>
+  </data>
+  <data name="Callevaluated" xml:space="preserve">
+    <value>Kõne hindamine</value>
+  </data>
+  <data name="CallevaluationnoticefromPQMS" xml:space="preserve">
+    <value>Hinnatud kõne teade Partcom QMS-ilt</value>
+  </data>
+  <data name="Callfileismissing" xml:space="preserve">
+    <value>Kõne fail on kadunud</value>
+  </data>
+  <data name="Callfileismissing1" xml:space="preserve">
+    <value>Ei leidnud kõne faili!</value>
+  </data>
+  <data name="CallingParty" xml:space="preserve">
+    <value>Helistaja number</value>
+  </data>
+  <data name="CallingParty1" xml:space="preserve">
+    <value>A Number</value>
+  </data>
+  <data name="Calllisten" xml:space="preserve">
+    <value>Kõne kuulamine</value>
+  </data>
+  <data name="Calllisteningreports" xml:space="preserve">
+    <value>Kõnede kuulamise raportid</value>
+  </data>
+  <data name="callmaxscore" xml:space="preserve">
+    <value>kõne, max skoor</value>
+  </data>
+  <data name="callmaxscore1" xml:space="preserve">
+    <value>kõne, maks punktid</value>
+  </data>
+  <data name="Callmustmatchwithallrules" xml:space="preserve">
+    <value>Kõne peab vastama kõikidele</value>
+  </data>
+  <data name="Callmustmatchwithanyrule" xml:space="preserve">
+    <value>Kõne peab vastama vähemalt ühele reeglile</value>
+  </data>
+  <data name="Calloutcomeupdated" xml:space="preserve">
+    <value>Kõne tulemus uuendatud</value>
+  </data>
+  <data name="Callqualityassessment" xml:space="preserve">
+    <value>Kõne kvaliteedi hindamine</value>
+  </data>
+  <data name="CallReplayLog" xml:space="preserve">
+    <value>Kuulamiste aruanne</value>
+  </data>
+  <data name="CallReplayLog1" xml:space="preserve">
+    <value>Kõnede kuulamiste otsing</value>
+  </data>
+  <data name="CallResult" xml:space="preserve">
+    <value>Tulemuse kirjeldus</value>
+  </data>
+  <data name="Callresult1" xml:space="preserve">
+    <value>Kõne tulemus</value>
+  </data>
+  <data name="Callresult2" xml:space="preserve">
+    <value>Kõne tulemus.</value>
+  </data>
+  <data name="Callresultadded" xml:space="preserve">
+    <value>Kõne tulemus lisatud </value>
+  </data>
+  <data name="Callresultchanged" xml:space="preserve">
+    <value>Kõne tulemus muudetud</value>
+  </data>
+  <data name="CallResults" xml:space="preserve">
+    <value>Kõne tulemused</value>
+  </data>
+  <data name="Callresultterminated" xml:space="preserve">
+    <value>Kõne tulemus lõpetatud</value>
+  </data>
+  <data name="Callscopy" xml:space="preserve">
+    <value>Kõnede kopeerimine</value>
+  </data>
+  <data name="Callsevaluationreport" xml:space="preserve">
+    <value>Kõnede hindamise raport</value>
+  </data>
+  <data name="Callsforperiod" xml:space="preserve">
+    <value>Perioodil tehtud kõnede arv</value>
+  </data>
+  <data name="Callssummaryreport" xml:space="preserve">
+    <value>Kõnede kokkuvõtted</value>
+  </data>
+  <data name="Callstarttime" xml:space="preserve">
+    <value>Kõne algusaeg</value>
+  </data>
+  <data name="Callstarttime1" xml:space="preserve">
+    <value>Kõne algusaeg</value>
+  </data>
+  <data name="CallStartTimeto" xml:space="preserve">
+    <value>Stardiaeg kuni:</value>
+  </data>
+  <data name="Calltag" xml:space="preserve">
+    <value>KCµne tulemus</value>
+  </data>
+  <data name="Calltags" xml:space="preserve">
+    <value>Kõne tulemused</value>
+  </data>
+  <data name="Calltime" xml:space="preserve">
+    <value>Kõne aeg</value>
+  </data>
+  <data name="CallType" xml:space="preserve">
+    <value>Kõne tüüp</value>
+  </data>
+  <data name="Calltype1" xml:space="preserve">
+    <value>Kõne tüüp</value>
+  </data>
+  <data name="Callupdated" xml:space="preserve">
+    <value>Kõne uuendatud</value>
+  </data>
+  <data name="Callwasnotfound" xml:space="preserve">
+    <value>Sellist kõnet ei leitud</value>
+  </data>
+  <data name="CanbereplayedfromArchive" xml:space="preserve">
+    <value>Jääb sinna</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Loobu</value>
+  </data>
+  <data name="Cancel1" xml:space="preserve">
+    <value>Tühista</value>
+  </data>
+  <data name="CannotcompareNewobjectversionnotfound" xml:space="preserve">
+    <value>Ei saa võrrelda! Uue objekti versiooni ei leitud.</value>
+  </data>
+  <data name="Cantmakethatfolder" xml:space="preserve">
+    <value>Ei suudetud sellist kausta teha.</value>
+  </data>
+  <data name="CCLoginname" xml:space="preserve">
+    <value>Agendi ID</value>
+  </data>
+  <data name="CD" xml:space="preserve">
+    <value>CD</value>
+  </data>
+  <data name="Changecallagent" xml:space="preserve">
+    <value>Muuda agent</value>
+  </data>
+  <data name="Changecallattributes" xml:space="preserve">
+    <value>Kõne atribuutide muutmine</value>
+  </data>
+  <data name="Changecalloutcome" xml:space="preserve">
+    <value>Muuda kõne tulemuse kirjeldust</value>
+  </data>
+  <data name="Changecalltag" xml:space="preserve">
+    <value>Kõne tagi muutmine</value>
+  </data>
+  <data name="Changedattributes" xml:space="preserve">
+    <value>Muudetud atribuudid</value>
+  </data>
+  <data name="Changedby" xml:space="preserve">
+    <value>Muutis</value>
+  </data>
+  <data name="Changedcriterias" xml:space="preserve">
+    <value>Muudetud kriteeriumid</value>
+  </data>
+  <data name="Changeelsespassword" xml:space="preserve">
+    <value>Teise kasutaja parooli muutmine</value>
+  </data>
+  <data name="Changeevaluationform" xml:space="preserve">
+    <value>Hindamis vormi muutmine</value>
+  </data>
+  <data name="Changegroup" xml:space="preserve">
+    <value>Tiimi muutmine</value>
+  </data>
+  <data name="Changeingstatuspleasewait" xml:space="preserve">
+    <value>Muudan staatust, palun oodake...</value>
+  </data>
+  <data name="Changeownpassword" xml:space="preserve">
+    <value>Enda parooli muutmine</value>
+  </data>
+  <data name="Changepassword" xml:space="preserve">
+    <value>Muuda parool</value>
+  </data>
+  <data name="Changepassword1" xml:space="preserve">
+    <value>Muuda parooli</value>
+  </data>
+  <data name="Changerole" xml:space="preserve">
+    <value>Rolli muutmine</value>
+  </data>
+  <data name="Changeselectiverecordingprofile" xml:space="preserve">
+    <value>Valikulise salvestamise profiili muutmine</value>
+  </data>
+  <data name="Changeservice" xml:space="preserve">
+    <value>Muuda teenust</value>
+  </data>
+  <data name="Changeservice1" xml:space="preserve">
+    <value>Teenuse muutmine</value>
+  </data>
+  <data name="Changessavedsucessfully" xml:space="preserve">
+    <value>Muudatused salvestatud</value>
+  </data>
+  <data name="Changestatus" xml:space="preserve">
+    <value>Muuda staatust</value>
+  </data>
+  <data name="Changestatusfailed" xml:space="preserve">
+    <value>Staatuse muumine ebaõnnestus</value>
+  </data>
+  <data name="Changeuser" xml:space="preserve">
+    <value>Kasutaja muutmine</value>
+  </data>
+  <data name="Changingofparameters" xml:space="preserve">
+    <value>Parameetrite sättimine</value>
+  </data>
+  <data name="Channel" xml:space="preserve">
+    <value>Kanal</value>
+  </data>
+  <data name="Channel1" xml:space="preserve">
+    <value>Kanal</value>
+  </data>
+  <data name="Channelnumber" xml:space="preserve">
+    <value>Kanali number</value>
+  </data>
+  <data name="Chooseagent" xml:space="preserve">
+    <value>Vali agent</value>
+  </data>
+  <data name="Choosecalloutcome" xml:space="preserve">
+    <value>Vali kõne tulemus</value>
+  </data>
+  <data name="Choosentypeofrulecannotbediscarding" xml:space="preserve">
+    <value>Valitud reegli tüüp ei saa olla kustutav!</value>
+  </data>
+  <data name="Chooseonlylastevaluatedresult" xml:space="preserve">
+    <value>Vali ainult viimase hindamise tulemus</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>Klass</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Lähtesta</value>
+  </data>
+  <data name="ClearFields" xml:space="preserve">
+    <value>Puhasta väljad</value>
+  </data>
+  <data name="Clientnum" xml:space="preserve">
+    <value>Kliendi nr.</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Kommentaar</value>
+  </data>
+  <data name="comment1" xml:space="preserve">
+    <value>Kommentaar</value>
+  </data>
+  <data name="Comment2" xml:space="preserve">
+    <value>Kommentaar</value>
+  </data>
+  <data name="Comment3" xml:space="preserve">
+    <value>Kommentaar</value>
+  </data>
+  <data name="Comment4" xml:space="preserve">
+    <value>Kommentaar</value>
+  </data>
+  <data name="Comment5" xml:space="preserve">
+    <value>Kommentaar</value>
+  </data>
+  <data name="Comment6" xml:space="preserve">
+    <value>Kommentaar</value>
+  </data>
+  <data name="Comment7" xml:space="preserve">
+    <value>Kommentaar</value>
+  </data>
+  <data name="Commentary" xml:space="preserve">
+    <value>Kommentaar</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Kommentaar</value>
+  </data>
+  <data name="Comments1" xml:space="preserve">
+    <value>Kommentaarid</value>
+  </data>
+  <data name="Commonscore" xml:space="preserve">
+    <value>Ühine tulemus %</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Kinnita</value>
+  </data>
+  <data name="Connected" xml:space="preserve">
+    <value>Ühendatud</value>
+  </data>
+  <data name="ConnectedOK" xml:space="preserve">
+    <value>Ühendus OK</value>
+  </data>
+  <data name="Connectedwaitingforcalls" xml:space="preserve">
+    <value>Ühendatud, ootan kõnesid...</value>
+  </data>
+  <data name="Connectingserverfailingpleasetrytorelogin" xml:space="preserve">
+    <value>Korduv ühendumine serveriga ebõnnestub, proovi uuesti sisse logida..</value>
+  </data>
+  <data name="Connectionfailedwillretryinsecseconds" xml:space="preserve">
+    <value>Ühenduse viga, proovin uuesti ühenduda [sec] sekundi pärast..</value>
+  </data>
+  <data name="Connectiontoserverfailed" xml:space="preserve">
+    <value>Ühendus serveriga ebaõnnestus</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Jätka</value>
+  </data>
+  <data name="Copycallfiles" xml:space="preserve">
+    <value>Kõne failide kopeerimine</value>
+  </data>
+  <data name="Copycomplete" xml:space="preserve">
+    <value>Kopeerimine valmis</value>
+  </data>
+  <data name="Copyerror" xml:space="preserve">
+    <value>Kopeerimise viga</value>
+  </data>
+  <data name="Copyprogress" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="Copystarted" xml:space="preserve">
+    <value>Kopeerimine käivitunud</value>
+  </data>
+  <data name="Copystatus" xml:space="preserve">
+    <value>Kopeerimis staatus</value>
+  </data>
+  <data name="Couldnotaddcallfile" xml:space="preserve">
+    <value>Ei õnnestunud kõnet lisada!</value>
+  </data>
+  <data name="Couldnotfindoldevaluationformforcomparison" xml:space="preserve">
+    <value>Ei leidnud vana hindamisvormi võrdlemiseks!</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Kõnede arv</value>
+  </data>
+  <data name="Countingbasedrecording" xml:space="preserve">
+    <value>Kordadepõhine</value>
+  </data>
+  <data name="Countofevaluations" xml:space="preserve">
+    <value>Hindamiste arv</value>
+  </data>
+  <data name="Createactionreport" xml:space="preserve">
+    <value>Loo toimingute raport</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Loodud</value>
+  </data>
+  <data name="Createdby" xml:space="preserve">
+    <value>Loodud</value>
+  </data>
+  <data name="Createdmediafolders" xml:space="preserve">
+    <value>Loodud meedia folderid</value>
+  </data>
+  <data name="CreateFolders" xml:space="preserve">
+    <value>Kaustade loomine</value>
+  </data>
+  <data name="Createnewevaluation" xml:space="preserve">
+    <value>Koosta uus hinnang</value>
+  </data>
+  <data name="Createreport" xml:space="preserve">
+    <value>Raporti loomine</value>
+  </data>
+  <data name="Criterianame" xml:space="preserve">
+    <value>Kriteeriumi nimi</value>
+  </data>
+  <data name="criteriarowdeleted" xml:space="preserve">
+    <value>Valitud rida kustutatud ok</value>
+  </data>
+  <data name="CriteriaType" xml:space="preserve">
+    <value>Tüüp</value>
+  </data>
+  <data name="DataCentre" xml:space="preserve">
+    <value>Määramata</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Kuupäev</value>
+  </data>
+  <data name="Date1" xml:space="preserve">
+    <value>Kuupäev</value>
+  </data>
+  <data name="Date2" xml:space="preserve">
+    <value>Kuupäev</value>
+  </data>
+  <data name="Date3" xml:space="preserve">
+    <value>Kuupäev</value>
+  </data>
+  <data name="Date4" xml:space="preserve">
+    <value>Kuupäev</value>
+  </data>
+  <data name="Datefrom" xml:space="preserve">
+    <value>Kuupäevast</value>
+  </data>
+  <data name="DateofArhivation" xml:space="preserve">
+    <value>Arhiveerimise kuupäev</value>
+  </data>
+  <data name="Dateoferasing" xml:space="preserve">
+    <value>Kustutamise kuupäev</value>
+  </data>
+  <data name="Dateshallbeinformatddmmyyyy" xml:space="preserve">
+    <value>Kuupäev peab olema kujul dd.mm.yyyy</value>
+  </data>
+  <data name="Dateto" xml:space="preserve">
+    <value>Kuni</value>
+  </data>
+  <data name="Dateto1" xml:space="preserve">
+    <value>Kuupäevani</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Päev</value>
+  </data>
+  <data name="Day1" xml:space="preserve">
+    <value>Päev</value>
+  </data>
+  <data name="ddmmyyyy" xml:space="preserve">
+    <value>(dd.mm.yyyy)</value>
+  </data>
+  <data name="Dearrecipient" xml:space="preserve">
+    <value>Tere,</value>
+  </data>
+  <data name="Defaultform" xml:space="preserve">
+    <value>Vaikimisi hindamisvorm</value>
+  </data>
+  <data name="Defaultpath" xml:space="preserve">
+    <value>Vaikimisi kaust</value>
+  </data>
+  <data name="Defaultrole" xml:space="preserve">
+    <value>Vaikimisi roll</value>
+  </data>
+  <data name="DefaultTemplate" xml:space="preserve">
+    <value>Vaikimisi</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Kustuta</value>
+  </data>
+  <data name="Delete1" xml:space="preserve">
+    <value>Kustuta</value>
+  </data>
+  <data name="Delete2" xml:space="preserve">
+    <value>Kustuta</value>
+  </data>
+  <data name="Delete3" xml:space="preserve">
+    <value>Tühista</value>
+  </data>
+  <data name="Delete4" xml:space="preserve">
+    <value>Kustuta</value>
+  </data>
+  <data name="Delete5" xml:space="preserve">
+    <value>Kustuta</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>Kustutatud</value>
+  </data>
+  <data name="Deletescallswitchmatchwithrules" xml:space="preserve">
+    <value>Kõned mis vastavad reeglitele, kustutatakse!</value>
+  </data>
+  <data name="Deletingfolderfailed" xml:space="preserve">
+    <value>Kataloogi kustutamine ebaõnnestus!</value>
+  </data>
+  <data name="DescribingEvaluationForms" xml:space="preserve">
+    <value>Hindamisvormide kirjeldamine</value>
+  </data>
+  <data name="Destinationfolder" xml:space="preserve">
+    <value>Kuhu kopeerida</value>
+  </data>
+  <data name="DetailedSearch" xml:space="preserve">
+    <value>Kõnede otsing</value>
+  </data>
+  <data name="DetailedviewofRoles" xml:space="preserve">
+    <value>Rolli detailvaade</value>
+  </data>
+  <data name="Detsember" xml:space="preserve">
+    <value>Detsember</value>
+  </data>
+  <data name="Dialednum" xml:space="preserve">
+    <value>Valitud nr.</value>
+  </data>
+  <data name="Dialednumber" xml:space="preserve">
+    <value>Valitud number</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Suund</value>
+  </data>
+  <data name="Discard" xml:space="preserve">
+    <value>Kustuta</value>
+  </data>
+  <data name="Disonnected" xml:space="preserve">
+    <value>Lahti ühendatud</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>Dokumendid</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Lae alla</value>
+  </data>
+  <data name="Downloadcall" xml:space="preserve">
+    <value>Kõne alla laadimine</value>
+  </data>
+  <data name="DoyouwantchangeuserAgentGroupparameters" xml:space="preserve">
+    <value>Soovid muuta kasutaja tiimi staatust</value>
+  </data>
+  <data name="DoYouwanttoterminateprevioususeraccount" xml:space="preserve">
+    <value>Kas sa tahad sulgeda eelmise kasutaja konto? </value>
+  </data>
+  <data name="Dublicatevaluesconflictwithvalueswithexistingservices" xml:space="preserve">
+    <value>Väärtused korduvad ja on juba kasutuses</value>
+  </data>
+  <data name="Duplicateentryforthisagentinthisprofile" xml:space="preserve">
+    <value>Sellel agendil on juba reegel määratud antud profiili piires</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Kestus</value>
+  </data>
+  <data name="Duration1" xml:space="preserve">
+    <value>Kõne pikkus</value>
+  </data>
+  <data name="Duration2" xml:space="preserve">
+    <value>Kõne pikkus</value>
+  </data>
+  <data name="Duration3" xml:space="preserve">
+    <value>Kestus</value>
+  </data>
+  <data name="durationto" xml:space="preserve">
+    <value>kestvus kuni</value>
+  </data>
+  <data name="DVD" xml:space="preserve">
+    <value>DVD</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Editentity" xml:space="preserve">
+    <value>Muuda</value>
+  </data>
+  <data name="Editextensionparameters" xml:space="preserve">
+    <value>Muuda töökoha parameetreid</value>
+  </data>
+  <data name="Effect" xml:space="preserve">
+    <value>Efekt</value>
+  </data>
+  <data name="Emailaddressisnotcorrect" xml:space="preserve">
+    <value>E-posti aadress pole õige!</value>
+  </data>
+  <data name="EMC" xml:space="preserve">
+    <value>EMC</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Aktiivne</value>
+  </data>
+  <data name="Enddate" xml:space="preserve">
+    <value>Aegumis kuupC¤ev</value>
+  </data>
+  <data name="Enddate1" xml:space="preserve">
+    <value>LCµpu kuupC¤ev</value>
+  </data>
+  <data name="EndPeriod" xml:space="preserve">
+    <value>Lõpu kuupäev</value>
+  </data>
+  <data name="Endtime" xml:space="preserve">
+    <value>Lõpp aeg</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>Inglise</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>VIGA</value>
+  </data>
+  <data name="Error1" xml:space="preserve">
+    <value>Viga</value>
+  </data>
+  <data name="Errorcallfilewasnotfound" xml:space="preserve">
+    <value>Kõne faili ei leitud.</value>
+  </data>
+  <data name="Errorcallwasnotselectedorfound" xml:space="preserve">
+    <value>Viga kõnet ei leitud või ei valitud.</value>
+  </data>
+  <data name="Errorcompletedevalutionforthiscallalreadyexists" xml:space="preserve">
+    <value>Selline hindamine lõplikus olekus on juba olemas</value>
+  </data>
+  <data name="Errorindateortimeformat" xml:space="preserve">
+    <value>Viga  kuupäeva {0} või aja {1} formaadis.</value>
+  </data>
+  <data name="ErrorinLoggonprocedurePleasetryagain" xml:space="preserve">
+    <value>Viga sisselogimisel palun proovige uuesti</value>
+  </data>
+  <data name="ErrorinLoggonprocedureWrongorincorrectPassword" xml:space="preserve">
+    <value>Viga sisselogimisel, vale parool</value>
+  </data>
+  <data name="ErrorinLoggonprocedureWrongorincorrectUsername" xml:space="preserve">
+    <value>Viga sisselogimisel, sellist kasutajanime ei leitud</value>
+  </data>
+  <data name="Errorinvalidvalue" xml:space="preserve">
+    <value>Vale väärtus</value>
+  </data>
+  <data name="ErrorNoformdescriptionfound" xml:space="preserve">
+    <value>Ei leitud vormi kirjeldust kõne hindamiseks</value>
+  </data>
+  <data name="ErrorNosuchcallwasfound" xml:space="preserve">
+    <value>Selline kõne puudub, et teda hinnata</value>
+  </data>
+  <data name="Erroronearchivingprocessalreadyrunningmultipleachriveprocesscannotrunconcurrently" xml:space="preserve">
+    <value>Viga üks arhiveerimisprotsess juba käib, kahte korraga käivitada ei saa</value>
+  </data>
+  <data name="Erroronselectiverecordingrules" xml:space="preserve">
+    <value>Valikulise salvestamise reeglites on viga palun kontrolli reegleid.</value>
+  </data>
+  <data name="Errortoolongvariable" xml:space="preserve">
+    <value>Liiga pikk</value>
+  </data>
+  <data name="Errorvariabletoobig" xml:space="preserve">
+    <value>Liiga suur</value>
+  </data>
+  <data name="Erroryouhavealreadyloggedinwithapplet" xml:space="preserve">
+    <value>Viga, kasutjal on juba aktiivne appleti sessioon</value>
+  </data>
+  <data name="Estonia" xml:space="preserve">
+    <value>Eesti</value>
+  </data>
+  <data name="EvaluateaCall" xml:space="preserve">
+    <value>Hinda kõnet</value>
+  </data>
+  <data name="Evaluateautoselectedcallsonly" xml:space="preserve">
+    <value>Ainult autoselekteeritud kõnede hindamine</value>
+  </data>
+  <data name="Evaluatecalls" xml:space="preserve">
+    <value>Hinda kõnesid</value>
+  </data>
+  <data name="evaluated" xml:space="preserve">
+    <value>hinnatud</value>
+  </data>
+  <data name="Evaluated1" xml:space="preserve">
+    <value>Hinnatud</value>
+  </data>
+  <data name="Evaluatedby" xml:space="preserve">
+    <value>Hindaja</value>
+  </data>
+  <data name="Evaluatedby1" xml:space="preserve">
+    <value>Hinnangu andis</value>
+  </data>
+  <data name="Evaluateteamscalls" xml:space="preserve">
+    <value>Hinda tiimi kõnesid</value>
+  </data>
+  <data name="Evaluation" xml:space="preserve">
+    <value>Hinnang</value>
+  </data>
+  <data name="Evaluationcompleted" xml:space="preserve">
+    <value>Lõplikult valmis</value>
+  </data>
+  <data name="Evaluationdate" xml:space="preserve">
+    <value>Kuupäev</value>
+  </data>
+  <data name="Evaluationdateid" xml:space="preserve">
+    <value>Hindamise kuupäev (id)</value>
+  </data>
+  <data name="EvaluationdetailsExcel" xml:space="preserve">
+    <value>Detailne hindamis raport (Excel)</value>
+  </data>
+  <data name="Evaluationform" xml:space="preserve">
+    <value>Hindamis vorm</value>
+  </data>
+  <data name="EvaluationForms" xml:space="preserve">
+    <value>Hindamise vormid</value>
+  </data>
+  <data name="Evaluationformversion" xml:space="preserve">
+    <value>Hindamis vormi versioon</value>
+  </data>
+  <data name="Evaluationinscorebycriterias" xml:space="preserve">
+    <value>Hindamis tulemus  % kriteeriumite järgi</value>
+  </data>
+  <data name="Evaluationlinksuccessfullysent" xml:space="preserve">
+    <value>Hinnagu link edukalt saadetud!</value>
+  </data>
+  <data name="Evaluationno" xml:space="preserve">
+    <value>Hinnang nr.</value>
+  </data>
+  <data name="Evaluationreport" xml:space="preserve">
+    <value>Hindamisraport</value>
+  </data>
+  <data name="Evaluationreporting" xml:space="preserve">
+    <value>Hindamis raportid</value>
+  </data>
+  <data name="EvaluationReports" xml:space="preserve">
+    <value>Kõne Hindamise Raportid</value>
+  </data>
+  <data name="EvaluationReports1" xml:space="preserve">
+    <value>Kõne hindamise raportid</value>
+  </data>
+  <data name="Evaluationsaved" xml:space="preserve">
+    <value>Hindamine on salvestatud ok</value>
+  </data>
+  <data name="Evaluationsbycriteriasreport" xml:space="preserve">
+    <value>Raport hindamis tulemuste järgi</value>
+  </data>
+  <data name="EvaluationTemplate" xml:space="preserve">
+    <value>Vormi nimi</value>
+  </data>
+  <data name="EvaluationTemplate1" xml:space="preserve">
+    <value>Hindamisvorm</value>
+  </data>
+  <data name="EvaluationTemplates" xml:space="preserve">
+    <value>Muuda kõne hindamise vormi</value>
+  </data>
+  <data name="EvaluationweightedExcel" xml:space="preserve">
+    <value>Detailne kaalutud raport (Excel)</value>
+  </data>
+  <data name="Existingevaluationfforthiscall" xml:space="preserve">
+    <value>Olemasolevad hinnagud</value>
+  </data>
+  <data name="Expires" xml:space="preserve">
+    <value>Aegub</value>
+  </data>
+  <data name="Exportcalls" xml:space="preserve">
+    <value>Kõnede eksportimine</value>
+  </data>
+  <data name="ExportdataintoMSExcel" xml:space="preserve">
+    <value>Ekspordi andmed MS Excelisse</value>
+  </data>
+  <data name="Extension" xml:space="preserve">
+    <value>Kliendi nimi</value>
+  </data>
+  <data name="Extension1" xml:space="preserve">
+    <value>Töökoht</value>
+  </data>
+  <data name="Extension2" xml:space="preserve">
+    <value>Töökoht</value>
+  </data>
+  <data name="Extensionalreadyinlist" xml:space="preserve">
+    <value>Töökoht on juba nimekirjas</value>
+  </data>
+  <data name="Extensionlicencesinuse" xml:space="preserve">
+    <value>Litsenseeritud töökohad</value>
+  </data>
+  <data name="Extensionparametersadded" xml:space="preserve">
+    <value>Töökoha parameetrid lisatud</value>
+  </data>
+  <data name="Extensionparametersdeleted" xml:space="preserve">
+    <value>Töökoha parameetrid kustutatud</value>
+  </data>
+  <data name="Extensionparametersupdated" xml:space="preserve">
+    <value>Töökoha parameetrid uuendatud</value>
+  </data>
+  <data name="Extensionreport" xml:space="preserve">
+    <value>Töökoha raport</value>
+  </data>
+  <data name="extensions" xml:space="preserve">
+    <value> töökohta.</value>
+  </data>
+  <data name="Failedtosendstop" xml:space="preserve">
+    <value>Ei õnnestunud salvestajale stoppi saata!</value>
+  </data>
+  <data name="Failedtostartrecording" xml:space="preserve">
+    <value>Ei õnnestunud salvestamist alustada!</value>
+  </data>
+  <data name="Failformat" xml:space="preserve">
+    <value>Faili tüüp</value>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>Tehing ebaõnnestus</value>
+  </data>
+  <data name="failure1" xml:space="preserve">
+    <value>ebaõnnestus</value>
+  </data>
+  <data name="Failure2" xml:space="preserve">
+    <value>Ebaõnnestus</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>Veebruar</value>
+  </data>
+  <data name="fieldcannotbenull" xml:space="preserve">
+    <value>väli ei tohi olla null</value>
+  </data>
+  <data name="fieldmayincludeonlydigits" xml:space="preserve">
+    <value>väljas tohib olla ainult number</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>Fail</value>
+  </data>
+  <data name="Filescopied" xml:space="preserve">
+    <value>Faile kopeeritud</value>
+  </data>
+  <data name="Filesfailednotfound" xml:space="preserve">
+    <value>Kopeerimata failid (mida ei leitud)</value>
+  </data>
+  <data name="Filesnotfound" xml:space="preserve">
+    <value>Failid mida ei leitud</value>
+  </data>
+  <data name="Filesnotfound1" xml:space="preserve">
+    <value>Leidmata failid</value>
+  </data>
+  <data name="Folderaccess" xml:space="preserve">
+    <value>Kataloogi ligipääs</value>
+  </data>
+  <data name="Foldercontents" xml:space="preserve">
+    <value>Kataloogi sisu</value>
+  </data>
+  <data name="Folderdeleted" xml:space="preserve">
+    <value>Kataloog kustutatud</value>
+  </data>
+  <data name="Folderfileuploaded" xml:space="preserve">
+    <value>Kataloogi fail üleslaetud.</value>
+  </data>
+  <data name="Folderid" xml:space="preserve">
+    <value>Kataloogi id</value>
+  </data>
+  <data name="Folderlist" xml:space="preserve">
+    <value>Kataloogid</value>
+  </data>
+  <data name="Foldermediafile" xml:space="preserve">
+    <value>Kataloogi meedia fail</value>
+  </data>
+  <data name="Foldername" xml:space="preserve">
+    <value>Kataloogi nimi</value>
+  </data>
+  <data name="Folderobjectdeleted" xml:space="preserve">
+    <value>Dokument/kõne kustutatud</value>
+  </data>
+  <data name="Folders" xml:space="preserve">
+    <value>Kataloogid</value>
+  </data>
+  <data name="Foldersaved" xml:space="preserve">
+    <value>Kataloog salvestatud.</value>
+  </data>
+  <data name="Folderslist" xml:space="preserve">
+    <value>Kataloogide nimekiri</value>
+  </data>
+  <data name="Forename" xml:space="preserve">
+    <value>Eesnimi</value>
+  </data>
+  <data name="Formaverages" xml:space="preserve">
+    <value>Vormi keskimine</value>
+  </data>
+  <data name="Formdataisinvalid" xml:space="preserve">
+    <value>Vormi andmed on vigased</value>
+  </data>
+  <data name="Formdeleted" xml:space="preserve">
+    <value>Vorm kustutati ok</value>
+  </data>
+  <data name="Formhaserrors" xml:space="preserve">
+    <value>Vormil on {0} viga</value>
+  </data>
+  <data name="Formsaved" xml:space="preserve">
+    <value>Vorm salvestatud ok</value>
+  </data>
+  <data name="Found" xml:space="preserve">
+    <value>Leiti</value>
+  </data>
+  <data name="Foundfolderstotalshowingto" xml:space="preserve">
+    <value>Kokku leiti {0} kataloogi, näitan {1} - {2}</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Reede</value>
+  </data>
+  <data name="from" xml:space="preserve">
+    <value>alates</value>
+  </data>
+  <data name="FromIP" xml:space="preserve">
+    <value>Muudeti IP-lt</value>
+  </data>
+  <data name="Generalevaluationsreport" xml:space="preserve">
+    <value>Tavaline hindamise raport</value>
+  </data>
+  <data name="Generatereport" xml:space="preserve">
+    <value>Koosta raport</value>
+  </data>
+  <data name="Generatesummaryreports" xml:space="preserve">
+    <value>Koosta kõnede kokkuvõtted</value>
+  </data>
+  <data name="Genteratereports" xml:space="preserve">
+    <value>Raporti koostamine</value>
+  </data>
+  <data name="Groupbyservices" xml:space="preserve">
+    <value>Grupeerida teenuste kaupa</value>
+  </data>
+  <data name="Groupheader" xml:space="preserve">
+    <value>Grupi päis</value>
+  </data>
+  <data name="gtgt" xml:space="preserve">
+    <value>&amp;gt;&amp;gt;</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Peida</value>
+  </data>
+  <data name="HostnameIP" xml:space="preserve">
+    <value>Arvutinimi/IP aadress</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>Tulemuse id</value>
+  </data>
+  <data name="ID1" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Id2" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="in" xml:space="preserve">
+    <value>sisse</value>
+  </data>
+  <data name="InBound" xml:space="preserve">
+    <value>Sisenev</value>
+  </data>
+  <data name="Inboundno" xml:space="preserve">
+    <value>Sisse nr</value>
+  </data>
+  <data name="Inboundno1" xml:space="preserve">
+    <value>Sisse nr</value>
+  </data>
+  <data name="Inclold" xml:space="preserve">
+    <value>Kuva ka vanad</value>
+  </data>
+  <data name="Includefollowingattributesinfilename" xml:space="preserve">
+    <value>Koosta faili nimi atribuutidest</value>
+  </data>
+  <data name="Includevisualcharts" xml:space="preserve">
+    <value>Lisa visaalne graafik</value>
+  </data>
+  <data name="Incorrectinputdata" xml:space="preserve">
+    <value>Vormi andmed on vigased</value>
+  </data>
+  <data name="Inout" xml:space="preserve">
+    <value>Sisse/välja</value>
+  </data>
+  <data name="InOutCall" xml:space="preserve">
+    <value>Sisenev/väljuv kõne</value>
+  </data>
+  <data name="InOutCall1" xml:space="preserve">
+    <value>Sisenev/väljuv kõne</value>
+  </data>
+  <data name="Insert" xml:space="preserve">
+    <value>Sisesta</value>
+  </data>
+  <data name="InsertnewRole" xml:space="preserve">
+    <value>Rolli lisamine</value>
+  </data>
+  <data name="InsertnewUser" xml:space="preserve">
+    <value>Kasutaja lisamine</value>
+  </data>
+  <data name="Invalidcallid" xml:space="preserve">
+    <value>Vigane kõne id</value>
+  </data>
+  <data name="Invaliddate" xml:space="preserve">
+    <value>Vigane kuupäev</value>
+  </data>
+  <data name="Invalidnewagentid" xml:space="preserve">
+    <value>Vigane agendi id</value>
+  </data>
+  <data name="Invalidpassword" xml:space="preserve">
+    <value>Vale parool</value>
+  </data>
+  <data name="Invalidusernameorpassword" xml:space="preserve">
+    <value>Vale kasutjanimi või parool</value>
+  </data>
+  <data name="Itemsperpage" xml:space="preserve">
+    <value>Kirjeid ekraanil</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>Jaanuar</value>
+  </data>
+  <data name="Jobisactivated" xml:space="preserve">
+    <value>Kordus aktiveeritud</value>
+  </data>
+  <data name="Jobparameters" xml:space="preserve">
+    <value>Korduse parameetr</value>
+  </data>
+  <data name="Jobscheduleoptions" xml:space="preserve">
+    <value>Kordus käivituse seadistused</value>
+  </data>
+  <data name="joinedbyoperator" xml:space="preserve">
+    <value>Reeglid seotud loogilise operatoriga:</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>Juuli</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>Juuni</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Keel</value>
+  </data>
+  <data name="Lasterror" xml:space="preserve">
+    <value>Viimane viga</value>
+  </data>
+  <data name="Lastrecording" xml:space="preserve">
+    <value>Viimane salvestus</value>
+  </data>
+  <data name="Lenghtminutesseconds" xml:space="preserve">
+    <value>Pikkus (minutit, sekundit)</value>
+  </data>
+  <data name="LicenceManagement" xml:space="preserve">
+    <value>Litsenseerimise haldus</value>
+  </data>
+  <data name="LicenceManagement1" xml:space="preserve">
+    <value>Litsenseerimine</value>
+  </data>
+  <data name="LicenceManagement2" xml:space="preserve">
+    <value>Litsenseerimine</value>
+  </data>
+  <data name="Licencesinuse" xml:space="preserve">
+    <value>Kasutatud litsentsid</value>
+  </data>
+  <data name="LicencesUsed" xml:space="preserve">
+    <value>Kasutatud litsentsid </value>
+  </data>
+  <data name="Linestates" xml:space="preserve">
+    <value>Liinide staatused</value>
+  </data>
+  <data name="Linestatesofchannels" xml:space="preserve">
+    <value>Liini kanalite olekud</value>
+  </data>
+  <data name="Listen" xml:space="preserve">
+    <value>Kuula</value>
+  </data>
+  <data name="Listen1" xml:space="preserve">
+    <value>Kuula</value>
+  </data>
+  <data name="ListenAllCalls" xml:space="preserve">
+    <value>Kõigi kõnede kuulamine</value>
+  </data>
+  <data name="Listenallcalls1" xml:space="preserve">
+    <value>Kuula kõiki kõnesid </value>
+  </data>
+  <data name="Listencallsbyrecordingrule" xml:space="preserve">
+    <value>Kuula kõnesid salvestus reeglite järgi</value>
+  </data>
+  <data name="Listencallsbyservice" xml:space="preserve">
+    <value>Kuula teenuste kõnesid</value>
+  </data>
+  <data name="Listendate" xml:space="preserve">
+    <value>Kuulamise aeg</value>
+  </data>
+  <data name="Listenedat" xml:space="preserve">
+    <value>Kuulamiseaeg</value>
+  </data>
+  <data name="Listenedby" xml:space="preserve">
+    <value>Kes kuulas</value>
+  </data>
+  <data name="ListenedBy1" xml:space="preserve">
+    <value>Kuulatud:</value>
+  </data>
+  <data name="Listenowncalls" xml:space="preserve">
+    <value>Oma kõnede kuulamine</value>
+  </data>
+  <data name="Listenowncalls1" xml:space="preserve">
+    <value>Kuula enda kõnesid</value>
+  </data>
+  <data name="Listenteamcalls" xml:space="preserve">
+    <value>Kuula tiimi kõnesid</value>
+  </data>
+  <data name="ListofRoles" xml:space="preserve">
+    <value>Rollid:</value>
+  </data>
+  <data name="ListofRoles1" xml:space="preserve">
+    <value>Rollide nimekiri</value>
+  </data>
+  <data name="ListofRoles2" xml:space="preserve">
+    <value>Rollide nimekiri</value>
+  </data>
+  <data name="ListoftheAgentGroups" xml:space="preserve">
+    <value>Tiimide nimekiri</value>
+  </data>
+  <data name="ListofUsers" xml:space="preserve">
+    <value>Kasutajate nimekiri</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Sisse logimine</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Logi välja</value>
+  </data>
+  <data name="Logout1" xml:space="preserve">
+    <value>Logi välja</value>
+  </data>
+  <data name="ltlt" xml:space="preserve">
+    <value>&amp;lt;&amp;lt;</value>
+  </data>
+  <data name="Maintainevaluationforms" xml:space="preserve">
+    <value>Halda hindamis vorme</value>
+  </data>
+  <data name="Makereport" xml:space="preserve">
+    <value>Koosta raport</value>
+  </data>
+  <data name="Mame" xml:space="preserve">
+    <value>Nimi</value>
+  </data>
+  <data name="Management" xml:space="preserve">
+    <value>Haldus</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>Märts</value>
+  </data>
+  <data name="Markedforreplay" xml:space="preserve">
+    <value>Vajab kordamist</value>
+  </data>
+  <data name="MaximumamountofLicensesinuse" xml:space="preserve">
+    <value>Kõik olemasolevad litsentsid on kasutuses</value>
+  </data>
+  <data name="Maximumcount" xml:space="preserve">
+    <value>Maksimaalne kõnede arv</value>
+  </data>
+  <data name="MaxScore" xml:space="preserve">
+    <value>Max punktid</value>
+  </data>
+  <data name="Maxscore1" xml:space="preserve">
+    <value>Max punktid</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>Mai</value>
+  </data>
+  <data name="Media" xml:space="preserve">
+    <value>Meedia</value>
+  </data>
+  <data name="MembersofAgentGroup" xml:space="preserve">
+    <value>Tiimis olevad aktiivsed kasutajad</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Teade</value>
+  </data>
+  <data name="Message1" xml:space="preserve">
+    <value>Teade:</value>
+  </data>
+  <data name="Messageschanged" xml:space="preserve">
+    <value>Muudetud nimed</value>
+  </data>
+  <data name="Minutestotal" xml:space="preserve">
+    <value>Kõne kestus kokku</value>
+  </data>
+  <data name="mmss" xml:space="preserve">
+    <value>(mm:ss)</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>Muudetud</value>
+  </data>
+  <data name="Modifyuserrightsoftherole" xml:space="preserve">
+    <value>Rollidele privileegide lisamine/kustutamine</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Esmaspäev</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Kuu</value>
+  </data>
+  <data name="Month1" xml:space="preserve">
+    <value>Kuu</value>
+  </data>
+  <data name="Month2" xml:space="preserve">
+    <value>Kuu</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Eesnimi</value>
+  </data>
+  <data name="Name1" xml:space="preserve">
+    <value>Nimi</value>
+  </data>
+  <data name="Name2" xml:space="preserve">
+    <value>Nimi</value>
+  </data>
+  <data name="Name3" xml:space="preserve">
+    <value>Nimi</value>
+  </data>
+  <data name="Name4" xml:space="preserve">
+    <value>Nimi</value>
+  </data>
+  <data name="NameofAgentGroupisalreadyinuse" xml:space="preserve">
+    <value>Tiimi nimi juba kasutusel</value>
+  </data>
+  <data name="Needsevaluation" xml:space="preserve">
+    <value>Vajab hindamist</value>
+  </data>
+  <data name="Needsreplay" xml:space="preserve">
+    <value>Vajab kuulamist</value>
+  </data>
+  <data name="Needssupervision" xml:space="preserve">
+    <value>Vajab C¼levaatamist</value>
+  </data>
+  <data name="NewAgentGroup" xml:space="preserve">
+    <value>Tiimi lisamine</value>
+  </data>
+  <data name="NewAgentGroupisaddedtolist" xml:space="preserve">
+    <value>Tiimi lisamine õnnestus</value>
+  </data>
+  <data name="Newcallstarted" xml:space="preserve">
+    <value>Uus kõne algas</value>
+  </data>
+  <data name="NewEvaluationTemplate" xml:space="preserve">
+    <value>Uus hindamise vorm</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Uus Parool</value>
+  </data>
+  <data name="Newpasswordandnewpasswordrepeatmustmatch" xml:space="preserve">
+    <value>Uus parool ja uue parooli kordus peavad klappima</value>
+  </data>
+  <data name="Newpasswordmustbeatleastcharacters" xml:space="preserve">
+    <value>Uus parool peab olema vähemalt 6 tähte</value>
+  </data>
+  <data name="NewRoleiscreated" xml:space="preserve">
+    <value>Rolli lisamine õnnestus</value>
+  </data>
+  <data name="Newsubfolderoptional" xml:space="preserve">
+    <value>Uus alamkataloog (valikuline)</value>
+  </data>
+  <data name="Newuseriscreated" xml:space="preserve">
+    <value>Kasutaja lisamine õnnestus</value>
+  </data>
+  <data name="next" xml:space="preserve">
+    <value>järgmine</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nr.</value>
+  </data>
+  <data name="Nocallsfoundmachingsetcriteria" xml:space="preserve">
+    <value>Ei leitud ühtegi kõne kirjet</value>
+  </data>
+  <data name="Nodataforreportcriteriaswasnotfountreportwillnotbegenrated" xml:space="preserve">
+    <value>Valitud kriteeriumiga andmeid ei leitud, raporti ei koostata</value>
+  </data>
+  <data name="Noofcalls" xml:space="preserve">
+    <value>Kõnede arv</value>
+  </data>
+  <data name="Noprofileruletype" xml:space="preserve">
+    <value>Profiili tüüp puudub</value>
+  </data>
+  <data name="Normalselectiverecording" xml:space="preserve">
+    <value>Tavaline</value>
+  </data>
+  <data name="Notavalidextension" xml:space="preserve">
+    <value>Töökoha number valel kujul</value>
+  </data>
+  <data name="Notrelevant" xml:space="preserve">
+    <value>Ei arvesta</value>
+  </data>
+  <data name="Notrelevantmarkedbydefault" xml:space="preserve">
+    <value>Vaikimis `Ära kasuta` märgitud</value>
+  </data>
+  <data name="Nousersfound" xml:space="preserve">
+    <value>Ühtegi kasutajat ei leitud</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="NR" xml:space="preserve">
+    <value>Jrk nr.</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>Oktoober</value>
+  </data>
+  <data name="Old" xml:space="preserve">
+    <value>Vanad</value>
+  </data>
+  <data name="OnDemand" xml:space="preserve">
+    <value>Nõudel</value>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>Süsteem</value>
+  </data>
+  <data name="OnlineCalls" xml:space="preserve">
+    <value>Salvestatavad kõned</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>ava</value>
+  </data>
+  <data name="OpenexistingEvaluationTemplate" xml:space="preserve">
+    <value>Vali olemasolev vorm</value>
+  </data>
+  <data name="Openingconnectiontoserver" xml:space="preserve">
+    <value>Loon ühendust serveriga...</value>
+  </data>
+  <data name="Ordernumber" xml:space="preserve">
+    <value>Jrk</value>
+  </data>
+  <data name="out" xml:space="preserve">
+    <value>välja</value>
+  </data>
+  <data name="OutBound" xml:space="preserve">
+    <value>Väljuv</value>
+  </data>
+  <data name="OutBoundno" xml:space="preserve">
+    <value>Välja nr.</value>
+  </data>
+  <data name="Outboundno1" xml:space="preserve">
+    <value>Välja nr</value>
+  </data>
+  <data name="Outcome" xml:space="preserve">
+    <value>Tulemus</value>
+  </data>
+  <data name="page" xml:space="preserve">
+    <value>lk</value>
+  </data>
+  <data name="Parameters" xml:space="preserve">
+    <value>Parameetrid</value>
+  </data>
+  <data name="PartcomQualityMonitoringSuite" xml:space="preserve">
+    <value>Partcom Quality Monitoring Suite</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Parool</value>
+  </data>
+  <data name="Passwordandusernamechangedok" xml:space="preserve">
+    <value>Parool ja kasutajanimi muudetud ok</value>
+  </data>
+  <data name="Passwordchangedok" xml:space="preserve">
+    <value>Parool muudetud ok</value>
+  </data>
+  <data name="Passwordcheck" xml:space="preserve">
+    <value>Parool uuesti</value>
+  </data>
+  <data name="Passworddonotmach" xml:space="preserve">
+    <value>Paroolid ei ole mõlemas väljas samad</value>
+  </data>
+  <data name="PasswordshouldbeatleastcharacterslongMustincludenumbersuppercaseandlowercasecharacters" xml:space="preserve">
+    <value>Parooli väli peab olema vähemalt 4 karakterit pikk.</value>
+  </data>
+  <data name="PBXnumber" xml:space="preserve">
+    <value>PBX number</value>
+  </data>
+  <data name="peragent" xml:space="preserve">
+    <value>agendi kohta</value>
+  </data>
+  <data name="percent" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>Protsent</value>
+  </data>
+  <data name="Percentagebasedrecording" xml:space="preserve">
+    <value>Protsendipõhine</value>
+  </data>
+  <data name="Percentagetorecord" xml:space="preserve">
+    <value>Salvestatavate kõnede protsent</value>
+  </data>
+  <data name="Perday" xml:space="preserve">
+    <value>Päeva kohta</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Periood</value>
+  </data>
+  <data name="Period1" xml:space="preserve">
+    <value>Periood</value>
+  </data>
+  <data name="Period2" xml:space="preserve">
+    <value>Periood</value>
+  </data>
+  <data name="Periodtype" xml:space="preserve">
+    <value>Perioodi tüüp</value>
+  </data>
+  <data name="PeriodType1" xml:space="preserve">
+    <value>Perioodi Tüüp</value>
+  </data>
+  <data name="Permissiontoseeevaluatedcalls" xml:space="preserve">
+    <value>Õigus näha hinnatud kõnesid</value>
+  </data>
+  <data name="Permonth" xml:space="preserve">
+    <value>Kuu kohta</value>
+  </data>
+  <data name="Perweek" xml:space="preserve">
+    <value>Nädala kohta</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="Phone1" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="PhoneCClogname" xml:space="preserve">
+    <value>Agendi ID</value>
+  </data>
+  <data name="Pilotno" xml:space="preserve">
+    <value>Pilot nr.</value>
+  </data>
+  <data name="Pilotno1" xml:space="preserve">
+    <value>Piloodi nr</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Kuula</value>
+  </data>
+  <data name="Play1" xml:space="preserve">
+    <value>Käivita</value>
+  </data>
+  <data name="PQMSApplet" xml:space="preserve">
+    <value>PQMS Applet</value>
+  </data>
+  <data name="PQMSClientAppletlogin" xml:space="preserve">
+    <value>PQMS Kliend Applet login</value>
+  </data>
+  <data name="PQMSusernotifiesYouaboutanevaluationresult" xml:space="preserve">
+    <value>Partcom QMSi kasutaja {0} teavitab Sind hinnatud kõne tulemusest.</value>
+  </data>
+  <data name="PremissiontomanageEvaluationForms" xml:space="preserve">
+    <value>Hindamisvormide halduse õigus</value>
+  </data>
+  <data name="previous" xml:space="preserve">
+    <value>eelmine</value>
+  </data>
+  <data name="Printevaluation" xml:space="preserve">
+    <value>Trüki</value>
+  </data>
+  <data name="PrintPDF" xml:space="preserve">
+    <value>Prindi PDF</value>
+  </data>
+  <data name="Priority" xml:space="preserve">
+    <value>Prioriteet</value>
+  </data>
+  <data name="Priority1" xml:space="preserve">
+    <value>Prioriteet</value>
+  </data>
+  <data name="Privatecall" xml:space="preserve">
+    <value>Privaatne</value>
+  </data>
+  <data name="Privatecall1" xml:space="preserve">
+    <value>Privaat kCµne</value>
+  </data>
+  <data name="Privilegeadded" xml:space="preserve">
+    <value>Privileeg lisatud</value>
+  </data>
+  <data name="Privilegeremoved" xml:space="preserve">
+    <value>Privileeg eemaldatud</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profiil</value>
+  </data>
+  <data name="Profileactiveagents" xml:space="preserve">
+    <value>Profiili aktiivsed agendid</value>
+  </data>
+  <data name="Profileactiverules" xml:space="preserve">
+    <value>Profiili aktiivsed reeglid</value>
+  </data>
+  <data name="Profiledeletedok" xml:space="preserve">
+    <value>Valik kustutatud</value>
+  </data>
+  <data name="Profiledetailview" xml:space="preserve">
+    <value>Profiili detailvaade</value>
+  </data>
+  <data name="Profileforautomaticevaluationselection" xml:space="preserve">
+    <value>Kõnede automaatne valik hindamiseks</value>
+  </data>
+  <data name="Profilehaserrors" xml:space="preserve">
+    <value>Valiku koostamisel leiti {0} viga</value>
+  </data>
+  <data name="Profilenamealreadyinuse" xml:space="preserve">
+    <value>Profiili nimi on juba kasutusel</value>
+  </data>
+  <data name="Profilesavedok" xml:space="preserve">
+    <value>Valik salvestatud</value>
+  </data>
+  <data name="Profilesforautomaticevaluationselection" xml:space="preserve">
+    <value>Kõnede automaatne valik hindamiseks</value>
+  </data>
+  <data name="Profileupdatewassuccess" xml:space="preserve">
+    <value>Profiili uuendamine õnnestus</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="rated" xml:space="preserve">
+    <value>hinnatud</value>
+  </data>
+  <data name="Rateddateid" xml:space="preserve">
+    <value>Hindamise kuupäev, id</value>
+  </data>
+  <data name="Ratingform" xml:space="preserve">
+    <value>Hindamisvorm</value>
+  </data>
+  <data name="Reactivate" xml:space="preserve">
+    <value>Re-aktiveeri</value>
+  </data>
+  <data name="Receivednewcall" xml:space="preserve">
+    <value>Saabus uus kõne!!!</value>
+  </data>
+  <data name="Record" xml:space="preserve">
+    <value>Salvesta</value>
+  </data>
+  <data name="RecordedCalls" xml:space="preserve">
+    <value>Kõned</value>
+  </data>
+  <data name="RecordedInteractions" xml:space="preserve">
+    <value>Otsing</value>
+  </data>
+  <data name="Recording" xml:space="preserve">
+    <value>Salvestan</value>
+  </data>
+  <data name="Recordingended" xml:space="preserve">
+    <value>Salvestamine lõpetatud.</value>
+  </data>
+  <data name="Recordingstarted" xml:space="preserve">
+    <value>Salvestamine edukalt alustatud.</value>
+  </data>
+  <data name="Recordingthecall" xml:space="preserve">
+    <value>Kõne salvestatakse ...</value>
+  </data>
+  <data name="records" xml:space="preserve">
+    <value>kirjet</value>
+  </data>
+  <data name="Recordsonlythosecallswitchmatchwithrules" xml:space="preserve">
+    <value>Salvestatakse ainult need kõned, mis vastavad reeglitele!</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Värskenda</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Eemalda</value>
+  </data>
+  <data name="Remove1" xml:space="preserve">
+    <value>Eemalda</value>
+  </data>
+  <data name="Removedattributes" xml:space="preserve">
+    <value>Eemaldatud atribuudid</value>
+  </data>
+  <data name="Removedcriterias" xml:space="preserve">
+    <value>Kustutatud kriteeriumid</value>
+  </data>
+  <data name="Removedrule" xml:space="preserve">
+    <value>Kustutatud reegel</value>
+  </data>
+  <data name="Renamefiles" xml:space="preserve">
+    <value>Nimeta failid ringi</value>
+  </data>
+  <data name="Reportgeneratedat" xml:space="preserve">
+    <value>Raport genereeritud</value>
+  </data>
+  <data name="Reportgeneratedat1" xml:space="preserve">
+    <value>Raport koostatud</value>
+  </data>
+  <data name="Reportiperiod" xml:space="preserve">
+    <value>Raporti periood</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Raportid</value>
+  </data>
+  <data name="ReportsizelimitexceededPleaseusecriteriasorshortentheperiod" xml:space="preserve">
+    <value>Raporti suurus ületatud! Palun kasutage lisa kriteeriume või lühendage perioodi.</value>
+  </data>
+  <data name="Reportstarting" xml:space="preserve">
+    <value>Raport vahemikus</value>
+  </data>
+  <data name="Requestedactionentrynotfound" xml:space="preserve">
+    <value>Otsitud tegevusel puuduvad sissekanded</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Tulemus</value>
+  </data>
+  <data name="Result1" xml:space="preserve">
+    <value>Tulemus</value>
+  </data>
+  <data name="Result2" xml:space="preserve">
+    <value>Tulemus</value>
+  </data>
+  <data name="Result3" xml:space="preserve">
+    <value>Tulemus</value>
+  </data>
+  <data name="Righttodownloadcalls" xml:space="preserve">
+    <value>Kõnede alla laadimine</value>
+  </data>
+  <data name="Ringingtonesbeforeanswer" xml:space="preserve">
+    <value>Kutsus</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Roll</value>
+  </data>
+  <data name="Roleclass" xml:space="preserve">
+    <value>Rolli klass</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Rollid</value>
+  </data>
+  <data name="Rolesadded" xml:space="preserve">
+    <value>Rollid lisatud</value>
+  </data>
+  <data name="Roleservicesupdatedok" xml:space="preserve">
+    <value>Rolli teenused uuendatud ok</value>
+  </data>
+  <data name="Rolesremoved" xml:space="preserve">
+    <value>Rollid eemaldatud</value>
+  </data>
+  <data name="Rolessetforuser" xml:space="preserve">
+    <value>Kasutajale valitud rollid</value>
+  </data>
+  <data name="Ruledeleted" xml:space="preserve">
+    <value>Reegel kustutatud</value>
+  </data>
+  <data name="RuleEffect" xml:space="preserve">
+    <value>Reegli effekt</value>
+  </data>
+  <data name="Ruleinsertsuccessful" xml:space="preserve">
+    <value>Reegli sisestamine õnnestus</value>
+  </data>
+  <data name="Rules" xml:space="preserve">
+    <value>Reeglid</value>
+  </data>
+  <data name="Ruletype" xml:space="preserve">
+    <value>Reegli tüüp</value>
+  </data>
+  <data name="Ruletype1" xml:space="preserve">
+    <value>Reegli tüüp</value>
+  </data>
+  <data name="Runmonthlyon" xml:space="preserve">
+    <value>Vali kuu</value>
+  </data>
+  <data name="Runonceat" xml:space="preserve">
+    <value>Käivita korra</value>
+  </data>
+  <data name="Runweeklyon" xml:space="preserve">
+    <value>Vali nädalapäev</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Laupäev</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salvesta kirjeldus</value>
+  </data>
+  <data name="Save1" xml:space="preserve">
+    <value>Salvesta</value>
+  </data>
+  <data name="Save2" xml:space="preserve">
+    <value>Salvesta</value>
+  </data>
+  <data name="Save3" xml:space="preserve">
+    <value>Salvesta</value>
+  </data>
+  <data name="Save4" xml:space="preserve">
+    <value>Salvesta</value>
+  </data>
+  <data name="Saveeval" xml:space="preserve">
+    <value>Salvesta</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Punktid</value>
+  </data>
+  <data name="Score1" xml:space="preserve">
+    <value>Punktid</value>
+  </data>
+  <data name="Score2" xml:space="preserve">
+    <value>Punktid</value>
+  </data>
+  <data name="Scorebygroups" xml:space="preserve">
+    <value>Grupi tulemus</value>
+  </data>
+  <data name="scoreof" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="Scorepoints" xml:space="preserve">
+    <value>Punktid</value>
+  </data>
+  <data name="Scorestep" xml:space="preserve">
+    <value>Punkti samm</value>
+  </data>
+  <data name="Scorestep1" xml:space="preserve">
+    <value>Punkti samm</value>
+  </data>
+  <data name="Screenrecordingextensions" xml:space="preserve">
+    <value>Ekraanisalvestuse töökohad</value>
+  </data>
+  <data name="Screenrecordingmanagement" xml:space="preserve">
+    <value>Ekraanisalvestuse haldus</value>
+  </data>
+  <data name="Screenrecordingparameters" xml:space="preserve">
+    <value>Ekraanisalvestus parameetrid</value>
+  </data>
+  <data name="Screenrecordings" xml:space="preserve">
+    <value>Ekraanipildi salvestused</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Otsi</value>
+  </data>
+  <data name="Search1" xml:space="preserve">
+    <value>Otsing</value>
+  </data>
+  <data name="Searchfrom" xml:space="preserve">
+    <value>Allikas</value>
+  </data>
+  <data name="SearchofUsers" xml:space="preserve">
+    <value>Kasutajate otsing</value>
+  </data>
+  <data name="Seeevaluationresults" xml:space="preserve">
+    <value>Hinnatud kõnede tulemused</value>
+  </data>
+  <data name="Selectagents" xml:space="preserve">
+    <value>Vali agent(did)</value>
+  </data>
+  <data name="Selectall" xml:space="preserve">
+    <value>--- Vali kõik ---</value>
+  </data>
+  <data name="Selectdocumentoraudiofile" xml:space="preserve">
+    <value>Vali dokument või audio file</value>
+  </data>
+  <data name="SelectedforEvaluation" xml:space="preserve">
+    <value>Vajab hindamist</value>
+  </data>
+  <data name="SelectedGroups" xml:space="preserve">
+    <value>Valitud grupid</value>
+  </data>
+  <data name="SelectedRoles" xml:space="preserve">
+    <value>Valitud rollid:</value>
+  </data>
+  <data name="SelectedUsernameisalreadyinusepleaseinsertnewUsername" xml:space="preserve">
+    <value>Selline kasutajanimi on juba kasutusel, palun vali uus</value>
+  </data>
+  <data name="Selectedusers" xml:space="preserve">
+    <value>Valitud kasutajad</value>
+  </data>
+  <data name="Selectionupdated" xml:space="preserve">
+    <value>Valik uuendatud</value>
+  </data>
+  <data name="Selectiverecording" xml:space="preserve">
+    <value>Valikuline salvestamine</value>
+  </data>
+  <data name="SelectiveRecording1" xml:space="preserve">
+    <value>Valikuline salvestamine</value>
+  </data>
+  <data name="Selectiverecordingrule" xml:space="preserve">
+    <value>Valikulise salvestamise reegel</value>
+  </data>
+  <data name="Selectiverecordingrules" xml:space="preserve">
+    <value>Valikulise salvestamise reegel</value>
+  </data>
+  <data name="Selectiverecordingruletype" xml:space="preserve">
+    <value>Valikulise salvestamise tüüp</value>
+  </data>
+  <data name="Selectivereocrding" xml:space="preserve">
+    <value>Valikuline salvestamine</value>
+  </data>
+  <data name="Selectreporttype" xml:space="preserve">
+    <value>Vali raporti tüüp</value>
+  </data>
+  <data name="Selectteams" xml:space="preserve">
+    <value>Vali tiim(id)</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Saada</value>
+  </data>
+  <data name="Sendevaluationto" xml:space="preserve">
+    <value>Saada hindamise tulemus aadressile</value>
+  </data>
+  <data name="Sendingcommand" xml:space="preserve">
+    <value>Saadan käsku ...</value>
+  </data>
+  <data name="Sentstoptorecorder" xml:space="preserve">
+    <value>Stopp salvestajale saadetud</value>
+  </data>
+  <data name="September" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="Serverreturnederror" xml:space="preserve">
+    <value>Server andis ühendumisel vea.</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Teenus</value>
+  </data>
+  <data name="Service1" xml:space="preserve">
+    <value>Teenus</value>
+  </data>
+  <data name="Service2" xml:space="preserve">
+    <value>Teenus</value>
+  </data>
+  <data name="Service3" xml:space="preserve">
+    <value>Teenus</value>
+  </data>
+  <data name="Service4" xml:space="preserve">
+    <value>Teenus</value>
+  </data>
+  <data name="Service5" xml:space="preserve">
+    <value>Teenus</value>
+  </data>
+  <data name="Service6" xml:space="preserve">
+    <value>Teenus</value>
+  </data>
+  <data name="Service7" xml:space="preserve">
+    <value>Teenus</value>
+  </data>
+  <data name="Serviceaddedok" xml:space="preserve">
+    <value>Teenus lisatud ok</value>
+  </data>
+  <data name="ServiceID" xml:space="preserve">
+    <value>Teenuse id</value>
+  </data>
+  <data name="ServiceID1" xml:space="preserve">
+    <value>Teenuse id</value>
+  </data>
+  <data name="Serviceid2" xml:space="preserve">
+    <value>Teenuse id</value>
+  </data>
+  <data name="Servicename" xml:space="preserve">
+    <value>Teenuse nimi</value>
+  </data>
+  <data name="ServicePilot" xml:space="preserve">
+    <value>Teenuse nimi</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Rolli teenused</value>
+  </data>
+  <data name="Services1" xml:space="preserve">
+    <value>Teenused</value>
+  </data>
+  <data name="Services2" xml:space="preserve">
+    <value>Teenused</value>
+  </data>
+  <data name="Services3" xml:space="preserve">
+    <value>Teenused</value>
+  </data>
+  <data name="Servicesaccessibletorole" xml:space="preserve">
+    <value>Rollile lubatud teenused</value>
+  </data>
+  <data name="Servicesadded" xml:space="preserve">
+    <value>Lisatud teenused</value>
+  </data>
+  <data name="Servicesmanagement" xml:space="preserve">
+    <value>Teenuste haldamine</value>
+  </data>
+  <data name="Servicesremoved" xml:space="preserve">
+    <value>Eemaldatud teenused</value>
+  </data>
+  <data name="Servicestobearchived" xml:space="preserve">
+    <value>Teenused arhiveerimiseks</value>
+  </data>
+  <data name="Servicestobedeleted" xml:space="preserve">
+    <value>Teenused kustutamiseks</value>
+  </data>
+  <data name="Serviceterminatedok" xml:space="preserve">
+    <value>Teenus lõpetatud ok</value>
+  </data>
+  <data name="Serviceupdatedok" xml:space="preserve">
+    <value>Teenus uuendatud ok</value>
+  </data>
+  <data name="Sessionstart" xml:space="preserve">
+    <value>Sessiooni algus</value>
+  </data>
+  <data name="Setupselectiverecordingrules" xml:space="preserve">
+    <value>Valikulise salvestamise reeglite seadistamine</value>
+  </data>
+  <data name="Shedulerjobname" xml:space="preserve">
+    <value>Korduse nimi</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Näita</value>
+  </data>
+  <data name="Showterminated" xml:space="preserve">
+    <value>Näita ka lõpetatud</value>
+  </data>
+  <data name="SizeMB" xml:space="preserve">
+    <value>Suurus (MB)</value>
+  </data>
+  <data name="StartArchiving" xml:space="preserve">
+    <value>Alusta arhiveerimist</value>
+  </data>
+  <data name="startarchiving1" xml:space="preserve">
+    <value>Arhiveeri</value>
+  </data>
+  <data name="Startcopy" xml:space="preserve">
+    <value>Alusta kopeerimist</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Algusaeg</value>
+  </data>
+  <data name="Startdatemustbeearlierthanenddate" xml:space="preserve">
+    <value>Alguskuupäev peab olema varasem kui lõpukuupäev</value>
+  </data>
+  <data name="Startingfrom" xml:space="preserve">
+    <value>Alates</value>
+  </data>
+  <data name="StartPeriod" xml:space="preserve">
+    <value>Start Periood</value>
+  </data>
+  <data name="Startrecording" xml:space="preserve">
+    <value>Alusta salvestamist.</value>
+  </data>
+  <data name="StartSearching" xml:space="preserve">
+    <value>Otsi</value>
+  </data>
+  <data name="Starttime" xml:space="preserve">
+    <value>Alguse aeg</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Olek</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Staatus</value>
+  </data>
+  <data name="StatuschangedOK" xml:space="preserve">
+    <value>Kõne staatus muudetud Ok</value>
+  </data>
+  <data name="Statusnotchanged" xml:space="preserve">
+    <value>Staatus ei muutunud</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Stopp</value>
+  </data>
+  <data name="Stoprecording" xml:space="preserve">
+    <value>Lõpeta salvestamine.</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>!=</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>&gt;</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>&gt;=</value>
+  </data>
+  <data name="String3" xml:space="preserve">
+    <value>&lt;</value>
+  </data>
+  <data name="String4" xml:space="preserve">
+    <value>&lt;=</value>
+  </data>
+  <data name="String5" xml:space="preserve">
+    <value>=</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Tehing õnnestus</value>
+  </data>
+  <data name="Success1" xml:space="preserve">
+    <value>Õnnestus</value>
+  </data>
+  <data name="Success2" xml:space="preserve">
+    <value>Õnnestus</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>Kokku</value>
+  </data>
+  <data name="Summaryandextensionsreport" xml:space="preserve">
+    <value>Kõnede kokkuvõtete ja töökoha raport</value>
+  </data>
+  <data name="Summaryreports" xml:space="preserve">
+    <value>Kõnede kokkuvõtted</value>
+  </data>
+  <data name="Sumwithrateingform" xml:space="preserve">
+    <value>Kokku hindamisvormiga</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Pühapäev</value>
+  </data>
+  <data name="Supervisor" xml:space="preserve">
+    <value>SV</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Perekonnanimi</value>
+  </data>
+  <data name="Surname1" xml:space="preserve">
+    <value>Perekonnanimi</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>Tiim</value>
+  </data>
+  <data name="TeamaveragesExcel" xml:space="preserve">
+    <value>Tiimi aritmeetiline keskmine (Excel)</value>
+  </data>
+  <data name="Teamaveragesreport" xml:space="preserve">
+    <value>Tiimi aritmeetilise keskmise raport</value>
+  </data>
+  <data name="Teamleader" xml:space="preserve">
+    <value>Liider</value>
+  </data>
+  <data name="Teams" xml:space="preserve">
+    <value>Tiimid</value>
+  </data>
+  <data name="Teamsadded" xml:space="preserve">
+    <value>Lisatud tiimid</value>
+  </data>
+  <data name="Teamsadded1" xml:space="preserve">
+    <value>Lisatud tiimid</value>
+  </data>
+  <data name="Teamsremoved" xml:space="preserve">
+    <value>Eemaldatud tiimid</value>
+  </data>
+  <data name="Teamsremoved1" xml:space="preserve">
+    <value>Eemaldatud tiimid</value>
+  </data>
+  <data name="Terminate" xml:space="preserve">
+    <value>Lõpeta</value>
+  </data>
+  <data name="Terminated" xml:space="preserve">
+    <value>Lõpetatud</value>
+  </data>
+  <data name="Terminated1" xml:space="preserve">
+    <value>Teenus aegub</value>
+  </data>
+  <data name="Terminated2" xml:space="preserve">
+    <value>Lõpetatud</value>
+  </data>
+  <data name="TerminationDate" xml:space="preserve">
+    <value>Lõpukuupäev</value>
+  </data>
+  <data name="Thatagentidisalreadyinusepealechoosenewid" xml:space="preserve">
+    <value>Selline agendi id on juba kasutusel, palun proovi uut.</value>
+  </data>
+  <data name="Thatarchiveidalreadyexists" xml:space="preserve">
+    <value>Selline arhiivi id on juba olemas</value>
+  </data>
+  <data name="Thefieldmustnotbeempty" xml:space="preserve">
+    <value>Väli ei tohi olla tühi</value>
+  </data>
+  <data name="ThenameoftheroleisalreadyinuseSelectnewnamefortherole" xml:space="preserve">
+    <value>Selline rollinimi on juba kasutusel, palun vali uus</value>
+  </data>
+  <data name="Thiscallhasbeenmarkedasprivate" xml:space="preserve">
+    <value>See kõne on märgitud privaatseks!</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Neljapäev</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Kellaaeg</value>
+  </data>
+  <data name="Time1" xml:space="preserve">
+    <value>Vali aeg</value>
+  </data>
+  <data name="Time2" xml:space="preserve">
+    <value>Kellaeg</value>
+  </data>
+  <data name="Timemustbeinformat" xml:space="preserve">
+    <value>Aeg peab olema sellises {0} formaaadis</value>
+  </data>
+  <data name="TimeofDay" xml:space="preserve">
+    <value>Kellaaeg</value>
+  </data>
+  <data name="Timestamp" xml:space="preserve">
+    <value>Ajatempel</value>
+  </data>
+  <data name="Timestampdownload" xml:space="preserve">
+    <value>Ajatempli salvestamine</value>
+  </data>
+  <data name="TimestampisnotOK" xml:space="preserve">
+    <value>Ajatempel ei ole korras</value>
+  </data>
+  <data name="TimestampisOK" xml:space="preserve">
+    <value>Ajatempel on korras</value>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>kuni</value>
+  </data>
+  <data name="tocopyfiles" xml:space="preserve">
+    <value>failide kopeerimiseks</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Kokku</value>
+  </data>
+  <data name="Total1" xml:space="preserve">
+    <value>Kokku</value>
+  </data>
+  <data name="Totalscore" xml:space="preserve">
+    <value>Hinnangu punktid kokku </value>
+  </data>
+  <data name="Totalweightedscore" xml:space="preserve">
+    <value>Kaalutud hinnangu punktid kokku </value>
+  </data>
+  <data name="Totalwithevaluationform" xml:space="preserve">
+    <value>Kokku hindamisvormiga</value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>Suunatud</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Teisipäev</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tüüp</value>
+  </data>
+  <data name="Type1" xml:space="preserve">
+    <value>Tüüp</value>
+  </data>
+  <data name="Type2" xml:space="preserve">
+    <value>Tüüp</value>
+  </data>
+  <data name="Type3" xml:space="preserve">
+    <value>Tüüp</value>
+  </data>
+  <data name="until" xml:space="preserve">
+    <value>kuni</value>
+  </data>
+  <data name="until1" xml:space="preserve">
+    <value>kuni</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Uuenda</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Lae üles</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Kasutaja</value>
+  </data>
+  <data name="User1" xml:space="preserve">
+    <value>Kasutaja</value>
+  </data>
+  <data name="User2" xml:space="preserve">
+    <value>Kasutaja</value>
+  </data>
+  <data name="UserAgentGroup" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="Userclass" xml:space="preserve">
+    <value>Kasutaja klass</value>
+  </data>
+  <data name="Userdonothavepermissiontoaccessthiscall" xml:space="preserve">
+    <value>Teil puudub õigus seda kõne vaadata/kuulata</value>
+  </data>
+  <data name="Userlanguage" xml:space="preserve">
+    <value>Kasutaja keel</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Kasutajanimi</value>
+  </data>
+  <data name="Username1" xml:space="preserve">
+    <value>Kasutajanimi</value>
+  </data>
+  <data name="Usernamecannotbeempty" xml:space="preserve">
+    <value>Kasutaja nimi puudub</value>
+  </data>
+  <data name="UsernameCCLoginnamealreadyinuse" xml:space="preserve">
+    <value>Kasutajanimi/Agendi ID on juba kasutusel!</value>
+  </data>
+  <data name="Userparameters" xml:space="preserve">
+    <value>Kasutaja detailvaade</value>
+  </data>
+  <data name="Userrights" xml:space="preserve">
+    <value>Privileegid</value>
+  </data>
+  <data name="UserrightsassignedtoRole" xml:space="preserve">
+    <value>Rolli privileegid</value>
+  </data>
+  <data name="UserrightsoftheRole" xml:space="preserve">
+    <value>Rolliga seotud privileegid</value>
+  </data>
+  <data name="UsersAgents" xml:space="preserve">
+    <value>Kasutajad</value>
+  </data>
+  <data name="UsersAgents1" xml:space="preserve">
+    <value>Kasutaja toimingud</value>
+  </data>
+  <data name="Usersallowed" xml:space="preserve">
+    <value>Lubatud kasutajad</value>
+  </data>
+  <data name="Usersnotallowed" xml:space="preserve">
+    <value>Mitte lubatud kasutajad</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Väärtus</value>
+  </data>
+  <data name="Verifytimestamp" xml:space="preserve">
+    <value>Kontrolli ajatemplit</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Versioon</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Eelvaade</value>
+  </data>
+  <data name="View1" xml:space="preserve">
+    <value>Vaata</value>
+  </data>
+  <data name="Viewandplayscreenrecordings" xml:space="preserve">
+    <value>Ekraanipildi salvestuste vaatamine ja mahamängimine</value>
+  </data>
+  <data name="Viewevaluationreports" xml:space="preserve">
+    <value>Hindamis raportid</value>
+  </data>
+  <data name="Viewevaluationresults" xml:space="preserve">
+    <value>Hindamis tulemused</value>
+  </data>
+  <data name="Viewlinestates" xml:space="preserve">
+    <value>Vaadata liinide olekuid</value>
+  </data>
+  <data name="Viewscreenrecordings" xml:space="preserve">
+    <value>Ekraanipildi salvestuste vaatamine</value>
+  </data>
+  <data name="VoiceloggerIP" xml:space="preserve">
+    <value>Voiceloggeri IP</value>
+  </data>
+  <data name="WaringareYousuretoterminateservice" xml:space="preserve">
+    <value>Hoiatus: Kas oled kindel et lõpetada teenus?</value>
+  </data>
+  <data name="WarningareYousuretodeletethisprofile" xml:space="preserve">
+    <value>Oled Sa kindel?</value>
+  </data>
+  <data name="WarningDoyouwanttodeletewholeform" xml:space="preserve">
+    <value>Hoiatus! Kas kustutatda kogu vorm?</value>
+  </data>
+  <data name="WARNINGIfnorulesaredefinedALLCALLSWILLBEDELETED" xml:space="preserve">
+    <value>HOIATUS! Kui ühtegi reeglit ei defineerita siis, KÕIK KÕNED KUSTUTATAKSE!</value>
+  </data>
+  <data name="Warninginformationisunavailbleforcallsmadebeforedateorcallsarearchivedtohistory" xml:space="preserve">
+    <value>Hoiatus, enne {$date} tehtud kõnede kohta info puudub või need on arhiveeritud!</value>
+  </data>
+  <data name="WarningThereportgeneratorfoundovermaximumallowedofoverMaxreportrecordsthereportisgenratedtothemaximumallowedreportsize" xml:space="preserve">
+    <value>Hoiatus: Raporti generaator leidis üle maksimaalselt raporti suuruseks lubatud {$overMax} kirje, raportis on kajastatud vaid esimesed kirjed mise on lubatud maksimumi piires.</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Kolmapäev</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>Nädal</value>
+  </data>
+  <data name="Week1" xml:space="preserve">
+    <value>Nädal</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Kaal</value>
+  </data>
+  <data name="WeightedResult" xml:space="preserve">
+    <value>Kaalutud Tulemus</value>
+  </data>
+  <data name="WeightedResult1" xml:space="preserve">
+    <value>Kaalutud Tulemus</value>
+  </data>
+  <data name="Weightedtotal" xml:space="preserve">
+    <value>Kaalutud tulemuse %</value>
+  </data>
+  <data name="Wheretoarchive" xml:space="preserve">
+    <value>Kuhu ahriveeritakse</value>
+  </data>
+  <data name="Wheretocreatearchives" xml:space="preserve">
+    <value>Kuhu arhiivid luua</value>
+  </data>
+  <data name="withthisform" xml:space="preserve">
+    <value>vormiga</value>
+  </data>
+  <data name="Workstation" xml:space="preserve">
+    <value>Töökoht</value>
+  </data>
+  <data name="WrongformatofcalldateCalldateshallbeinformat" xml:space="preserve">
+    <value>Viga alguskuupäeva formaadis. Kuupäev peab olema kujul</value>
+  </data>
+  <data name="WrongformatofcalllenghtCalllenghtshallbeinformat" xml:space="preserve">
+    <value>Kõne pikkus valesti märgitud. Pikkus peaeb olema kujul</value>
+  </data>
+  <data name="XSLtransformationerror" xml:space="preserve">
+    <value>XSL transformatsiooni viga</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Aasta</value>
+  </data>
+  <data name="Youareloggedoutclosethiswindow" xml:space="preserve">
+    <value>Oled ennast välja loginud, palun sulge see aken.</value>
+  </data>
+  <data name="Youareunabletoseethisevaluationbecauseitisnotcompletedyet" xml:space="preserve">
+    <value>Seda hindamist ei saa teie vaadata kuna see on veel lõpetamata.</value>
+  </data>
+  <data name="Youcanviewtheresultfromlinkbelow" xml:space="preserve">
+    <value>Hinnagu tulemust näed all olevalt lingilt:</value>
+  </data>
+  <data name="Youdonothavepremisiisonsforthataction" xml:space="preserve">
+    <value>Teil puudub õigus selleks toiminguks</value>
+  </data>
+  <data name="Youdonthaveaccessforthispage" xml:space="preserve">
+    <value>Puudub juurdepääsu õigus</value>
+  </data>
+  <data name="Yourenotallowedtoaccessroledetails" xml:space="preserve">
+    <value>Teil puudub õigus rolli vaatamiseks!</value>
+  </data>
+  <data name="Yourenotallowedtoevalutecalls" xml:space="preserve">
+    <value>Teil puudub õigus selleks toiminguks</value>
+  </data>
+</root>
