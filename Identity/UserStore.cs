@@ -10,6 +10,7 @@ using DAL.Interfaces;
 using DAL.Repositories;
 using Domain.Identity;
 using Microsoft.AspNet.Identity;
+using NLog;
 
 namespace Identity
 {
@@ -21,9 +22,11 @@ namespace Identity
         IRoleIntRepository, IUserClaimIntRepository, IUserLoginIntRepository, IUserIntRepository, IUserRoleIntRepository
         >
     {
-        public UserStoreInt(IUOW uow)
-            : base(uow)
+        private readonly NLog.ILogger _logger;
+        public UserStoreInt(IUOW uow, ILogger logger)
+            : base(uow, logger)
         {
+            _logger = logger;
         }
     }
 
@@ -35,9 +38,11 @@ namespace Identity
         IRoleRepository, IUserClaimRepository, IUserLoginRepository, IUserRepository, IUserRoleRepository>,
         IUserStore<User>
     {
-        public UserStore(IUOW uow)
-            : base(uow)
+        private readonly NLog.ILogger _logger;
+        public UserStore(IUOW uow, ILogger logger)
+            : base(uow, logger)
         {
+            _logger = logger;
         }
     }
 
@@ -72,16 +77,18 @@ namespace Identity
         where TUserRoleRepository : class, IUserRoleRepository<TKey, TUserRole>
 
     {
-        private readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+        private readonly NLog.ILogger _logger;
         private readonly string _instanceId = Guid.NewGuid().ToString();
 
         private readonly IUOW _uow;
         private bool _disposed;
 
-        public UserStore(IUOW uow)
+        public UserStore(IUOW uow, ILogger logger)
         {
-            _logger.Debug("InstanceId: " + _instanceId);
             _uow = uow;
+            _logger = logger;
+
+            _logger.Debug("InstanceId: " + _instanceId);
         }
 
         #region dispose
@@ -289,7 +296,7 @@ namespace Identity
             {
                 throw new ArgumentNullException("user");
             }
-            user.LockoutEndDateUtc = lockoutEnd == DateTimeOffset.MinValue ? (DateTime?) null : lockoutEnd.UtcDateTime;
+            user.LockoutEndDateUtc = lockoutEnd == DateTimeOffset.MinValue ? (DateTime?)null : lockoutEnd.UtcDateTime;
             return Task.FromResult(0);
         }
 
@@ -553,7 +560,7 @@ namespace Identity
                 throw new InvalidOperationException(roleName);
             }
 
-            _uow.GetRepository<TUserRoleRepository>().Add(new TUserRole() {UserId = user.Id, RoleId = role.Id});
+            _uow.GetRepository<TUserRoleRepository>().Add(new TUserRole() { UserId = user.Id, RoleId = role.Id });
             _uow.Commit();
 
             return Task.FromResult(0);
@@ -656,7 +663,7 @@ namespace Identity
             _logger.Info("claim.value: " + claim.Value + " claim.type: " + claim.Type);
 
             _uow.GetRepository<TUserClaimRepository>()
-                .Add(new TUserClaim() {ClaimValue = claim.Value, ClaimType = claim.Type, UserId = user.Id});
+                .Add(new TUserClaim() { ClaimValue = claim.Value, ClaimType = claim.Type, UserId = user.Id });
             _uow.Commit();
             return Task.FromResult<object>(null);
         }

@@ -150,7 +150,7 @@ namespace Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                _uow.Calls.Add(call);
+                _uow.Calls.AddCall(call);
                 _uow.Commit();
                 return RedirectToAction("Index");
             }

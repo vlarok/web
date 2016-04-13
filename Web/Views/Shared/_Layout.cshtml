@@ -79,7 +79,10 @@
                             <ul>
                    
                                 <li><a href="@Url.Action("Index", "Users", new {area = "Admin"})"><i class="fa  fa-user"></i><span class="hidden-sm text"> @Resources.Front.UsersAgents</span></a></li>
-                                <li><a href="@Url.Action("Index", "Roles", new {area = "Admin"})"><i class="fa  fa-gears"></i><span class="hidden-sm text"> Roles</span></a></li>
+                                <li><a href="@Url.Action("Index", "Roles", new {area = "Admin"})"><i class="fa  fa-gears"></i><span class="hidden-sm text"> @Resources.Front.Roles</span></a></li>
+                                <li><a href="@Url.Action("Selective", "Calls", new {})"><i class="fa  fa-search-plus"></i><span class="hidden-sm text"> @Resources.Front.AgentUserGroups</span></a></li>
+                                <li><a href="@Url.Action("ChangePassword", "Manage", new {})"><i class="fa  fa-search-plus"></i><span class="hidden-sm text"> @Resources.Front.Changepassword</span></a></li>
+
                                 <li><a href="@Url.Action("Index", "UserRoles", new {area = "Admin"})"><i class="fa fa-trophy"></i><span class="hidden-sm text"> Users in Roles</span></a></li>
 
                             </ul>
@@ -89,9 +92,17 @@
                             <a class="dropmenu" href="index.html#"><i class="fa fa-suitcase"></i><span class="hidden-sm text"> @Resources.Front.Management</span> <span class="chevron opened"></span></a>
                             <ul>
                                 <li><a href="@Url.Action("Index", "Services", new {})"><i class="fa  fa-globe"></i><span class="hidden-sm text"> @Resources.Front.Service1</span></a></li>
+                                <li><a href="@Url.Action("Selective", "Calls", new {})"><i class="fa  fa-globe"></i><span class="hidden-sm text"> @Resources.Front.EvaluationForms</span></a></li>
 
-                           </ul>
+                            </ul>
                         </li>
+                        <li>
+                            <a class="dropmenu" href="index.html#"><i class="fa fa-bar-chart-o"></i><span class="hidden-sm text"> @Resources.Front.Reports</span> <span class="chevron opened"></span></a>
+                            <ul>
+                                <li><a href="@Url.Action("Index", "SystemLog", new {area = "Admin"})"><i class="fa  fa-bars"></i><span class="hidden-sm text"> SystemLog</span></a></li>
+                            </ul>
+                        </li>
+
 
                     
                         @if (Request.IsAuthenticated)
@@ -109,8 +120,7 @@
                                     <li><a href="@Url.Action("Index", "Articles", new {area = "Admin"})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> Articles</span></a></li>
                                     <li><a href="@Url.Action("Index", "MultiLangStrings", new {area = "Admin"})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> MultiLangStrings</span></a></li>
                                     <li><a href="@Url.Action("Index", "Translations", new {area = "Admin"})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> Translations</span></a></li>
-                                    <li><a href="@Url.Action("Index", "SystemLog", new {area = "Admin"})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> SystemLog</span></a></li>
-
+                                    
                                     <li><a href="@Url.Action("Index", "UserLogins", new {area = "Admin"})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> Logins</span></a></li>
                                     <li><a href="@Url.Action("Index", "UserClaims", new {area = "Admin"})"><i class="fa fa-cutlery"></i><span class="hidden-sm text"> Claims</span></a></li>
 

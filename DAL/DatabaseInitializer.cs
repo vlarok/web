@@ -41,6 +41,8 @@ namespace DAL
 
             context.SaveChanges();
 
+
+
             // Users in Roles
             context.UserRolesInt.Add(new UserRoleInt()
             {
@@ -49,7 +51,27 @@ namespace DAL
             });
 
             context.SaveChanges();
+            var sql = @"CREATE PROCEDURE [dbo].[PostDb]
+	@ServiceId int output,
+	@UserId int output,
 
+	@ANumber varchar(50) output,
+	@BNumber varchar(50) output,
+	
+	 @StartDate	datetime output,
+ @AudioFileName varchar(50) output,
+	@InOut varchar(50) output,
+	@Duration varchar(50) output,
+	@StorageDir varchar(50) output,
+
+	@Custom1 varchar(50) output
+AS  
+BEGIN 
+SELECT @ServiceId = 1;
+SELECT @ANumber = '51080089';
+SELECT @UserId=1;
+END";
+            context.Database.ExecuteSqlCommand(sql);
 
             var articleHeadLine = "<h1>ASP.NET</h1>";
             var articleBody =

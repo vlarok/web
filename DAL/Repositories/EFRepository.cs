@@ -9,6 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.Interfaces;
+using NLog;
 
 namespace DAL.Repositories
 {
@@ -16,7 +17,7 @@ namespace DAL.Repositories
     // covers all basic crud methods, common for all other repos
     public class EFRepository<T> : IEFRepository<T> where T : class
     {
-        private readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+        private readonly NLog.ILogger _logger = NLog.LogManager.GetCurrentClassLogger();
         private readonly string _instanceId = Guid.NewGuid().ToString();
 
         // the context and the dbset we are working with
@@ -26,6 +27,7 @@ namespace DAL.Repositories
         //Constructor, requires dbContext as dependency
         public EFRepository(IDbContext dbContext)
         {
+
             if (dbContext == null)
                 throw new ArgumentNullException(nameof(dbContext));
 
@@ -126,10 +128,10 @@ namespace DAL.Repositories
 
         public EntityKey GetPrimaryKeyInfo(T entity)
         {
-            var properties = typeof (DbSet).GetProperties();
+            var properties = typeof(DbSet).GetProperties();
             foreach (
                 var objectContext in
-                    properties.Select(propertyInfo => ((IObjectContextAdapter) DbContext).ObjectContext))
+                    properties.Select(propertyInfo => ((IObjectContextAdapter)DbContext).ObjectContext))
             {
                 ObjectStateEntry objectStateEntry;
                 if (null != entity && objectContext.ObjectStateManager
@@ -143,7 +145,7 @@ namespace DAL.Repositories
 
         public string[] GetKeyNames(T entity)
         {
-            var objectSet = ((IObjectContextAdapter) DbContext).ObjectContext.CreateObjectSet<T>();
+            var objectSet = ((IObjectContextAdapter)DbContext).ObjectContext.CreateObjectSet<T>();
             var keyNames = objectSet.EntitySet.ElementType.KeyMembers.Select(k => k.Name).ToArray();
             return keyNames;
         }

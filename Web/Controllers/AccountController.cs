@@ -4,11 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-
 using Domain.Identity;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using NLog;
 using Web.ViewModels;
 
 namespace Web.Controllers
@@ -16,19 +16,20 @@ namespace Web.Controllers
     [Authorize]
     public class AccountController : BaseController
     {
-        private readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+        private readonly NLog.ILogger _logger;
         private readonly string _instanceId = Guid.NewGuid().ToString();
         private readonly ApplicationSignInManager _signInManager;
         private readonly ApplicationUserManager _userManager;
         private readonly IAuthenticationManager _authenticationManager;
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager,
-            IAuthenticationManager authenticationManager)
+            IAuthenticationManager authenticationManager, ILogger logger)
         {
             _logger.Debug("InstanceId: " + _instanceId);
             _userManager = userManager;
             _signInManager = signInManager;
             _authenticationManager = authenticationManager;
+            _logger = logger;
         }
 
         //
@@ -65,7 +66,7 @@ namespace Web.Controllers
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
-                    return RedirectToAction("SendCode", new {ReturnUrl = returnUrl, RememberMe = model.RememberMe});
+                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
                     ModelState.AddModelError("", "Invalid login attempt.");
@@ -83,7 +84,7 @@ namespace Web.Controllers
             {
                 return View("Error");
             }
-            return View(new VerifyCodeViewModel {Provider = provider, ReturnUrl = returnUrl, RememberMe = rememberMe});
+            return View(new VerifyCodeViewModel { Provider = provider, ReturnUrl = returnUrl, RememberMe = rememberMe });
         }
 
         //
@@ -136,7 +137,7 @@ namespace Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new UserInt {UserName = model.Email, Email = model.Email};
+                var user = new UserInt { UserName = model.Email, Email = model.Email };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -265,7 +266,7 @@ namespace Web.Controllers
         {
             // Request a redirect to the external login provider
             return new ChallengeResult(provider,
-                Url.Action("ExternalLoginCallback", "Account", new {ReturnUrl = returnUrl}));
+                Url.Action("ExternalLoginCallback", "Account", new { ReturnUrl = returnUrl }));
         }
 
         //
@@ -280,9 +281,9 @@ namespace Web.Controllers
             }
             var userFactors = await _userManager.GetValidTwoFactorProvidersAsync(userId);
             var factorOptions =
-                userFactors.Select(purpose => new SelectListItem {Text = purpose, Value = purpose}).ToList();
+                userFactors.Select(purpose => new SelectListItem { Text = purpose, Value = purpose }).ToList();
             return
-                View(new SendCodeViewModel {Providers = factorOptions, ReturnUrl = returnUrl, RememberMe = rememberMe});
+                View(new SendCodeViewModel { Providers = factorOptions, ReturnUrl = returnUrl, RememberMe = rememberMe });
         }
 
         //
@@ -303,7 +304,7 @@ namespace Web.Controllers
                 return View("Error");
             }
             return RedirectToAction("VerifyCode",
-                new {Provider = model.SelectedProvider, ReturnUrl = model.ReturnUrl, RememberMe = model.RememberMe});
+                new { Provider = model.SelectedProvider, ReturnUrl = model.ReturnUrl, RememberMe = model.RememberMe });
         }
 
         //
@@ -326,14 +327,14 @@ namespace Web.Controllers
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
-                    return RedirectToAction("SendCode", new {ReturnUrl = returnUrl, RememberMe = false});
+                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = false });
                 case SignInStatus.Failure:
                 default:
                     // If the user does not have an account, then prompt the user to create an account
                     ViewBag.ReturnUrl = returnUrl;
                     ViewBag.LoginProvider = loginInfo.Login.LoginProvider;
                     return View("ExternalLoginConfirmation",
-                        new ExternalLoginConfirmationViewModel {Email = loginInfo.Email});
+                        new ExternalLoginConfirmationViewModel { Email = loginInfo.Email });
             }
         }
 
@@ -358,7 +359,7 @@ namespace Web.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new UserInt {UserName = model.Email, Email = model.Email};
+                var user = new UserInt { UserName = model.Email, Email = model.Email };
                 var result = await _userManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
@@ -442,7 +443,7 @@ namespace Web.Controllers
 
             public override void ExecuteResult(ControllerContext context)
             {
-                var properties = new AuthenticationProperties {RedirectUri = RedirectUri};
+                var properties = new AuthenticationProperties { RedirectUri = RedirectUri };
                 if (UserId != default(int))
                 {
                     properties.Dictionary[XsrfKey] = UserId.ToString(CultureInfo.InvariantCulture);

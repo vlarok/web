@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
+using NLog;
 using Web.ViewModels;
 
 namespace Web.Controllers
@@ -12,24 +12,26 @@ namespace Web.Controllers
     [Authorize]
     public class ManageController : BaseController
     {
-        private readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+        private readonly NLog.ILogger _logger;
         private readonly string _instanceId = Guid.NewGuid().ToString();
         private readonly ApplicationSignInManager _signInManager;
         private readonly ApplicationUserManager _userManager;
         private readonly IAuthenticationManager _authenticationManager;
 
-        public ManageController()
+        public ManageController(ILogger logger)
         {
+            _logger = logger;
             _logger.Debug("InstanceId: " + _instanceId);
         }
 
         public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager,
-            IAuthenticationManager authenticationManager)
+            IAuthenticationManager authenticationManager, ILogger logger)
         {
             _logger.Info("");
             _userManager = userManager;
             _signInManager = signInManager;
             _authenticationManager = authenticationManager;
+            _logger = logger;
         }
 
         //
@@ -88,7 +90,7 @@ namespace Web.Controllers
             {
                 message = ManageMessageId.Error;
             }
-            return RedirectToAction("ManageLogins", new {Message = message});
+            return RedirectToAction("ManageLogins", new { Message = message });
         }
 
         //
@@ -120,7 +122,7 @@ namespace Web.Controllers
                 };
                 await _userManager.SmsService.SendAsync(message);
             }
-            return RedirectToAction("VerifyPhoneNumber", new {PhoneNumber = model.Number});
+            return RedirectToAction("VerifyPhoneNumber", new { PhoneNumber = model.Number });
         }
 
         //
@@ -162,7 +164,7 @@ namespace Web.Controllers
             // Send an SMS through the SMS provider to verify the phone number
             return phoneNumber == null
                 ? View("Error")
-                : View(new VerifyPhoneNumberViewModel {PhoneNumber = phoneNumber});
+                : View(new VerifyPhoneNumberViewModel { PhoneNumber = phoneNumber });
         }
 
         //
@@ -184,7 +186,7 @@ namespace Web.Controllers
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                 }
-                return RedirectToAction("Index", new {Message = ManageMessageId.AddPhoneSuccess});
+                return RedirectToAction("Index", new { Message = ManageMessageId.AddPhoneSuccess });
             }
             // If we got this far, something failed, redisplay form
             ModelState.AddModelError("", "Failed to verify phone");
@@ -198,14 +200,14 @@ namespace Web.Controllers
             var result = await _userManager.SetPhoneNumberAsync(User.Identity.GetUserId<int>(), null);
             if (!result.Succeeded)
             {
-                return RedirectToAction("Index", new {Message = ManageMessageId.Error});
+                return RedirectToAction("Index", new { Message = ManageMessageId.Error });
             }
             var user = await _userManager.FindByIdAsync(User.Identity.GetUserId<int>());
             if (user != null)
             {
                 await _signInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
             }
-            return RedirectToAction("Index", new {Message = ManageMessageId.RemovePhoneSuccess});
+            return RedirectToAction("Index", new { Message = ManageMessageId.RemovePhoneSuccess });
         }
 
         //
@@ -236,7 +238,7 @@ namespace Web.Controllers
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                 }
-                return RedirectToAction("Index", new {Message = ManageMessageId.ChangePasswordSuccess});
+                return RedirectToAction("Index", new { Message = ManageMessageId.ChangePasswordSuccess });
             }
             AddErrors(result);
             return View(model);
@@ -265,7 +267,7 @@ namespace Web.Controllers
                     {
                         await _signInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                     }
-                    return RedirectToAction("Index", new {Message = ManageMessageId.SetPasswordSuccess});
+                    return RedirectToAction("Index", new { Message = ManageMessageId.SetPasswordSuccess });
                 }
                 AddErrors(result);
             }
@@ -320,12 +322,12 @@ namespace Web.Controllers
             var loginInfo = await _authenticationManager.GetExternalLoginInfoAsync(XsrfKey, User.Identity.GetUserId());
             if (loginInfo == null)
             {
-                return RedirectToAction("ManageLogins", new {Message = ManageMessageId.Error});
+                return RedirectToAction("ManageLogins", new { Message = ManageMessageId.Error });
             }
             var result = await _userManager.AddLoginAsync(User.Identity.GetUserId<int>(), loginInfo.Login);
             return result.Succeeded
                 ? RedirectToAction("ManageLogins")
-                : RedirectToAction("ManageLogins", new {Message = ManageMessageId.Error});
+                : RedirectToAction("ManageLogins", new { Message = ManageMessageId.Error });
         }
 
         protected override void Dispose(bool disposing)

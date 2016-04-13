@@ -11,7 +11,7 @@ namespace Web
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                 "~/bower_components/jquery/dist/jquery.js",
                 "~/bower_components/jquery-ui/jquery-ui.js",
-
+"~/Scripts/jquery.jplayer.js",
                       "~/Scripts/jquery-migrate-1.2.1.min.js"));
 
 
@@ -59,7 +59,9 @@ namespace Web
                 "~/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css",
 
                       "~/Content/style.min.css",
-                "~/Content/site.css"));
+                "~/Content/site.css",
+                "~/Content/smoothness/jquery-ui.css",
+                "~/Content/player.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                    "~/Scripts/app/app.js"));
