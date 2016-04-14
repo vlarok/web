@@ -96,7 +96,7 @@ namespace Web.Controllers
             items.Add(new SelectListItem { Text = "out",Value = Resources.Front.OutBound });
             vm.DirectionSelectList = new SelectList(items, "Text","Value");
 
-            vm.PagedCalls= calls.ToPagedList(vm.Page ?? 1, 20);
+            vm.PagedCalls= calls.ToPagedList(vm.Page ?? 1, 10);
             return View(vm);
         }
 

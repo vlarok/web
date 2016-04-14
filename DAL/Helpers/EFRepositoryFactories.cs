@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.Interfaces;
 using DAL.Repositories;
+using Domain.Rights;
 using NLog;
 
 namespace DAL.Helpers
@@ -54,7 +55,16 @@ namespace DAL.Helpers
                 ,
                 {typeof (ICallRepository), dbContext => new CallRepository(dbContext)}
                 ,
-                {typeof (IServiceRepository), dbContext => new ServiceRepository(dbContext)}
+                {typeof (IServiceRepository), dbContext => new ServiceRepository(dbContext)},
+                {typeof (IGroupRepository), dbContext => new GroupRepository(dbContext)}
+                ,
+                {typeof (IGroupPrivilegeRepository), dbContext => new GroupPrivilegeRepository(dbContext)}
+                ,
+                {typeof (IPrivilegeRepository), dbContext => new PrivilegeRepository(dbContext)}
+                ,
+                {typeof (IUserGroupRepository), dbContext => new UserGroupRepository(dbContext)}
+                ,
+                {typeof (IUserPrivilegesRepository), dbContext => new UserPrivilegesRepository(dbContext)}
             };
         }
 

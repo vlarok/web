@@ -12,6 +12,7 @@ using DAL.Helpers;
 using DAL.Interfaces;
 using Domain;
 using Domain.Identity;
+using Domain.Rights;
 using Ninject;
 using NLog;
 
@@ -63,6 +64,11 @@ namespace DAL
         public IDbSet<Call> Calls { get; set; }
 
         public IDbSet<Service> Services { get; set; }
+        public IDbSet<Group> Groups { get; set; }
+        public IDbSet<GroupPrivilege> GroupPrivileges { get; set; }
+        public IDbSet<Privilege> Privileges { get; set; }
+        public IDbSet<UserGroup> UserGroups { get; set; }
+        public IDbSet<UserPrivilege> UserPrivileges { get; set; }
 
         // Identity tables, PK - string
         //public IDbSet<Role> Roles { get; set; }

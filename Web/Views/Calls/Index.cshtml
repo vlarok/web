@@ -219,7 +219,14 @@
                                 @Html.DisplayFor(modelItem => item.Bnumber)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Dir)
+                                @if (@Html.DisplayFor(modelItem => item.Dir).Equals("in"))
+                                {
+                                    @Resources.Front.InBound
+                                }
+                                else
+                                {
+                                    @Resources.Front.OutBound
+                                }
                             </td>
 
                             <td>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Domain.Rights;
 using Microsoft.AspNet.Identity;
 
 namespace Domain.Identity
@@ -49,15 +50,19 @@ namespace Domain.Identity
 
         //Additional (custom) properties
         public virtual List<Person> Persons { get; set; }
+       
 
 
 
 
-       [DataType(DataType.DateTime)]
+        [DataType(DataType.DateTime)]
         public DateTime Created { get; set; }
 
      //   public virtual List<Call> Calls { get; set; } = new List<Call>();
        public virtual List<Call> Calls { get; set; }
+
+        public virtual List<Privilege> Privileges { get; set; }
+        public virtual List<UserGroup> UserGroups { get; set; }
     }
 
 

@@ -70,6 +70,14 @@ namespace DAL
         public ICallRepository Calls => GetRepo<ICallRepository>();
         public IServiceRepository Services => GetRepo<IServiceRepository>();
 
+        public IGroupRepository Groups => GetRepo<IGroupRepository>();
+        public IGroupPrivilegeRepository GroupPrivileges => GetRepo<IGroupPrivilegeRepository>();
+        public IPrivilegeRepository Privileges => GetRepo<IPrivilegeRepository>();
+        public IUserGroupRepository UserGroups => GetRepo<IUserGroupRepository>();
+
+        public IUserPrivilegesRepository UserPrivileges => GetRepo<IUserPrivilegesRepository>();
+
+
         // calling standard EF repo provider
         private IEFRepository<T> GetStandardRepo<T>() where T : class
         {

@@ -32,6 +32,14 @@ namespace DAL.Interfaces
 
         IServiceRepository Services { get; }
 
+        IGroupRepository Groups { get; }
+        IGroupPrivilegeRepository GroupPrivileges { get; }
+        IPrivilegeRepository Privileges { get; }
+        IUserGroupRepository UserGroups { get; }
+        IUserPrivilegesRepository UserPrivileges { get; }
+
+
+
         // Identity, PK - string
         //IUserRepository Users { get; }
         //IUserRoleRepository UserRoles { get; }

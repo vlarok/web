@@ -60,9 +60,14 @@
     <Compile Include="Identity\UserRole.cs" />
     <Compile Include="MultiLangString.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="Rights\Group.cs" />
+    <Compile Include="Rights\Privilege.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rights\UserGroup.cs" />
     <Compile Include="Service.cs" />
     <Compile Include="Translation.cs" />
+    <Compile Include="Rights\GroupPrivilege.cs" />
+    <Compile Include="Rights\UserPrivilege.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAnnotations\DataAnnotations.csproj">
