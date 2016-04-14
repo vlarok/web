@@ -45,6 +45,7 @@ namespace DAL.Interfaces
         IRoleIntRepository RolesInt { get; }
         IUserClaimIntRepository UserClaimsInt { get; }
         IUserLoginIntRepository UserLoginsInt { get; }
-        
+
+       
     }
 }

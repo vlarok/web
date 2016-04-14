@@ -109,5 +109,9 @@ namespace DAL.Repositories
 
         }
 
+        public IQueryable<Call> GetAllCalls(DateTime searchStartDate, DateTime searchEndDate)
+        {
+          return  DbSet.Where(c => c.Created >= searchStartDate && c.Created <= searchEndDate);
+        }
     }
 }

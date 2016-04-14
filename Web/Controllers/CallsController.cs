@@ -30,7 +30,7 @@ namespace Web.Controllers
         public ActionResult Index(CallViewModel vm)
         {
 
-
+            IQueryable<Call> calls;
             vm.CreatedSort = String.IsNullOrEmpty(vm.Sort) ? "created" : string.Empty;
             if (vm.SearchStartDate.Equals(vm.SearchEndDate))
             {
@@ -41,45 +41,93 @@ namespace Web.Controllers
 
             if (vm.ServiceIdNullable == null)
             {
-                vm.Calls =
-                    _uow.Calls.All.Where(
-                        c => c.Created >= vm.SearchStartDate && c.Created <= vm.SearchEndDate);
+                calls = _uow.Calls.GetAllCalls(vm.SearchStartDate, vm.SearchEndDate);
 
             }
             else
             {
-                vm.Calls =
-                    _uow.Calls.All.Where(
-                        c =>
-                            c.Created >= vm.SearchStartDate && c.Created <= vm.SearchEndDate &&
-                            c.ServiceId == vm.ServiceIdNullable);
+              
+                    calls = _uow.Calls.GetAllCalls(vm.SearchStartDate, vm.SearchEndDate).Where(
+                        c => c.ServiceId == vm.ServiceIdNullable);
             }
-            // return
 
-            vm.ServiceSelectList =
-                new SelectList(_uow.Services.All.Select(t => new {t.ServiceId, t.ServiceName}).ToList(),
-                    nameof(Service.ServiceId), nameof(Service.ServiceName));
+            //+------------------------------------------------------------------+
+            //|serach direction                                         |
+            //+------------------------------------------------------------------+
+            if (!String.IsNullOrEmpty(vm.Direction))
+            {
+                calls = calls.Where(s => s.Dir.Equals(vm.Direction));
+            }
+
+            //+------------------------------------------------------------------+
+            //|Serach by number                                         |
+            //+------------------------------------------------------------------+
 
 
+            if (!String.IsNullOrEmpty(vm.Search))
+            {
+                calls = calls.Where(c => c.Anumber.StartsWith(vm.Search) || c.Bnumber.StartsWith(vm.Search));
+            }
 
             switch (vm.Sort)
             {
 
                 case "created":
-                    vm.Calls = vm.Calls.OrderBy(c => c.Created);
+                    calls = calls.OrderBy(c => c.Created);
 
                     break;
 
                 default:
-                    vm.Calls = vm.Calls.OrderByDescending(c => c.Created);
+                    calls = calls.OrderByDescending(c => c.Created);
 
                     break;
             }
 
-            vm.PagedCalls=vm.Calls.ToPagedList(vm.Page ?? 1, 3);
+            vm.ServiceSelectList =
+                new SelectList(_uow.Services.All.Select(t => new { t.ServiceId, t.ServiceName }).ToList(),
+                    nameof(Service.ServiceId), nameof(Service.ServiceName));
+
+            //Dir
+            List<SelectListItem> items = new List<SelectListItem>();
+
+
+
+            items.Add(new SelectListItem { Text = "in",Value = Resources.Front.InBound  });
+            items.Add(new SelectListItem { Text = "out",Value = Resources.Front.OutBound });
+            vm.DirectionSelectList = new SelectList(items, "Text","Value");
+
+            vm.PagedCalls= calls.ToPagedList(vm.Page ?? 1, 20);
             return View(vm);
         }
 
+
+        public void Generate()
+        {
+            //:TODO meil on vaja kontroll teha kui custom väljad on nullid
+            for (int i = 0; i < 30; i++)
+            {
+                for (int j = 1; j < 1000; j++)
+                {
+                    _uow.Calls.AddCall(new Call()
+                    {
+                        AudioDir = @"2015\04\27\22\",
+                        AudioFileName = "20150427225942_001_50336869",
+                        Anumber = "16684" + i.ToString(),
+                        Bnumber = i.ToString() + "98991",
+                        Dir = "in",
+                        Duration = "1" + i.ToString(),
+                        UserId = 1,
+                        ServiceId = 1,
+                        Created = DateTime.Now.AddMinutes(-j),
+                        Custom1 = "1"
+
+                    });
+                    _uow.Commit();
+                }
+              
+            }
+           
+        }
         public ActionResult Selective()
         {
             return View();

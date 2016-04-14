@@ -69,8 +69,8 @@
                             <a class="dropmenu" href="index.html#"><i class="fa fa-headphones"></i><span class="hidden-sm text"> @Resources.Front.RecordedCalls</span> <span class="chevron opened"></span></a>
                             <ul>
 
-                                <li><a href="@Url.Action("Index", "Calls", new {})"><i class="fa fa-search"></i><span class="hidden-sm text"> @Resources.Front.RecordedInteractions</span></a></li>
-                                <li><a href="@Url.Action("Selective", "Calls", new {})"><i class="fa  fa-search-plus"></i><span class="hidden-sm text"> @Resources.Front.Selectiverecording</span></a></li>
+                                <li><a href="@Url.Action("Index", "Calls", new { area = "" })"><i class="fa fa-search"></i><span class="hidden-sm text"> @Resources.Front.RecordedInteractions</span></a></li>
+                                <li><a href="@Url.Action("Selective", "Calls", new { area = ""})"><i class="fa  fa-search-plus"></i><span class="hidden-sm text"> @Resources.Front.Selectiverecording</span></a></li>
 
                             </ul>
                         </li>
@@ -80,8 +80,8 @@
                    
                                 <li><a href="@Url.Action("Index", "Users", new {area = "Admin"})"><i class="fa  fa-user"></i><span class="hidden-sm text"> @Resources.Front.UsersAgents</span></a></li>
                                 <li><a href="@Url.Action("Index", "Roles", new {area = "Admin"})"><i class="fa  fa-gears"></i><span class="hidden-sm text"> @Resources.Front.Roles</span></a></li>
-                                <li><a href="@Url.Action("Selective", "Calls", new {})"><i class="fa  fa-search-plus"></i><span class="hidden-sm text"> @Resources.Front.AgentUserGroups</span></a></li>
-                                <li><a href="@Url.Action("ChangePassword", "Manage", new {})"><i class="fa  fa-search-plus"></i><span class="hidden-sm text"> @Resources.Front.Changepassword</span></a></li>
+                                <li><a href="@Url.Action("Selective", "Calls", new { area = ""})"><i class="fa  fa-search-plus"></i><span class="hidden-sm text"> @Resources.Front.AgentUserGroups</span></a></li>
+                                <li><a href="@Url.Action("ChangePassword", "Manage", new { area = ""})"><i class="fa  fa-search-plus"></i><span class="hidden-sm text"> @Resources.Front.Changepassword</span></a></li>
 
                                 <li><a href="@Url.Action("Index", "UserRoles", new {area = "Admin"})"><i class="fa fa-trophy"></i><span class="hidden-sm text"> Users in Roles</span></a></li>
 
@@ -91,8 +91,8 @@
                         <li>
                             <a class="dropmenu" href="index.html#"><i class="fa fa-suitcase"></i><span class="hidden-sm text"> @Resources.Front.Management</span> <span class="chevron opened"></span></a>
                             <ul>
-                                <li><a href="@Url.Action("Index", "Services", new {})"><i class="fa  fa-globe"></i><span class="hidden-sm text"> @Resources.Front.Service1</span></a></li>
-                                <li><a href="@Url.Action("Selective", "Calls", new {})"><i class="fa  fa-globe"></i><span class="hidden-sm text"> @Resources.Front.EvaluationForms</span></a></li>
+                                <li><a href="@Url.Action("Index", "Services", new { area = ""})"><i class="fa  fa-globe"></i><span class="hidden-sm text"> @Resources.Front.Service1</span></a></li>
+                                <li><a href="@Url.Action("Selective", "Calls", new { area = ""})"><i class="fa  fa-globe"></i><span class="hidden-sm text"> @Resources.Front.EvaluationForms</span></a></li>
 
                             </ul>
                         </li>

@@ -30,5 +30,9 @@ namespace Web.ViewModels
         public string CurrentSort { get; set; }
         public string Sort { get; set; }
         public string Search { get; set; }
+        public SelectList DirectionSelectList { get; set; }
+        public string Direction { get; set; }
     }
+
+   
 }
