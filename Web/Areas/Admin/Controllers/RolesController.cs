@@ -98,7 +98,7 @@ namespace Web.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-
+            /*
             var selected= _uow.RolePrivileges.All.Where(x => x.RoleId.Equals(id)).ToList();
 
             var sel =
@@ -108,7 +108,7 @@ namespace Web.Areas.Admin.Controllers
                         _uow.RolePrivileges.All.Where(z => z.RoleId.Equals(id))
                             .Select(i => i.PrivilegeId)
                             .FirstOrDefault());
-
+            */
            
             var vm = new RoleViewModel()
             {
@@ -142,13 +142,16 @@ namespace Web.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit( RoleViewModel vm)
         {
-
-            //
-           // _uow.Privileges.All;
             if (ModelState.IsValid)
             {
-              _roleManager.Update(vm.Role);
-              //  _uow.RolePrivileges.UpdateAll();
+
+                _roleManager.Update(vm.Role);
+                
+
+                _uow.RolePrivileges.UpdateById(vm.Role.Id,vm.PrivilegeId);
+              _uow.Commit();
+              
+                
                 return RedirectToAction("Index");
             }
             return View(vm);

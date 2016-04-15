@@ -1,5 +1,7 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using DAL.Interfaces;
+using Domain.Identity;
 using Domain.Rights;
 
 namespace DAL.Repositories
@@ -16,6 +18,18 @@ namespace DAL.Repositories
         {
           return  DbSet.Any(x => x.RoleId == id && x.PrivilegeId == privilegeId);
           
+        }
+
+        public void UpdateById(int id, int[] privilegeId)
+        {
+            List<RolePrivilege> rp = DbSet.Where(x => x.RoleId.Equals(id)).ToList();
+            DbSet.RemoveRange(rp);
+          
+            foreach (var pid in privilegeId)
+            {
+                DbSet.Add(new RolePrivilege() {RoleId = id,PrivilegeId = pid});
+            }
+         
         }
     }
 }
