@@ -32,9 +32,6 @@
                         <th>
                             @Html.DisplayNameFor(model => model.FirstOrDefault().PhoneNumber)
                         </th>
-                        <th>
-                            @Html.DisplayName("Roles")
-                        </th>
 
                         <th></th>
                     </tr>
@@ -50,9 +47,6 @@
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.PhoneNumber)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Roles.Count)
                             </td>
                             <td>
                                 <div class="delete-section">

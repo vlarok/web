@@ -1,42 +1,69 @@
-﻿@model Domain.Identity.RoleInt
+﻿@model Web.Areas.Admin.ViewModels.RoleViewModel
+
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = @Resources.Front.Role;
 }
-
-<h2>Edit</h2>
-
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
+
     <div class="form-horizontal">
-        <h4>Role</h4>
-        <hr/>
-        @Html.ValidationSummary(true, "", new {@class = "text-danger"})
-        @Html.HiddenFor(model => model.Id)
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2><strong>@Resources.Front.Edit</strong> @Resources.Front.Role</h2>
+                    </div>
+                    <div class="panel-body">
+                        @Html.ValidationSummary(true, "", new {@class = "text-danger"})
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Name, htmlAttributes: new {@class = "control-label col-md-2"})
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Name, new {htmlAttributes = new {@class = "form-control"}})
-                @Html.ValidationMessageFor(model => model.Name, "", new {@class = "text-danger"})
-            </div>
-        </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default"/>
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="text-input">@Resources.Front.Role</label>
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Role.Name, new {htmlAttributes = new {@class = "form-control"}})
+                                @Html.ValidationMessageFor(model => model.Role.Name, "", new {@class = "text-danger"})
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="select">@Resources.Front.Roles</label>
+                            <div class="col-md-9">
+                                <ul class="list-group checked-list-box" id="tables">
+
+
+                                        @foreach (var item in Model.Privileges)
+                                        {
+
+                                            <li class="list-group-item" data-checked="@item.Selected">
+                                                <input type="checkbox" name="PrivilegeId" value="@item.Value" checked="@item.Selected" class="hidden" />
+                                                @item.Text
+                                            </li>
+                                        }
+
+</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> @Resources.Front.Editentity</button>
+                    </div>
+
+                </div>
+
+
+
             </div>
-        </div>
-    </div>
+        </div><!--/.col-->
+    </div><!--/.row-->
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/checkbox.js"></script>
 }

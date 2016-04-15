@@ -10,7 +10,6 @@ namespace Domain.Rights
     {
         public int GroupId { get; set; }
         public string GroupName { get; set; }
-        public virtual List<GroupPrivilege> GroupPrivileges { get; set; }
         public virtual List<UserGroup> UserGroups { get; set; }
 
     }

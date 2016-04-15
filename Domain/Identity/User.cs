@@ -60,8 +60,7 @@ namespace Domain.Identity
 
      //   public virtual List<Call> Calls { get; set; } = new List<Call>();
        public virtual List<Call> Calls { get; set; }
-
-        public virtual List<Privilege> Privileges { get; set; }
+        
         public virtual List<UserGroup> UserGroups { get; set; }
     }
 

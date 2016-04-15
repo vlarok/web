@@ -4,14 +4,18 @@ using System.Net;
 using System.Web.Mvc;
 using DAL.Interfaces;
 using Domain.Identity;
+using Domain.Rights;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
+using MvcCheckBoxList.Model;
 using NLog;
+using Web.Areas.Admin.ViewModels;
+using Web.Controllers;
 
 namespace Web.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class RolesController : Controller
+    public class RolesController : BaseController
     {
         private readonly NLog.ILogger _logger;
         private readonly string _instanceId = Guid.NewGuid().ToString();
@@ -94,7 +98,41 @@ namespace Web.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            return View(role);
+
+            var selected= _uow.RolePrivileges.All.Where(x => x.RoleId.Equals(id)).ToList();
+
+            var sel =
+                _uow.Privileges.All.Where(
+                    x =>
+                        x.PrivilegeId ==
+                        _uow.RolePrivileges.All.Where(z => z.RoleId.Equals(id))
+                            .Select(i => i.PrivilegeId)
+                            .FirstOrDefault());
+
+           
+            var vm = new RoleViewModel()
+            {
+                Role = role,
+                Privileges = _uow.Privileges.All.Select(x => new SelectListItem()
+                {
+                     Selected = _uow.RolePrivileges.Contains(id,x.PrivilegeId),
+                  //  Selected = true,
+                    Text = x.PrivilegeName,
+                    Value = x.PrivilegeId.ToString()
+                })
+
+                // PrivilegeSources=new SelectList(_uow.Privileges.All)
+                // SelectedSources=_uow.
+            };
+          
+            /*
+               ViewBag.ApplicationUserList = db.ApplicationUsers.ToList().Select(x => new SelectListItem()
+            {
+                Selected = ApplicationUser.Contains(x.Id),
+                Text = x.UserName,
+                Value = x.Id
+            });*/
+            return View(vm);
         }
 
         // POST: Roles/Edit/5
@@ -102,14 +140,18 @@ namespace Web.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name")] RoleInt role)
+        public ActionResult Edit( RoleViewModel vm)
         {
+
+            //
+           // _uow.Privileges.All;
             if (ModelState.IsValid)
             {
-                _roleManager.Update(role);
+              _roleManager.Update(vm.Role);
+              //  _uow.RolePrivileges.UpdateAll();
                 return RedirectToAction("Index");
             }
-            return View(role);
+            return View(vm);
         }
 
         // GET: Roles/Delete/5

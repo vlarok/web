@@ -1,38 +1,67 @@
 ﻿@model List<Domain.Identity.RoleInt>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = @Resources.Front.Roles;
 }
 
-<h2>Index</h2>
+@Html.AntiForgeryToken()
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.FirstOrDefault().Name)
-        </th>
-        <th>Users</th>
-        <th></th>
-    </tr>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading" data-original-title>
+                <h2>
+                    <i class="fa fa-location-arrow"></i><span class="break"></span>@Resources.Front.Roles
+                </h2>
+                <div class="panel-actions">
+                    <a href="@Url.Action("Create","Roles",new {area="Admin"})"><i class="fa fa-edit"></i></a>
+                </div>
+            </div>
+            <div class="panel-body">
+                <a href="@Url.Action("Create","Roles",new {area="Admin"})" class="btn btn-sm btn-success" title="Add restourant"><i class="fa fa-edit"></i> @Resources.Front.Addnew</a>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Users.Count)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {id = item.Id}) |
-                @Html.ActionLink("Details", "Details", new {id = item.Id}) |
-                @Html.ActionLink("Delete", "Delete", new {id = item.Id})
-            </td>
-        </tr>
-    }
+                <table class="table table-bordered bootstrap-datatable datatable">
+                    <tr>
+                        
+                        <th>
+                          
+                        </th>
 
-</table>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr >
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                <div class="delete-section">
+                                   
+                                        <a class="btn btn-sm btn-info" href="@Url.Action("Edit", new {id = item.Id})">
+                                            <i class="fa fa-edit "></i>
+                                        </a>
+
+
+
+
+                                        <a class="btn btn-sm btn-danger delete-link" href="@Url.Action("Delete", new {id = item.Id})"><i class="fa fa-trash-o "></i></a>
+                                        <div class="btn btn-sm btn-danger delete-confirm" style="display: none" data-delete-id="@item.Id">
+                                            <i class="fa fa-edit"></i> Confirm
+                                        </div>
+
+                                    
+
+
+                                </div>
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

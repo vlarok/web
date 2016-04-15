@@ -7182,6 +7182,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Listen team calls.
+        /// </summary>
+        public static string team_calllisten {
+            get {
+                return ResourceManager.GetString("team_calllisten", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Team averages (Excel).
         /// </summary>
         public static string TeamaveragesExcel {

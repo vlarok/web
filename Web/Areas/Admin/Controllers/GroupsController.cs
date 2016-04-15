@@ -2,104 +2,119 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using System.Web.Http.Description;
+using System.Web;
+using System.Web.Mvc;
 using DAL;
 using Domain.Rights;
+using Web.Controllers;
 
 namespace Web.Areas.Admin.Controllers
 {
-    public class GroupsController : ApiController
+    public class GroupsController :  BaseController
     {
         private DataBaseContext db = new DataBaseContext();
 
-        // GET: api/Groups
-        public IQueryable<Group> GetGroups()
+        // GET: Admin/Groups
+        public ActionResult Index()
         {
-            return db.Groups;
+            return View(db.Groups.ToList());
         }
 
-        // GET: api/Groups/5
-        [ResponseType(typeof(Group))]
-        public IHttpActionResult GetGroup(int id)
+        // GET: Admin/Groups/Details/5
+        public ActionResult Details(int? id)
         {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
             Group group = db.Groups.Find(id);
             if (group == null)
             {
-                return NotFound();
+                return HttpNotFound();
             }
-
-            return Ok(group);
+            return View(group);
         }
 
-        // PUT: api/Groups/5
-        [ResponseType(typeof(void))]
-        public IHttpActionResult PutGroup(int id, Group group)
+        // GET: Admin/Groups/Create
+        public ActionResult Create()
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            return View();
+        }
 
-            if (id != group.GroupId)
+        // POST: Admin/Groups/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "GroupId,GroupName")] Group group)
+        {
+            if (ModelState.IsValid)
             {
-                return BadRequest();
-            }
-
-            db.Entry(group).State = EntityState.Modified;
-
-            try
-            {
+                db.Groups.Add(group);
                 db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!GroupExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return RedirectToAction("Index");
             }
 
-            return StatusCode(HttpStatusCode.NoContent);
+            return View(group);
         }
 
-        // POST: api/Groups
-        [ResponseType(typeof(Group))]
-        public IHttpActionResult PostGroup(Group group)
+        // GET: Admin/Groups/Edit/5
+        public ActionResult Edit(int? id)
         {
-            if (!ModelState.IsValid)
+            if (id == null)
             {
-                return BadRequest(ModelState);
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-
-            db.Groups.Add(group);
-            db.SaveChanges();
-
-            return CreatedAtRoute("DefaultApi", new { id = group.GroupId }, group);
-        }
-
-        // DELETE: api/Groups/5
-        [ResponseType(typeof(Group))]
-        public IHttpActionResult DeleteGroup(int id)
-        {
             Group group = db.Groups.Find(id);
             if (group == null)
             {
-                return NotFound();
+                return HttpNotFound();
             }
+            return View(group);
+        }
 
+        // POST: Admin/Groups/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "GroupId,GroupName")] Group group)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(group).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(group);
+        }
+
+        // GET: Admin/Groups/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Group group = db.Groups.Find(id);
+            if (group == null)
+            {
+                return HttpNotFound();
+            }
+            return View(group);
+        }
+
+        // POST: Admin/Groups/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Group group = db.Groups.Find(id);
             db.Groups.Remove(group);
             db.SaveChanges();
-
-            return Ok(group);
+            return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
@@ -109,11 +124,6 @@ namespace Web.Areas.Admin.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }
-
-        private bool GroupExists(int id)
-        {
-            return db.Groups.Count(e => e.GroupId == id) > 0;
         }
     }
 }

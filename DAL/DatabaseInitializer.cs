@@ -5,6 +5,7 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using Domain;
 using Domain.Identity;
+using Domain.Rights;
 using Microsoft.AspNet.Identity;
 
 namespace DAL
@@ -15,8 +16,16 @@ namespace DAL
         protected override void Seed(DataBaseContext context)
         {
 
-            context.Services.AddOrUpdate(new Service() { ServiceId = 1, ServiceName = "Tallinn" });
+            context.Services.AddOrUpdate(new Service() { ServiceId = 1, ServiceName = "Helsinki" });
             context.SaveChanges();
+            context.Services.AddOrUpdate(new Service() { ServiceId = 2, ServiceName = "Tallinn" });
+            context.SaveChanges();
+            context.Services.AddOrUpdate(new Service() { ServiceId = 3, ServiceName = "Stockholm" });
+            context.SaveChanges();
+
+
+
+
 
             var pwdHasher = new PasswordHasher();
 
@@ -72,6 +81,112 @@ SELECT @ANumber = '51080089';
 SELECT @UserId=1;
 END";
             context.Database.ExecuteSqlCommand(sql);
+
+
+            #region Privilege execution
+            context.Privileges.Add(new Privilege() { PrivilegeName = "listenallcalls" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "team_calllisten" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "listenowncalls" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "listenservicecalls" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "listenrulecalls" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "calldownload" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "evautosel" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "evaluateselonly" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "evreportsagent" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "team_callevaluate" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "mantainevforms" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "seeevalutaionforms" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "evreports" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "evaluate" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "selectiverec" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "actionreports" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "summaryreports" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "listenreports" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "services" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "userroles" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "teamadd" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "roleprivis" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "findusers" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "insertusers" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "rolelist" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "roleadd" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "paramsset" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "callscopy" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "archivefiles" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "folders" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "foldersAdmin" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "pqmsclient" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "pqmsonlineclient" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "workstationext" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "linestates" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "changepass" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "screenrecordings" });
+            context.SaveChanges();
+            context.Privileges.Add(new Privilege() { PrivilegeName = "licenseesAdmin" });
+            context.SaveChanges();
+
+
+            #endregion
+
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 30; j++)
+                {
+                    context.Calls.AddOrUpdate(new Call()
+                    {
+                        AudioDir = @"2015\04\27\22\",
+                        AudioFileName = "20150427225942_001_50336869",
+                        Anumber = "16684" + i.ToString(),
+                        Bnumber = i.ToString() + "98991",
+                        Dir = "in",
+                        Duration = "1" + i.ToString(),
+                        UserId = 1,
+                        ServiceId = 1,
+                        Created = DateTime.Now.AddMinutes(j).AddDays(i),
+                        Custom1 = "1"
+
+                    });
+                    context.SaveChanges();
+                }
+
+            }
 
             var articleHeadLine = "<h1>ASP.NET</h1>";
             var articleBody =

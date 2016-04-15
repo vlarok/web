@@ -65,10 +65,9 @@ namespace DAL
 
         public IDbSet<Service> Services { get; set; }
         public IDbSet<Group> Groups { get; set; }
-        public IDbSet<GroupPrivilege> GroupPrivileges { get; set; }
         public IDbSet<Privilege> Privileges { get; set; }
         public IDbSet<UserGroup> UserGroups { get; set; }
-        public IDbSet<UserPrivilege> UserPrivileges { get; set; }
+        public IDbSet<RolePrivilege> UserPrivileges { get; set; }
 
         // Identity tables, PK - string
         //public IDbSet<Role> Roles { get; set; }

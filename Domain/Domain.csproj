@@ -66,8 +66,7 @@
     <Compile Include="Rights\UserGroup.cs" />
     <Compile Include="Service.cs" />
     <Compile Include="Translation.cs" />
-    <Compile Include="Rights\GroupPrivilege.cs" />
-    <Compile Include="Rights\UserPrivilege.cs" />
+    <Compile Include="Rights\RolePrivilege.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAnnotations\DataAnnotations.csproj">

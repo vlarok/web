@@ -57,14 +57,13 @@ namespace DAL.Helpers
                 ,
                 {typeof (IServiceRepository), dbContext => new ServiceRepository(dbContext)},
                 {typeof (IGroupRepository), dbContext => new GroupRepository(dbContext)}
-                ,
-                {typeof (IGroupPrivilegeRepository), dbContext => new GroupPrivilegeRepository(dbContext)}
+                
                 ,
                 {typeof (IPrivilegeRepository), dbContext => new PrivilegeRepository(dbContext)}
                 ,
                 {typeof (IUserGroupRepository), dbContext => new UserGroupRepository(dbContext)}
                 ,
-                {typeof (IUserPrivilegesRepository), dbContext => new UserPrivilegesRepository(dbContext)}
+                {typeof (IRolePrivilegesRepository), dbContext => new RolePrivilegesRepository(dbContext)}
             };
         }
 

@@ -73,12 +73,10 @@
     <Compile Include="Helpers\EFRepositoryFactories.cs" />
     <Compile Include="Helpers\EFRepositoryProvider.cs" />
     <Compile Include="Helpers\FormattedDbEntityValidationException.cs" />
-    <Compile Include="Repositories\GroupPrivilegeRepository.cs" />
     <Compile Include="Repositories\PrivilegeRepository.cs" />
     <Compile Include="Repositories\UserGroupRepository.cs" />
-    <Compile Include="Repositories\UserPrivilegesRepository.cs" />
+    <Compile Include="Repositories\RolePrivilegesRepository.cs" />
     <Compile Include="Interfaces\IArticleRepository.cs" />
-    <Compile Include="Interfaces\IGroupPrivilegeRepository.cs" />
     <Compile Include="Interfaces\IGroupRepository.cs" />
     <Compile Include="Interfaces\IPrivilegeRepository.cs" />
     <Compile Include="Interfaces\IServiceRepository.cs" />
@@ -93,7 +91,7 @@
     <Compile Include="Interfaces\IUserClaimRepository.cs" />
     <Compile Include="Interfaces\IUserGroupRepository.cs" />
     <Compile Include="Interfaces\IUserLoginRepository.cs" />
-    <Compile Include="Interfaces\IUserPrivilegesRepository.cs" />
+    <Compile Include="Interfaces\IRolePrivilegesRepository.cs" />
     <Compile Include="Interfaces\IUserRepository.cs" />
     <Compile Include="Interfaces\IUserRoleRepository.cs" />
     <Compile Include="NLogCommandInterceptor.cs" />

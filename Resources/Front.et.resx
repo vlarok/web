@@ -2799,4 +2799,7 @@
   <data name="Yourenotallowedtoevalutecalls" xml:space="preserve">
     <value>Teil puudub õigus selleks toiminguks</value>
   </data>
+  <data name="team_calllisten" xml:space="preserve">
+    <value>Tiimi kõnede kuulamine</value>
+  </data>
 </root>

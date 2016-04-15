@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Domain.Rights.Group>
+
+@{
+    ViewBag.Title = @Resources.Domain.Services;
+}
+
+@Html.AntiForgeryToken()
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading" data-original-title>
+                <h2>
+                    <i class="fa fa-location-arrow"></i><span class="break"></span>@Resources.Front.AgentUserGroups
+                </h2>
+                <div class="panel-actions">
+                    <a href="@Url.Action("Create","Services",new {area=""})"><i class="fa fa-edit"></i></a>
+                </div>
+            </div>
+            <div class="panel-body">
+                <a href="@Url.Action("Create","Services",new {area=""})" class="btn btn-sm btn-success" title="Add restourant"><i class="fa fa-edit"></i> @Resources.Front.Addnew</a>
+
+                <table class="table table-bordered bootstrap-datatable datatable">
+                    <tr>
+                        <th>
+                            @Resources.Front.ID1
+                        </th>
+                        <th>
+                            @Resources.Front.Name1
+                        </th>
+
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.GroupId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.GroupName)
+                            </td>
+                            <td>
+                                <div class="delete-section">
+                                    
+                                        <a class="btn btn-sm btn-info" href="@Url.Action("Edit", new {id = item.GroupId})">
+                                            <i class="fa fa-edit "></i>
+                                        </a>
+
+
+
+
+
+                                </div>
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

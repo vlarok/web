@@ -33,10 +33,9 @@ namespace DAL.Interfaces
         IServiceRepository Services { get; }
 
         IGroupRepository Groups { get; }
-        IGroupPrivilegeRepository GroupPrivileges { get; }
         IPrivilegeRepository Privileges { get; }
         IUserGroupRepository UserGroups { get; }
-        IUserPrivilegesRepository UserPrivileges { get; }
+        IRolePrivilegesRepository RolePrivileges { get; }
 
 
 
