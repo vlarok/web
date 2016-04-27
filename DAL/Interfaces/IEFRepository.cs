@@ -14,6 +14,7 @@ namespace DAL.Interfaces
         // gett all records in table
         //IQueryable<T> All { get; }
         List<T> All { get; }
+        IQueryable<T> AllIQueryable { get; }
 
         // get all records with filter
         //IQueryable<T> GetAllIncluding(params Expression<Func<T, object>>[] includeProperties);

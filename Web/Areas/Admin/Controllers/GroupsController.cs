@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DAL;
+using DAL.Interfaces;
 using Domain.Rights;
 using Web.Controllers;
 
@@ -14,12 +15,17 @@ namespace Web.Areas.Admin.Controllers
 {
     public class GroupsController :  BaseController
     {
-        private DataBaseContext db = new DataBaseContext();
+        private readonly IUOW _uow;
+
+        public GroupsController(IUOW uow)
+        {
+            _uow = uow;
+        }
 
         // GET: Admin/Groups
         public ActionResult Index()
         {
-            return View(db.Groups.ToList());
+            return View(_uow.Groups.All);
         }
 
         // GET: Admin/Groups/Details/5
@@ -29,7 +35,7 @@ namespace Web.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Group group = db.Groups.Find(id);
+            Group group = _uow.Groups.GetById(id);
             if (group == null)
             {
                 return HttpNotFound();
@@ -52,8 +58,8 @@ namespace Web.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Groups.Add(group);
-                db.SaveChanges();
+                _uow.Groups.Add(group);
+                _uow.Commit();
                 return RedirectToAction("Index");
             }
 
@@ -67,7 +73,7 @@ namespace Web.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Group group = db.Groups.Find(id);
+            Group group = _uow.Groups.GetById(id);
             if (group == null)
             {
                 return HttpNotFound();
@@ -84,8 +90,8 @@ namespace Web.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(group).State = EntityState.Modified;
-                db.SaveChanges();
+                _uow.Groups.Update(group);
+                _uow.Commit();
                 return RedirectToAction("Index");
             }
             return View(group);
@@ -98,7 +104,7 @@ namespace Web.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Group group = db.Groups.Find(id);
+            Group group = _uow.Groups.GetById(id);
             if (group == null)
             {
                 return HttpNotFound();
@@ -111,9 +117,9 @@ namespace Web.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Group group = db.Groups.Find(id);
-            db.Groups.Remove(group);
-            db.SaveChanges();
+            Group group = _uow.Groups.GetById(id);
+            _uow.Groups.Delete(group);
+            _uow.Commit();
             return RedirectToAction("Index");
         }
 
@@ -121,7 +127,7 @@ namespace Web.Areas.Admin.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+               
             }
             base.Dispose(disposing);
         }

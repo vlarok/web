@@ -11,6 +11,7 @@ namespace Web.Controllers
 {
     public class BaseController : Controller
     {
+
         protected override IAsyncResult BeginExecuteCore(AsyncCallback callback, object state)
         {
             var cookie = Request.Cookies["_culture"];

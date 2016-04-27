@@ -109,7 +109,7 @@ namespace Web.Areas.Admin.Controllers
                             .Select(i => i.PrivilegeId)
                             .FirstOrDefault());
             */
-           
+           /*
             var vm = new RoleViewModel()
             {
                 Role = role,
@@ -124,7 +124,7 @@ namespace Web.Areas.Admin.Controllers
                 // PrivilegeSources=new SelectList(_uow.Privileges.All)
                 // SelectedSources=_uow.
             };
-          
+          */
             /*
                ViewBag.ApplicationUserList = db.ApplicationUsers.ToList().Select(x => new SelectListItem()
             {
@@ -132,7 +132,7 @@ namespace Web.Areas.Admin.Controllers
                 Text = x.UserName,
                 Value = x.Id
             });*/
-            return View(vm);
+            return View(role);
         }
 
         // POST: Roles/Edit/5
@@ -140,21 +140,14 @@ namespace Web.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit( RoleViewModel vm)
+        public ActionResult Edit([Bind(Include = "Id,Name")] RoleInt role)
         {
             if (ModelState.IsValid)
             {
-
-                _roleManager.Update(vm.Role);
-                
-
-                _uow.RolePrivileges.UpdateById(vm.Role.Id,vm.PrivilegeId);
-              _uow.Commit();
-              
-                
+                _roleManager.Update(role);
                 return RedirectToAction("Index");
             }
-            return View(vm);
+            return View(role);
         }
 
         // GET: Roles/Delete/5

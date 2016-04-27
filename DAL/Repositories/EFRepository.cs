@@ -45,6 +45,8 @@ namespace DAL.Repositories
 
         public List<T> All => DbSet.ToList();
 
+        public IQueryable<T> AllIQueryable => DbSet;
+
         //public IQueryable<T> GetAllIncluding(params Expression<Func<T, object>>[] includeProperties)
         //{
         //	return includeProperties.

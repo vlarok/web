@@ -7,5 +7,6 @@ namespace DAL.Interfaces
     {
         bool Contains(int id, int privilegeId);
         void UpdateById(int id, int[] privilegeId);
+        object GetAllUserPrivileges(int v);
     }
 }

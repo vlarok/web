@@ -31,5 +31,10 @@ namespace DAL.Repositories
             }
          
         }
+
+        public object GetAllUserPrivileges(int v)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -9,8 +9,10 @@ using System.Web.Mvc;
 using DAL;
 using DAL.Interfaces;
 using Domain;
+using Microsoft.AspNet.Identity;
 using PagedList;
 using PagedList.Mvc;
+using Web.Helpers;
 using Web.ViewModels;
 
 namespace Web.Controllers
@@ -27,9 +29,17 @@ namespace Web.Controllers
 
         // GET: Calls
         //[ValidateInput(false)]
-        public ActionResult Index(CallViewModel vm)
-        {
 
+        [HasPermission("ListenAllCalls")]
+        public ActionResult Index(CallViewModel vm)
+        {/*
+             int RolId = _uow.UserRolesInt.All.Where(x => x.UserId == User.Identity.GetUserId<int>()).Select(x=>x.RoleId).FirstOrDefault();
+            int PermissionId = _uow.Privileges.All.Where(x => x.PrivilegeName== "ListenAllCalls").Select(x=>x.PrivilegeId).FirstOrDefault();
+            bool midagi = _uow.RolePrivileges.All.Where(x => x.RoleId.Equals(RolId) &&x.PrivilegeId.Equals(PermissionId)).Select(x=>x.YesNo).FirstOrDefault();
+
+            
+            var bla = _uow.RolePrivileges.GetAllUserPrivileges(User.Identity.GetUserId<int>());
+            bool on = midagi;*/
             IQueryable<Call> calls;
             vm.CreatedSort = String.IsNullOrEmpty(vm.Sort) ? "created" : string.Empty;
             if (vm.SearchStartDate.Equals(vm.SearchEndDate))
